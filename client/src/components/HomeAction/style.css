@@ -1,0 +1,48 @@
+.action-contents{
+    height:100vh;
+    background-color:#CCEBFD;
+     padding-left: 0px;
+     margin-left: -15px;
+}
+
+
+.action-text-box{
+    position:absolute;
+    top:25%;
+
+}
+
+.action-text{
+width:90%;
+}
+
+.action-header{
+}
+
+.numbers-list{
+    font-size:2em;
+}
+
+
+.offerings-btn{
+    background-color:#86BFFF;
+    color:white;
+    width:50%;
+    margin:25px;
+}
+
+.circle-lines {
+    /* width:150px;
+    height:150px; */
+    width:75%;
+    left:15%;
+    background-color:#CCEBFD;
+    position:absolute;
+    top:15%;
+}
+
+.dipper-4 {
+    opacity:.25;
+    position:absolute;
+    bottom: -35%;
+}

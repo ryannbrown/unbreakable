@@ -1,0 +1,109 @@
+
+/* * {
+  overflow-x:hidden;
+} */
+.App {
+  text-align: center;
+  overflow:hidden !important;
+}
+
+h1, h2 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+h1 {
+  margin:0;
+}
+
+p, li, h3, h4, h5, a, button {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing:.1rem
+}
+
+.libre {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.rob {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* .App {
+  background-image:url(../src/media/moroccan-flower.png);
+  box-shadow: inset 0 0 0 1000px rgba(217, 189, 189, .7);
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.page-content {
+  /* height:90vh; */
+  /* margin-top:5%; */
+}
+
+
+.primaryTextColor {
+  color: #86BFFF;
+}
+
+.lightText  {
+  color:  #ECECEC
+}
+
+.darkText {
+  color: #707070;
+}
+
+hr {
+  margin: 5% auto;
+  border:1px solid #ECECEC;
+  width:100%;
+}
+
+.addPadding {
+  padding:5%;
+}
+
+
+.footer-div{
+  height:200px;
+  background-color:lightblue;
+}
+
+.footer-div > * {
+  position:absolute;
+  top:50%;
+}

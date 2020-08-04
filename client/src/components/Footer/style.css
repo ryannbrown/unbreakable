@@ -1,0 +1,17 @@
+.footer-div {
+    /* position:absolute;
+    top:25%; */
+}
+
+.footer-content-box{
+    width:100%;
+    position:absolute;
+    top:25%;
+    color:white;
+}
+
+
+.comet-image{
+    width:5%;
+    margin-top: -1%;
+}
