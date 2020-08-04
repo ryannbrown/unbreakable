@@ -1,6 +1,6 @@
 .off-page{
     height:100vh;
-    background-color:#CCEBFD;
+    background-image: linear-gradient(to right top, #ccebfd, #d3ecfd, #daeefc, #e0effc, #e6f1fb);
 }
 
 .off-boxparent{
