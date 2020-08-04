@@ -226,6 +226,87 @@
       req.pipe(busboy);
     });
     
+
+
+    //    POST CUSTOM INVENTORY
+    // let posts = []
+    app.post('/api/lead-form', function (req, res) {
+      console.log("keys")
+      const data = {
+        name: req.body.name,
+        email: req.body.email,
+        selection: req.body.selection,
+        message: req.body.message
+      };
+    
+      posts.push(data)
+    
+      const query = `INSERT INTO leads (name, email, selection, message)
+         VALUES($1,$2, $3, $4)`
+      const values = [data.name, data.email, data.selection, data.message];
+      //  FOR DEV
+      console.log(query)
+      //  console.log(values)
+      console.log(data)
+      client.query(query, values, (error, results) => {
+        if (error) {
+          throw error
+        }
+        res.send('POST request to the homepage')
+      }
+      );
+    })
+
+    app.options('/api/leads', cors())
+    app.get('/api/leads', cors(), function (req, response) {
+    
+      client.query(
+        "SELECT * from leads", (error, results) => {
+          if (error) {
+            throw error
+          }
+          var data = results.rows
+          response.send(JSON.stringify({ data }));
+        }
+      );
+    })
+    
+    app.get('/api/leads/:id', cors(), function (req, response) {
+      // var gun_id = req.params.id;
+      const data = {
+        id: req.params.id
+      }
+    
+      const query = `SELECT * from leads WHERE id = $1`
+      const values = [data.id]
+      client.query(query, values, (error, results) => {
+        if (error) {
+          throw error
+          // results.status(500)
+        }
+        var data = results.rows
+        response.send(JSON.stringify({ data }));
+      }
+      );
+    })
+
+  //    DELETE CUSTOM INVENTORY
+  app.delete('/api/remove_lead', function (req, response) {
+    let id = req.body.id
+    console.log(id);
+    client.query(
+      `DELETE FROM leads WHERE id = '${id}' `, (error, results) => {
+        console.log(error, results);
+        if (error) {
+          throw error
+        }
+  
+        // var data = results.rows
+        var data = results.rows
+        response.send(JSON.stringify({ data }));
+      }
+    );
+  })
     
     
     // INACTIVE DB

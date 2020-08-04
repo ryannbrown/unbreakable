@@ -22,6 +22,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
+    z-index:400;
 }
 .edit-icon {
     position: absolute;
@@ -44,4 +45,15 @@
 
 .login-form {
     margin: 5% auto;
+}
+
+.lead-modal {
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    top: 50%;
+    z-index: 2500;
+    left: 40%;
 }
