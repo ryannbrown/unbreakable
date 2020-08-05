@@ -31,6 +31,10 @@ width:90%;
     margin:25px;
 }
 
+.offerings-btn:hover {
+    box-shadow: 0 0 50px #86bfffc4;
+}
+
 .circle-lines {
     /* width:150px;
     height:150px; */
