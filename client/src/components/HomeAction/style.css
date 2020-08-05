@@ -35,6 +35,11 @@ width:90%;
     box-shadow: 0 0 50px #86bfffc4;
 }
 
+.btn:hover {
+    color: white !important;
+    text-decoration: none;
+}
+
 .circle-lines {
     /* width:150px;
     height:150px; */
