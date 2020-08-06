@@ -8,6 +8,7 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import logo from '../../media/moons.png'
 // import InboxIcon from '@material-ui/icons/MoveToInbox';
 // import MailIcon from '@material-ui/icons/Mail';
 
@@ -47,7 +48,7 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Home', 'Services', 'Blog', 'About'].map((text, index) => (
+        {['Home', 'Offerings', 'Blog', 'Connect'].map((text, index) => (
             <a href={`/${text}`}>
   <ListItem button key={text}>
             <ListItemText className="primaryTextColor" primary={text} />
@@ -63,7 +64,7 @@ export default function TemporaryDrawer() {
     <div>
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}><i class="material-icons">menu</i></Button>
+          <Button onClick={toggleDrawer(anchor, true)}><img style={{width:  `75px` }} src={logo}></img></Button>
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
             {list(anchor)}
           </Drawer>

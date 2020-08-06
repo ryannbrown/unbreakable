@@ -39,11 +39,12 @@ export default class HomeAction extends Component {
 
 
             <Row >
-                <Col sm={12} md={6} className="action-contents">
+
+                <Col sm={12} md={6} className="action-contents1">
                     <Image className="circle-lines" src={circleLines} />
                 </Col>
-                <Col sm={12} md={6}>
-                    <div className="action-contents primaryTextColor">
+                <Col sm={12} md={6} className="action-contents2">
+                    <div className=" primaryTextColor">
                         <div className="action-text-box">
                             <h1 className="action-header">I'm the healing coach for you if...</h1>
                             <p className="action-text"><span className="numbers-list"><i>1.</i></span>If you want to connect with nature and things about the substances

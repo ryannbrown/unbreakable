@@ -17,12 +17,21 @@ export default class Navigation extends Component {
 
     this.listener = null;
     this.state = {
-      status: "top"
+      status: "top",
+      isMobile: false
     };
   }
 
 
   componentDidMount() {
+
+    if (window.innerWidth < 667) {
+      this.setState({
+        isMobile: true
+      })
+      console.log("not mobile")
+    }
+
     this.listener = document.addEventListener("scroll", e => {
       var scrolled = document.scrollingElement.scrollTop;
       if (scrolled >= 120) {
@@ -39,11 +48,14 @@ export default class Navigation extends Component {
 
   componentDidUpdate() {
     document.removeEventListener("scroll", this.listener);
+
+
+
   }
 
   render() {
 
-
+    const { isMobile } = this.state;
 
 
 
@@ -60,17 +72,24 @@ export default class Navigation extends Component {
       // </Navbar>
 
       <div>
-        <Navbar fixed="top" style={{backgroundColor: this.state.status ==="top" ? "transparent" : "#86BFFF", transition: '.6s'}} className="title">
-          <Navbar.Brand href="/">
-          {/* <div className="menu-icon"><TemporaryDrawer></TemporaryDrawer></div> */}
-          <img
-              src={logo}
-              width="75"
-              height="auto"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
+        <Navbar fixed="top" style={{ backgroundColor: this.state.status === "top" ? "transparent" : "#86BFFF", transition: '.6s' }} className="title">
+          {isMobile ? (
+            <Navbar.Brand>
+              <div className="menu-icon"><TemporaryDrawer></TemporaryDrawer></div>
+
             </Navbar.Brand>
+            ) : (
+              <Navbar.Brand href="/">
+                <img
+                  src={logo}
+                  width="75"
+                  height="auto"
+                  className="d-inline-block align-top"
+                  alt="React Bootstrap logo"
+                />
+              </Navbar.Brand>
+            )
+          }
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav"></Navbar.Collapse>
           <Nav className="justify-content-center" activeKey="/home">
@@ -89,14 +108,14 @@ export default class Navigation extends Component {
             </Nav.Item>
             <Nav.Item className="cta-nav-btn">
               <a href="/offerings">
-              <Button style={{backgroundColor: this.state.status ==="top" ? "#86BFFF" : "white", color:this.state.status ==="top" ? "white" : "#86BFFF", transition: '.6s'}}>Offerings</Button>
-                </a>
+                <Button style={{ backgroundColor: this.state.status === "top" ? "#86BFFF" : "white", color: this.state.status === "top" ? "white" : "#86BFFF", transition: '.6s' }}>Offerings</Button>
+              </a>
             </Nav.Item>
             <Nav.Item className="nav-arrow">
-             <Image style={{display: this.state.status ==="top" ? "none" : "flex", transition: '.6s'}} src={whiteArrow}></Image>
+              <Image style={{ display: this.state.status === "top" ? "none" : "flex", transition: '.6s' }} src={whiteArrow}></Image>
             </Nav.Item>
           </Nav>
-          </Navbar>
+        </Navbar>
       </div >
     )
 

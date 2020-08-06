@@ -86,3 +86,14 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
     border-color:transparent;
     background-color:transparent;
 }
+
+
+@media (max-width:667px) {
+    .justify-content-center.navbar-nav {
+        display:none;
+    }
+
+    .fixed-top {
+        height:75px;
+    }
+}

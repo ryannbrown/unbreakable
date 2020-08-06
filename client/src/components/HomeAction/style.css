@@ -1,4 +1,10 @@
-.action-contents{
+.action-contents1{
+    height:100vh;
+background-image: linear-gradient(to left top, #ccebfd, #d3ecfd, #daeefc, #e0effc, #e6f1fb);
+     padding-left: 0px;
+     margin-left: -15px;
+}
+.action-contents2{
     height:100vh;
 background-image: linear-gradient(to right top, #ccebfd, #d3ecfd, #daeefc, #e0effc, #e6f1fb);
      padding-left: 0px;
@@ -45,7 +51,7 @@ width:90%;
     height:150px; */
     width:75%;
     left:15%;
-    background-color:#CCEBFD;
+    /* background-color:#CCEBFD; */
     position:absolute;
     top:15%;
 }

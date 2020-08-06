@@ -17,7 +17,7 @@
     left:-15%;
     top:25%;
    /* height:50vh; */
-   height:auto;
+   height:500px;
     width:25vw;
     background-color:white;
     border-radius:25px;
@@ -30,7 +30,7 @@
     left:40%;
     top:25%;
     /* height:50vh; */
-    height:auto;
+    height:500px;
     width:25vw;
     background-color:white;
     border-radius:25px;
@@ -42,7 +42,7 @@
     right:-15%;
     top:25%;
     /* height:50vh; */
-    height:auto;
+    height:500px;
     width:25vw;
     background-color:white;
     border-radius:25px;
@@ -89,4 +89,41 @@
 
 .footer-div{
     /* display:none; */
+}
+
+
+@media (max-width:997px) {
+    /* MODAL  */
+
+.modal-box {
+    position: fixed;
+    left: 17%;
+    top: 25%;
+    /* height: 50vh; */
+    height: 67%;
+    width: 65%;
+    background-color: white;
+    border-radius: 25px;
+    opacity: 1;
+    z-index: 100;
+}
+
+.arrow-right {
+    right:5%;
+}
+.arrow-left {
+    left: 5%;
+}
+
+
+.prev-modal {
+    display:none;
+}
+.next-modal {
+    display:none;
+}
+
+.off-image {
+    width: 55%;
+}
 }
