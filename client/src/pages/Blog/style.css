@@ -934,7 +934,7 @@ z-index:200;
     
      .button-wrapper{
          position:absolute;
-         top:110%;
+         top:115%;
          left:15%;
          display:flex;
          width:75%;
@@ -1025,6 +1025,3 @@ button.blog-btn.btn.btn-basic {
     margin: 5px;
     color: white;
 }
-
-
-
