@@ -38,7 +38,8 @@ width:90%;
 }
 
 .offerings-btn:hover {
-    box-shadow: 0 0 50px #86bfffc4;
+    box-shadow: 0 0 20px #86bfffd1;
+    transition: .6s;
 }
 
 .btn:hover {
