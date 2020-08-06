@@ -101,7 +101,7 @@ class AddItem extends Component {
         if (!itemPosted) {
             return (
                 <div className="m-5">
-                    <h1>Add Item</h1>
+                    <h1>New Post</h1>
                     <form onSubmit={this.handleSubmit} encType="multipart/form-data" >
 
                         <Form.Label>Item Image</Form.Label>

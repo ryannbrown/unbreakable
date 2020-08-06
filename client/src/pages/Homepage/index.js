@@ -15,7 +15,7 @@ import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
 function Homepage() {
 
     return (
-        <div className="page-content">
+        <div className="homepage-content">
             <HomeHero></HomeHero>
             <HomeBio></HomeBio>
             <HomeAction/>
