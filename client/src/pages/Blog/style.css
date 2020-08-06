@@ -94,7 +94,7 @@ z-index:200;
  .button-wrapper{
      position:absolute;
      top:90%;
-     left:12.5%;
+     left:15%;
      display:flex;
      width:75%;
  }
@@ -258,8 +258,8 @@ z-index:200;
 
  .button-wrapper{
      position:absolute;
-     top:80%;
-     left:12.5%;
+     top:85%;
+     left:15%;
      display:flex;
      width:75%;
  }
@@ -425,8 +425,8 @@ z-index:200;
     
      .button-wrapper{
          position:absolute;
-         top:85%;
-         left:12.5%;
+         top:90%;
+         left:15%;
          display:flex;
          width:75%;
      }
@@ -593,8 +593,8 @@ z-index:200;
     
      .button-wrapper{
          position:absolute;
-         top:75%;
-         left:12.5%;
+         top:80%;
+         left:15%;
          display:flex;
          width:75%;
      }
@@ -699,7 +699,7 @@ z-index:200;
     
     .blog-date-box{
         display:flex;
-        width:25%;
+        width:32.5%;
         position:absolute;
         top:7%;
         right:15%;
@@ -760,8 +760,8 @@ z-index:200;
     
      .button-wrapper{
          position:absolute;
-         top:85%;
-         left:12.5%;
+         top:90%;
+         left:15%;
          display:flex;
          width:75%;
      }
@@ -934,8 +934,8 @@ z-index:200;
     
      .button-wrapper{
          position:absolute;
-         top:105%;
-         left:5.5%;
+         top:110%;
+         left:15%;
          display:flex;
          width:75%;
      }
@@ -1017,6 +1017,13 @@ z-index:200;
       
 
 
+}
+
+
+button.blog-btn.btn.btn-basic {
+    background-color: rgb(134, 191, 255);
+    margin: 5px;
+    color: white;
 }
 
 

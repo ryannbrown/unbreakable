@@ -104,9 +104,9 @@ class Blog extends Component {
                 <div className="grid">
                     {items}
                     <div className="button-wrapper" >
-                <Button className="offerings-btn" variant="basic">Check out my offerings</Button>
-                <Button className="offerings-btn" variant="basic">Contact me</Button>
-                <Button className="offerings-btn" variant="basic">Home</Button>
+                <Button className="blog-btn" variant="basic">Check out my offerings</Button>
+                <Button className="blog-btn" variant="basic">Contact me</Button>
+                <Button className="blog-btn" variant="basic">Home</Button>
                 </div>
              
                 </div>
