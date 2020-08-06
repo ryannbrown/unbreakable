@@ -88,8 +88,8 @@ p, li, h3, h4, h5, a, button {
 }
 
 hr {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   border: 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #fff;
@@ -97,8 +97,8 @@ hr {
 
 @media (max-width: 667px) {
   hr {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 110px;
     border: 0;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #fff;
