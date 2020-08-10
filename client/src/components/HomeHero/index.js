@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 // import HomeHero from "../../components/HomeHero/index"
 import './style.css';
 import profPic from "../../media/5.PNG"
-import heroImg from "../../media/2.jpg"
+import heroImg from "../../media/hero.jpg"
 import arrow from "../../media/arrow.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
@@ -55,8 +55,8 @@ export default class HomeHero extends Component {
         {/* <Col md={3}></Col> */}
 
         <Col sm={12} md={12} className="home-img" style={{
-            backgroundImage: `url(${heroImg})`,
-            backgroundColor: `#333333f2`,
+            // backgroundImage: `url(${heroImg})`,
+            backgroundColor: `#0E3B62`,
             opacity: `90%`,
             backgroundBlendMode: `multiply`,
             backgroundPosition: `center`,
@@ -70,14 +70,14 @@ export default class HomeHero extends Component {
             //   cover no-repeat center center fixed`
         }}>
             {/* <Image src={heroImg}></Image> */}
-            <div className="tc w-100 hero-text-block">
-                <h4 className="title-name">Kathryn Judy Brown</h4>
-                <h1 className="title-phrase">Energy Healer.</h1>
+            <div className="hero-text-block">
+                <h4 className="title-name">Freshness,</h4>
+                <h1 className="title-phrase">Like Never Before</h1>
             </div>
 
        <br></br>
        {/* <div> */}
-       <Button className="action-button" variant="outline-dark">Discover</Button>
+       <Button className="action-button" variant="outline-dark">Scroll to hear our story</Button>
        <div className="arrow-container">
             <Image className="arrow-img center" src={arrow}></Image>
             </div>

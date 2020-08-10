@@ -42,7 +42,8 @@ width:90%;
 }
 
 .btn:hover {
-    color: white !important;
+    box-shadow: 0 0 20px #86bfffd1;
+    /* color: white !important; */
     text-decoration: none;
 }
 

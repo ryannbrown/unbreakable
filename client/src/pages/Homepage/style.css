@@ -46,9 +46,6 @@
 }
 
 
-.hero-text-block {
-    color:white;
-}
 
 
 .action-button {
@@ -107,17 +104,23 @@
     height:200px;
 }
 
+.hero-text-block {
+    position:absolute;
+    left:5%;
+    color:white;
+}
 
 
 .title-name {
-    font-size:22px;
+    font-size:6rem;
     font-family: 'Roboto', sans-serif;
     font-weight:300;
+    letter-spacing: .75rem;
 
 }
 
 .title-phrase {
-    font-size:60px;
+    font-size:2rem;
     letter-spacing:3px;
 }
 

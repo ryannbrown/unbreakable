@@ -55,7 +55,7 @@ export default class Footer extends Component {
             //   cover no-repeat center center fixed`
         }} className="footer-div">
                 <div className="footer-content-box">
-                <h2 className="libre"><i>Not Your Mama's Healer</i></h2>
+                <h2 className="libre"><i>Blue Heron Pasta Water</i></h2>
             <p>Powered by The Media Team</p>
             <Image className="comet-image" src={whiteComet}></Image>
                 </div>

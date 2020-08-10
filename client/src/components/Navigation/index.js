@@ -101,14 +101,14 @@ export default class Navigation extends Component {
             </Nav.Item> */}
             <Nav.Item>
               {/* TODO: Figure out these event keys for active pages */}
-              <Nav.Link href="/connect" eventKey="link-1">Connect</Nav.Link>
+              <Nav.Link href="/about" eventKey="link-1">About</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="link-2" href="/blog">Blog</Nav.Link>
+              <Nav.Link eventKey="link-2" href="/contact">Contact</Nav.Link>
             </Nav.Item>
             <Nav.Item className="cta-nav-btn">
               <a href="/offerings">
-                <Button style={{ backgroundColor: this.state.status === "top" ? "#86BFFF" : "white", color: this.state.status === "top" ? "white" : "#86BFFF", transition: '.6s' }}>Offerings</Button>
+                <Button className="offerings-btn-link" style={{ backgroundColor: this.state.status === "top" ? "#86BFFF" : "white", color: this.state.status === "top" ? "white" : "#86BFFF", transition: '.6s' }}>Subscribe</Button>
               </a>
             </Nav.Item>
             <Nav.Item className="nav-arrow">

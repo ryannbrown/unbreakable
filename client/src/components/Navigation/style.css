@@ -97,3 +97,10 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
         height:75px;
     }
 }
+
+
+.offerings-btn-link:hover {
+    border:none;
+    box-shadow: 0 0 20px #86bfffd1;
+    transition: .6s;
+}

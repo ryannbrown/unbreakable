@@ -40,11 +40,11 @@ function App() {
              {/* <Route path="/pricing" component={Pricing}/>
              <Route path="/about" component={About}/>
              <Route path="/contact" component={Contact}/> */}
-             <Route path="/blog/:post" component={BlogPost}/>
+             {/* <Route path="/blog/:post" component={BlogPost}/>
              <Route path="/blog" component={Blog}/>
              <Route path="/connect" component={Connect}/>
              <Route path="/offerings" component={Offerings}/>
-             <Route path="/admin" component={Admin}/>
+             <Route path="/admin" component={Admin}/> */}
              <Route path="/" component={Homepage}/>
            </Switch>
          </Router>
