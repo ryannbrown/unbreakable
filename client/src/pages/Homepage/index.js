@@ -16,13 +16,14 @@ function Homepage() {
 
     return (
         <div className="homepage-content">
+            {/* <div className="scroll-snap-outer"> */}
             <HomeHero></HomeHero>
             {/* <HomeBio></HomeBio>
             <HomeAction/>
             <hr style={{width:  `50%`}}></hr>
             <HomeQuote/>
-            <hr style={{width:  `50%`}}></hr> */}
-
+            <hr style={{width:  `50%`}}></hr>
+            </div> */}
 
             {/* <Row>
                 <Col>

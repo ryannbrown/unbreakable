@@ -50,7 +50,9 @@ export default class HomeHero extends Component {
   
   
       return (
-      
+      <div className="inner">
+
+    
       <Row>
         {/* <Col md={3}></Col> */}
 
@@ -92,6 +94,7 @@ export default class HomeHero extends Component {
         </Col>
         {/* <Col md={3}></Col> */}
     </Row>
+    </div>
       )
   
     }

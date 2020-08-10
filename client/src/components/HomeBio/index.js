@@ -36,7 +36,7 @@ export default class HomeBio extends Component {
   
       return (
       
-      
+      <div className="inner">
       <Row>
        <Col className="bio-col" sm={12} md={6}>
        <h1 className="bio-header primaryTextColor">Hi, I'm Kathryn...</h1>
@@ -74,6 +74,7 @@ export default class HomeBio extends Component {
        </div>
        </Col>
     </Row>
+    </div>
       )
   
     }
