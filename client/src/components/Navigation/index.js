@@ -72,7 +72,7 @@ export default class Navigation extends Component {
       // </Navbar>
 
       <div>
-        <Navbar fixed="top" style={{ backgroundColor: this.state.status === "top" ? "transparent" : "#86BFFF", transition: '.6s' }} className="title">
+        <Navbar fixed="top" style={{ backgroundColor: this.state.status === "top" ? "transparent" : "#FFFFFF", transition: '.6s' }} className="title">
           {isMobile ? (
             <Navbar.Brand>
               <div className="menu-icon"><TemporaryDrawer></TemporaryDrawer></div>

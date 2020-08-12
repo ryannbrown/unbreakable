@@ -1,6 +1,6 @@
 import { Container, Nav, Button, Image, Row, Col } from 'react-bootstrap'
 import Navbar from 'react-bootstrap/Navbar'
-import React from 'react';
+import React, { Component } from 'react';
 // import logo from './logo.svg';
 import HomeHero from "../../components/HomeHero/index"
 import HomeBio from "../../components/HomeBio/index"
@@ -12,20 +12,40 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
 
 
-function Homepage() {
+export default class Homepage extends Component {
 
-    return (
-        <div className="homepage-content">
-            {/* <div className="scroll-snap-outer"> */}
-            <HomeHero></HomeHero>
-            {/* <HomeBio></HomeBio>
+    constructor(props) {
+        super(props);
+
+        this.listener = null;
+        this.state = {
+            status: "top",
+            isMobile: false
+        };
+    }
+
+    componentDidMount() {
+        console.log("here!")
+    }
+
+
+
+    render() {
+
+
+
+        return (
+            <div className="homepage-content">
+                {/* <div className="scroll-snap-outer"> */}
+                <HomeHero></HomeHero>
+                {/* <HomeBio></HomeBio>
             <HomeAction/>
             <hr style={{width:  `50%`}}></hr>
             <HomeQuote/>
             <hr style={{width:  `50%`}}></hr>
             </div> */}
 
-            {/* <Row>
+                {/* <Row>
                 <Col>
                     <br></br>
                     <h1 className="lightText addPadding f1">I offer <span className="primaryTextColor">cocktails</span> <FontAwesomeIcon icon={faGlassMartini}></FontAwesomeIcon></h1>
@@ -84,7 +104,7 @@ function Homepage() {
                     <Button variant="outline-dark">More Information</Button>
                 </Col>
             </Row> */}
-        </div>
-    )
+            </div>
+        )
+    }
 }
-export default Homepage
