@@ -5,11 +5,13 @@
 }
 
 .contact-box h1 p {
-    margin:15px 0px;
+    margin:15px;
+
 }
 
 .contact-box p {
-    margin:15px 0px;
+    margin:15px auto;
+    width:75%;
 }
 
 .contact-box button {
@@ -39,6 +41,7 @@
 
 .contact-box p {
     margin:15px 0px;
+    width:100%;
 }
 
 .contact-box button {
