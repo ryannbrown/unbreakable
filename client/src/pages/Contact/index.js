@@ -87,7 +87,7 @@ export default class Contact extends Component {
                         backgroundPosition: `center`,
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
-                        backgroundAttachment: `fixed`,
+                        // backgroundAttachment: `fixed`,
                         height: `44vh`,
                         display: `flex`,
                         alignItems: `center`,
