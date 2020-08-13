@@ -4,6 +4,10 @@
     text-align:left; */
 }
 
+button:focus {
+    outline:none;
+}
+
 .contact-box h1 p {
     margin:15px;
 

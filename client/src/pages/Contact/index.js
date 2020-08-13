@@ -72,7 +72,7 @@ export default class Contact extends Component {
                         position: `relative`
                         //   cover no-repeat center center fixed`
                     }}>
-                        <Image className="hero-logo-contact" src={logo}></Image>
+                        <a href="/"><Image className="hero-logo-contact" src={logo}></Image></a>
                     </Col>
                     {/* <Col md={3}></Col> */}
                 </Row>
@@ -97,7 +97,7 @@ export default class Contact extends Component {
                         <div className="contact-box">
                             <h1>Contact us</h1>
                             <p>Drop us a line the next time you're in Raleigh</p>
-                            <a href="mailto:info@blueheronculinary.com?subject=Contact Blue Heron" subect="Contact Blue Heron"><Button className="contact-btn-link">Email us</Button></a>
+                            <a href="mailto:info@blueheronculinary.com?subject=Contact Blue Heron" subect="Contact Blue Heron"><button className="contact-btn-link">Email us</button></a>
                         </div>
                     </Col>
                     {/* <Col md={3}></Col> */}

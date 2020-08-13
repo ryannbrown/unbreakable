@@ -54,7 +54,7 @@ export default class HomeHero extends Component {
       <div className="inner">
         <div className="cta-nav-btn">
           <a href="/contact">
-            <Button className="contact-btn-link">Contact us</Button>
+            <button className="contact-btn-link">Contact us</button>
           </a>
         </div>
 
