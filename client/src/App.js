@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Navigation from "./components/Navigation/index"
 import Homepage from "./pages/Homepage/index"
+import Contact from "./pages/Contact/index"
 import Admin from "./pages/Admin/index.js"
 import Blog from "./pages/Blog/index.js"
 import Connect from "./pages/Connect/index.js"
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-         <Navigation/>
+         {/* <Navigation/> */}
          <Router history = {history}>
            <Switch>
              {/* <Route path = "/" component={App}/> */}
@@ -45,10 +46,11 @@ function App() {
              <Route path="/connect" component={Connect}/>
              <Route path="/offerings" component={Offerings}/>
              <Route path="/admin" component={Admin}/> */}
+             <Route path="/contact" component={Contact}/>
              <Route path="/" component={Homepage}/>
            </Switch>
          </Router>
-       <Footer></Footer>
+       {/* <Footer></Footer> */}
          
     </div>
   

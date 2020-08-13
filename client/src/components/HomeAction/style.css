@@ -29,23 +29,6 @@ width:90%;
 }
 
 
-.offerings-btn{
-    background-color:#86BFFF;
-    color:white;
-    width:50%;
-    margin:25px;
-}
-
-.offerings-btn:hover {
-    box-shadow: 0 0 20px #86bfffd1;
-    transition: .6s;
-}
-
-.btn:hover {
-    box-shadow: 0 0 20px #86bfffd1;
-    /* color: white !important; */
-    text-decoration: none;
-}
 
 .circle-lines {
     /* width:150px;

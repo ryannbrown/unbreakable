@@ -1,0 +1,50 @@
+.contact-box {
+    margin:0px auto;
+    /* left:25%;
+    text-align:left; */
+}
+
+.contact-box h1 p {
+    margin:15px 0px;
+}
+
+.contact-box p {
+    margin:15px 0px;
+}
+
+.contact-box button {
+    margin:15px 0px;
+    /* padding:25px; */
+}
+
+.hero-logo-contact {
+    margin:0px auto;
+    width:50%;
+}
+
+@media (min-width:667px) {
+.hero-logo-contact {
+    margin:0px auto;
+    width:25%;
+}
+.contact-box {
+    position:absolute;
+    left:15%;
+    text-align:left;
+}
+
+.contact-box h1 p {
+    margin:15px 0px;
+}
+
+.contact-box p {
+    margin:15px 0px;
+}
+
+.contact-box button {
+    margin:15px 0px;
+    /* padding:25px; */
+}
+}
+
+

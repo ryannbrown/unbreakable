@@ -1,0 +1,31 @@
+
+.cta-nav-btn{
+    position:absolute;
+    right:25px;
+    top:25px;
+    padding-right:3rem;
+    padding-top:.3125rem;
+    z-index:5000;
+    
+}
+.contact-btn-link{
+    color: #0E3B62;
+    background-color:transparent;
+    border: 1px solid #0E3B62;
+}
+.contact-btn-link-contactpage{
+    color: #0E3B62;
+    border: 1px solid #0E3B62;
+}
+
+
+.contact-btn-link:hover {
+    color: #fff;
+    background-color: #6F8EA8;
+    border-color: #6F8EA8;
+}
+
+.hero-logo {
+    margin:0px auto;
+    width:25%;
+}

@@ -51,7 +51,7 @@
 .action-button {
     font-size:22px;
     height: 60px;
-    opacity:.5 !important;
+    /* opacity:.5 !i mportant; */
     width: 180px;
     width:100%;
     justify-content: center;

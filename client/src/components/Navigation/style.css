@@ -73,13 +73,6 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 }
 
 
-.cta-nav-btn{
-    position:absolute;
-    right:25px;
-    top:25px;
-    padding-right:3rem;
-    padding-top:.3125rem;
-}
 
 
 .btn-primary {
@@ -99,8 +92,3 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 }
 
 
-.offerings-btn-link:hover {
-    border:none;
-    box-shadow: 0 0 20px #86bfffd1;
-    transition: .6s;
-}
