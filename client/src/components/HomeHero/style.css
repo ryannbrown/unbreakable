@@ -4,7 +4,7 @@
     right:25px;
     top:25px;
     padding-right:3rem;
-    padding-top:.3125rem;
+    /* padding-top:.3125rem; */
     z-index:5000;
     
 }
@@ -29,3 +29,20 @@
     margin:0px auto;
     width:25%;
 }
+
+@media (max-width:667px) {
+    .hero-logo {
+        margin:0px auto;
+        width:50%;
+    }
+
+    .cta-nav-btn{
+    position:absolute;
+    right:0px;
+    /* top:25px; */
+    z-index:5000;
+    
+}
+}
+
+
