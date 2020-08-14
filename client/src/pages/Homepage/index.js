@@ -21,18 +21,34 @@ export default class Homepage extends Component {
         this.state = {
             status: "top",
             isMobile: false,
-            vh: '100vh'
+            vh: '100vh',
+            px: ''
         };
     }
 
     componentDidMount() {
+        let vh = window.innerHeight * 0.01;
+        let px = vh * 100;
+        px += 'px'
+        console.log(px)
+
+
+        this.setState({
+            vh: vh,
+            px: px
+        })
         window.addEventListener('resize', () => {
             console.log("resizing")
             // We execute the same script as before
             let vh = window.innerHeight * 0.01;
+            let px = vh * 100;
+            px += 'px'
+            console.log(px)
+
 
             this.setState({
-                vh: vh
+                vh: vh,
+                px: px
             })
 
             // console.log(window.innerHeight * 0.01);
@@ -44,7 +60,7 @@ export default class Homepage extends Component {
 
 
     render() {
-
+// console.log(this.state.vh)
 
 
         return (
