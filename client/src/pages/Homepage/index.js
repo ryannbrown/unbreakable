@@ -28,45 +28,25 @@ export default class Homepage extends Component {
     componentDidMount() {
         let height = window.innerHeight + 'px';
         console.log(height)
-        // let px = vh * 100;
-        // px += 'px'
-        // console.log(px)
+  
 
 
         this.setState({
             height: height
         })
         window.addEventListener('resize', () => {
-            console.log("resizing")
-            // We execute the same script as before
-            // let vh = window.innerHeight * 0.01;
             let height = window.innerHeight + 'px';
             console.log(height)
             this.setState({
                 height: height
             })
-            // let px = vh * 100;
-            // px += 'px'
-            // console.log(px)
-
-
-            // this.setState({
-            //     // vh: vh,
-            //     px: px
-            // })
-
-            // console.log(window.innerHeight * 0.01);
-            // document.documentElement.style.setProperty('--vh', `32px`);
+     
           });
-        //   console.log(window.innerHeight);
     }
 
 
 
     render() {
-console.log(this.state.height)
-
-
         return (
             <div className="homepage-content" style={{
                 // height: `20vh`, /* Fallback for browsers that do not support Custom Properties */

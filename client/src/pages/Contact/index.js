@@ -26,18 +26,34 @@ export default class Contact extends Component {
 
 
     componentDidMount() {
-        this.listener = document.addEventListener("scroll", e => {
-            var scrolled = document.scrollingElement.scrollTop;
-            if (scrolled >= 120) {
-                if (this.state.status !== "bgChanged") {
-                    this.setState({ status: "bgChanged" });
-                }
-            } else {
-                if (this.state.status !== "top") {
-                    this.setState({ status: "top" });
-                }
-            }
-        });
+        let height = window.innerHeight + 'px';
+        console.log(height)
+  
+
+
+        this.setState({
+            height: height
+        })
+        window.addEventListener('resize', () => {
+            let height = window.innerHeight + 'px';
+            console.log(height)
+            this.setState({
+                height: height
+            })
+     
+          });
+        // this.listener = document.addEventListener("scroll", e => {
+        //     var scrolled = document.scrollingElement.scrollTop;
+        //     if (scrolled >= 120) {
+        //         if (this.state.status !== "bgChanged") {
+        //             this.setState({ status: "bgChanged" });
+        //         }
+        //     } else {
+        //         if (this.state.status !== "top") {
+        //             this.setState({ status: "top" });
+        //         }
+        //     }
+        // });
     }
 
     componentDidUpdate() {
@@ -51,7 +67,9 @@ export default class Contact extends Component {
 
 
         return (
-            <div className="inner">
+            <div className="inner" style={{
+                height: `${this.state.height}`
+            }}>
 
 
                 <Row>
