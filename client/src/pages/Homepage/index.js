@@ -31,6 +31,7 @@ export default class Homepage extends Component {
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
           });
+          console.log(window.innerHeight);
     }
 
 
@@ -41,8 +42,8 @@ export default class Homepage extends Component {
 
         return (
             <div className="homepage-content" style={{
-                height: `20vh`, /* Fallback for browsers that do not support Custom Properties */
-                height: `calc(var(--vh, 1vh) * 100)`
+                // height: `20vh`, /* Fallback for browsers that do not support Custom Properties */
+                // height: `calc(var(--vh, 1vh) * 100)`
             }}>
                 <HomeHero></HomeHero>
             </div>
