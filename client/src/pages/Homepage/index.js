@@ -21,54 +21,58 @@ export default class Homepage extends Component {
         this.state = {
             status: "top",
             isMobile: false,
-            vh: '100vh',
-            px: ''
+           height: '100vh'
         };
     }
 
     componentDidMount() {
-        let vh = window.innerHeight * 0.01;
-        let px = vh * 100;
-        px += 'px'
-        console.log(px)
+        let height = window.innerHeight + 'px';
+        console.log(height)
+        // let px = vh * 100;
+        // px += 'px'
+        // console.log(px)
 
 
         this.setState({
-            vh: vh,
-            px: px
+            height: height
         })
         window.addEventListener('resize', () => {
             console.log("resizing")
             // We execute the same script as before
-            let vh = window.innerHeight * 0.01;
-            let px = vh * 100;
-            px += 'px'
-            console.log(px)
-
-
+            // let vh = window.innerHeight * 0.01;
+            let height = window.innerHeight + 'px';
+            console.log(height)
             this.setState({
-                vh: vh,
-                px: px
+                height: height
             })
+            // let px = vh * 100;
+            // px += 'px'
+            // console.log(px)
+
+
+            // this.setState({
+            //     // vh: vh,
+            //     px: px
+            // })
 
             // console.log(window.innerHeight * 0.01);
             // document.documentElement.style.setProperty('--vh', `32px`);
           });
-          console.log(window.innerHeight);
+        //   console.log(window.innerHeight);
     }
 
 
 
     render() {
-// console.log(this.state.vh)
+console.log(this.state.height)
 
 
         return (
             <div className="homepage-content" style={{
                 // height: `20vh`, /* Fallback for browsers that do not support Custom Properties */
-                height: `${this.state.vh}`
+                height: `${this.state.height}`
             }}>
-                <HomeHero></HomeHero>
+                <HomeHero height={this.state.height}></HomeHero>
             </div>
         )
     }

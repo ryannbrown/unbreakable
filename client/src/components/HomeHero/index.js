@@ -70,8 +70,8 @@ export default class HomeHero extends Component {
             backgroundSize: `cover`,
             backgroundRepeat: `no-repeat`,
             backgroundAttachment: `fixed`,
-            height: `100vh`,
-            maxHeight: '-webkit-fill-available',
+            height: `${this.props.height}`,
+            // maxHeight: '-webkit-fill-available',
             display: `flex`,
             alignItems: `center`,
             position: `relative`
