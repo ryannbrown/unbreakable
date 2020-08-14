@@ -124,6 +124,10 @@
     letter-spacing:3px;
 }
 
+.homepage-content {
+    height: calc(var(--vh, 1vh) * 100);
+}
+
 .homepage-content > hr {
     margin:50px auto;
 }
