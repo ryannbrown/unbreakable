@@ -26,19 +26,30 @@ export default class Contact extends Component {
 
 
     componentDidMount() {
+       const heightNum = window.innerHeight;
         let height = window.innerHeight + 'px';
-        console.log(height)
+        let topHeight = heightNum * 0.56 + 'px';
+        let bottomHeight = heightNum * 0.44 + 'px';
+        console.log(bottomHeight)
   
 
 
         this.setState({
-            height: height
+            height: height,
+            topHeight: topHeight,
+            bottomHeight: bottomHeight
         })
         window.addEventListener('resize', () => {
+            const heightNum = window.innerHeight;
             let height = window.innerHeight + 'px';
-            console.log(height)
+            let topHeight = heightNum * 0.56 + 'px';
+            let bottomHeight = heightNum * 0.44 + 'px';
+            // let height = window.innerHeight + 'px';
+            // console.log(topHeight)
             this.setState({
-                height: height
+                height: height,
+                topHeight: topHeight,
+                bottomHeight: bottomHeight
             })
      
           });
@@ -62,6 +73,7 @@ export default class Contact extends Component {
 
     render() {
 
+        const {topHeight, bottomHeight} = this.state;
 
 
 
@@ -84,7 +96,7 @@ export default class Contact extends Component {
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
                         backgroundAttachment: `fixed`,
-                        height: `56vh`,
+                        height: `${topHeight}`,
                         display: `flex`,
                         alignItems: `center`,
                         position: `relative`
@@ -106,7 +118,7 @@ export default class Contact extends Component {
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
                         // backgroundAttachment: `fixed`,
-                        height: `44vh`,
+                        height: `${bottomHeight}`,
                         display: `flex`,
                         alignItems: `center`,
                         position: `relative`
