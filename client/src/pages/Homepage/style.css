@@ -125,7 +125,11 @@
 }
 
 .homepage-content {
-    height: 100vh;
+    height: 100vh; 
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.inner {
     height: calc(var(--vh, 1vh) * 100);
 }
 

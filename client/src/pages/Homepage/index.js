@@ -20,7 +20,8 @@ export default class Homepage extends Component {
         this.listener = null;
         this.state = {
             status: "top",
-            isMobile: false
+            isMobile: false,
+            vh: '100vh'
         };
     }
 
@@ -29,7 +30,13 @@ export default class Homepage extends Component {
             console.log("resizing")
             // We execute the same script as before
             let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+            this.setState({
+                vh: vh
+            })
+
+            // console.log(window.innerHeight * 0.01);
+            // document.documentElement.style.setProperty('--vh', `32px`);
           });
           console.log(window.innerHeight);
     }
@@ -43,7 +50,7 @@ export default class Homepage extends Component {
         return (
             <div className="homepage-content" style={{
                 // height: `20vh`, /* Fallback for browsers that do not support Custom Properties */
-                // height: `calc(var(--vh, 1vh) * 100)`
+                height: `${this.state.vh}`
             }}>
                 <HomeHero></HomeHero>
             </div>
