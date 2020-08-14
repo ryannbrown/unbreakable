@@ -26,6 +26,9 @@ export default class Homepage extends Component {
 
     componentDidMount() {
         console.log("here!")
+        let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
     }
 
 
@@ -35,7 +38,10 @@ export default class Homepage extends Component {
 
 
         return (
-            <div className="homepage-content">
+            <div className="homepage-content" style={{
+                height: `20vh`, /* Fallback for browsers that do not support Custom Properties */
+                height: `calc(var(--vh, 1vh) * 100)`
+            }}>
                 <HomeHero></HomeHero>
             </div>
         )
