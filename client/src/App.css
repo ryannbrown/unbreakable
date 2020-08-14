@@ -2,14 +2,18 @@
 /* * {
   overflow-x:hidden;
 } */
+
+* {
+  font-family: 'adelle';
+}
 .App {
   text-align: center;
   overflow-x: hidden !important;
 }
 
 h1, h2 {
-  /* font-family: 'Libre Baskerville', serif; */
-  font-family: adelle, serif;
+/* font-family: 'adelle'; */
+  /* font-family: serif; */
 }
 
 h1 {
@@ -18,7 +22,7 @@ h1 {
 
 p, li, h3, h4, h5, a, button {
   /* font-family: 'Roboto', sans-serif; */
-  font-family: adelle, serif;
+  /* font-family: adelle, serif; */
   letter-spacing:.1rem
 }
 
