@@ -170,7 +170,7 @@ textarea{
     min-height:150px;
     height:150px;
     max-height:150px;
-    overflow:hidden;
+    overflow-y:auto;
 }
 
 @media (min-width:997px) {
