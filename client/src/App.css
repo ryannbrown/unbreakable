@@ -8,6 +8,12 @@
 }
 
 
+.light {
+  font-family: 'adelle-ultrathin';
+font-weight: 100;
+font-style: normal;
+}
+
 .App {
   text-align: center;
   overflow-x: hidden !important;
