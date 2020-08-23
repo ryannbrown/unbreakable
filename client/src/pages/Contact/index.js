@@ -9,7 +9,7 @@ import logo from "../../media/Blue-Heron-White.png"
 import heroImg from "../../media/sand-beach.png"
 // import arrow from "../../media/arrow.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -194,7 +194,8 @@ export default class Contact extends Component {
                 {showModal ? (
                     <div className="modal-canvas">
                         <div className="contact-modal">
-                            <button className="exit-btn" onClick={() => { this.setState({ showModal: false }) }}>close</button>
+                            <FontAwesomeIcon className="exit-btn" icon={faTimes} onClick={() => { this.setState({ showModal: false }) }}></FontAwesomeIcon>
+                            {/* <button className="exit-btn" onClick={() => { this.setState({ showModal: false }) }}>close</button> */}
                             <div className="modal-content">
                                 <h1>Contact us</h1>
                                 <p>Plug in an email and send our way!</p>

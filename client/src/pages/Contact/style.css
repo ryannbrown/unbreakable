@@ -73,14 +73,16 @@ button:focus {
 }
 
 .exit-btn {
+    font-size:1.25rem;
     color:white;
     opacity:.5;
     position:absolute;
-    top:5px;
-    left:5px;
+    top:15px;
+    right:15px;
     background-color:transparent;
     border:none;
-    z-index:999
+    z-index:999;
+    cursor: pointer;
 }
 
 .exit-btn:hover{
@@ -221,9 +223,9 @@ input {
 
 
 @media (max-width:997px) {
-    .exit-btn {
+    /* .exit-btn {
         font-size:.75rem;
-    }
+    } */
     .modal-content {
         top:5%;
     }
