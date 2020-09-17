@@ -4,7 +4,7 @@
 
 .contact-box {
     margin:0px auto;
-    color:#0E3B62
+    color:white;
     /* left:25%;
     text-align:left; */
 }
@@ -66,6 +66,7 @@ button:focus {
 .modal-canvas {
     position:fixed;
     background-color:#6F8EA8;
+    background-color:#0E3B62;
     /* backdrop-filter: blur(2px); */
     width:100%;
     height:44vh;
@@ -101,7 +102,7 @@ button:focus {
     height:600px;
     border:2px solid white;
     border-radius:15px;
-    background-color:transparent;
+    background-color: rgba(14, 59, 98,0.5);
     backdrop-filter: blur(60px);
      background-blend-mode:blur;
    
