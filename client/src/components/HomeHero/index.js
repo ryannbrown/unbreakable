@@ -90,7 +90,7 @@ export default class HomeHero extends Component {
             <br></br>
             {/* <div> */}
             {/* <Button className="action-button" variant="outline-dark">Coming Soon     </Button> */}
-            <p className="action-button primaryTextColor">January 2021</p>
+            <p className="action-button primaryTextColor">February 2021</p>
             {/* <div className="arrow-container">
             <Image className="arrow-img center" src={arrow}></Image>
             </div> */}
