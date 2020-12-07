@@ -58,10 +58,8 @@ export default class HomeHero extends Component {
           </a>
         </div>
 
-        <Row>
-          {/* <Col md={3}></Col> */}
-
-          <Col sm={12} md={12} className="home-img" style={{
+        <div>
+          <div sm={12} md={12} className="home-img" style={{
             backgroundImage: `url(${heroImg})`,
             backgroundColor: `#F9F8F0`,
             opacity: `90%`,
@@ -71,40 +69,17 @@ export default class HomeHero extends Component {
             backgroundRepeat: `no-repeat`,
             backgroundAttachment: `fixed`,
             height: `${this.props.height}`,
-            // maxHeight: '-webkit-fill-available',
             display: `flex`,
             alignItems: `center`,
             position: `relative`
-            //   cover no-repeat center center fixed`
           }}>
-            <Image className="hero-logo" src={logo}></Image>
-            {/* <div className="hero-text-block">
-                <h4 className="title-name">Freshness,</h4>
-                <h1 className="title-phrase">Like Never Before</h1>
-            </div> */}
-            {/* <div className="hero-text-block">
-                <h4 className="title-name">Freshness,</h4>
-                <h1 className="title-phrase">Like Never Before</h1>
-            </div> */}
+            <img className="hero-logo" src={logo}></img>
+       
 
             <br></br>
-            {/* <div> */}
-            {/* <Button className="action-button" variant="outline-dark">Coming Soon     </Button> */}
             <p className="action-button primaryTextColor">February 2021</p>
-            {/* <div className="arrow-container">
-            <Image className="arrow-img center" src={arrow}></Image>
-            </div> */}
-            {/* </div> */}
-
-
-
-
-
-
-
-          </Col>
-          {/* <Col md={3}></Col> */}
-        </Row>
+          </div>
+        </div>
       </div>
     )
 

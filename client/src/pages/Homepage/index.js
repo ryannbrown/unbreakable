@@ -2,10 +2,7 @@ import { Container, Nav, Button, Image, Row, Col } from 'react-bootstrap'
 import Navbar from 'react-bootstrap/Navbar'
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import HomeHero from "../../components/HomeHero/index"
-import HomeBio from "../../components/HomeBio/index"
-import HomeAction from "../../components/HomeAction/index"
-import HomeQuote from "../../components/HomeQuote/index"
+import HomeHero from "../../components/HomeHero/index";
 import './style.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

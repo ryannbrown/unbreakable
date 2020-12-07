@@ -119,18 +119,7 @@ export default class Contact extends Component {
         bottomHeight: bottomHeight,
       });
     });
-    // this.listener = document.addEventListener("scroll", e => {
-    //     var scrolled = document.scrollingElement.scrollTop;
-    //     if (scrolled >= 120) {
-    //         if (this.state.status !== "bgChanged") {
-    //             this.setState({ status: "bgChanged" });
-    //         }
-    //     } else {
-    //         if (this.state.status !== "top") {
-    //             this.setState({ status: "top" });
-    //         }
-    //     }
-    // });
+
   }
 
   componentDidUpdate() {
