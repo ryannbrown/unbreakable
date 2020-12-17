@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 
 import './style.css';
 // import profPic from "../../media/5.PNG"
-import placeHolder from "../../../media/placeholder.png"
-
+// import placeHolder from "../../../media/placeholder.png"
+import bookImg from "../../../media/book-img.png"
 
 
 
@@ -38,7 +38,7 @@ export default class Hero extends Component {
     return (
       <div className="home-img" style={{
         // backgroundImage: `url(${heroImg})`,
-        backgroundColor: `white`,
+        backgroundColor: `#f9fafb`,
         opacity: `100%`,
         backgroundBlendMode: `multiply`,
         backgroundPosition: `center`,
@@ -53,7 +53,7 @@ export default class Hero extends Component {
         justifyContent: 'center',
         position: `relative`
       }}>
-        <img className="hero-logo" src={placeHolder}></img>
+        <img className="hero-logo" src={bookImg}></img>
    
 
         <br></br>

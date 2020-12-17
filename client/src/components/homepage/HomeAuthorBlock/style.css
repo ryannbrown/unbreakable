@@ -1,10 +1,46 @@
 .author-content{
     display:flex;
+    width:100%;
 }
 
 .auth-text{
+    width:50%;
     display:flex;
     flex-direction: column;
     justify-content: center;
     margin:50px;
+    padding:75px;
+}
+
+.auth-text h2 {
+    color:#196196;
+}
+
+.auth-text button {
+    background-color:transparent;
+    padding: 10px 30px;
+    width:250px;
+    margin:0px auto;
+    border: 1px solid #868686;
+    transition:.6s;
+}
+.auth-text button:hover {
+    background-color:#196196;
+    color:white;
+    padding: 10px 30px;
+    width:250px;
+    margin:0px auto;
+    border: 1px solid#196196;
+    transition:.6s
+}
+
+.auth-pic{
+    width:50%;
+}
+
+
+
+.auth-img {
+    width:458px;
+    height:591px;
 }

@@ -12,5 +12,16 @@
 
 .subscribe-content h2 {
     color:#196196;
-    margin:25px; 
+    margin:30px; 
+}
+
+.subscribe-content button {
+    border:1px solid #868686;
+    padding:5px 30px;
+    background-color:transparent;
+}
+.subscribe-content input {
+    border:1px solid #868686;
+    background-color:transparent;
+    padding:5px;
 }

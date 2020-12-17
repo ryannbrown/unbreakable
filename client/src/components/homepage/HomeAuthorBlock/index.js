@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import './style.css';
 // import profPic from "../../media/5.PNG"
-import placeHolder from "../../../media/placeholder.png"
+import portrait from "../../../media/portrait.png"
 
 
 
@@ -54,9 +54,9 @@ export default class HomeAuthorBlock extends Component {
           }}>
             {/* <img className="hero-logo" src={logo}></img> */}
             <div className="author-content">
-            <div className="auth-pic"><img className="auth-img" src={placeHolder}></img></div>
+            <div className="auth-pic"><img className="auth-img" src={portrait}></img></div>
             <div className="auth-text">
-              <h1>Carolyn S. Skowron</h1>
+              <h2>Carolyn S. Skowron</h2>
               <p>Author of Unbreakable</p>
               <button>More about the author</button>
             </div>
