@@ -32,6 +32,21 @@
     display:none;
   }
 }
+
+@media (max-width:725px) {
+  .nav-right{
+    flex-direction:column;
+    /* display:none; */
+  }
+  .nav-right a {
+    padding-left: 60px !important;
+}
+
+}
+
+.mobile-header nav, .mobile-header ul {
+  height:auto !important;
+}
   
   /**---- Header ----**/
   
