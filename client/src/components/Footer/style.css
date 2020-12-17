@@ -31,3 +31,16 @@
  margin:10px 25px;
  text-align:center;
 }
+
+.footer-brand{
+  width:150px;
+  margin-bottom:10px;
+}
+
+.social-wrapper img {
+  width:25px;
+  cursor:pointer;
+}
+.social-wrapper img:hover {
+opacity:.5;
+}

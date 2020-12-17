@@ -3,8 +3,10 @@ import { Navbar, NavDropdown } from "react-bootstrap";
 import React, { Component } from "react";
 // import logo from "../../media/stamplogo.png";
 import "./style.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGrinWink } from "@fortawesome/free-solid-svg-icons";
+import logo from "../../media/logo.png"
+import fbLogo from "../../media/fb-grey.png"
+import instaLogo from "../../media/insta-grey.png"
+import cartLogo from "../../media/cart-grey.png"
 var _ = require("lodash");
 
 export default class Footer extends Component {
@@ -25,7 +27,8 @@ export default class Footer extends Component {
       <div>
         <div className="darkfooter">
           <div>
-            <h1 className="brand-title">UNBREAKABLE</h1>
+            {/* <h1 className="brand-title">UNBREAKABLE</h1> */}
+            <img className="footer-brand" src={logo}></img>
             <br></br>
             {/* <hr></hr> */}
           </div>
@@ -36,9 +39,10 @@ export default class Footer extends Component {
               <a><p>About</p></a>
             </div>
             <div className="social-wrapper">
-              <FontAwesomeIcon icon={faGrinWink}/>
-              <FontAwesomeIcon icon={faGrinWink}/>
-              <FontAwesomeIcon icon={faGrinWink}/>
+             <img src={fbLogo}></img>
+             <img src={instaLogo}></img>
+             <img src={cartLogo}></img>
+         
               {/* <img src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_19,h_19,al_c,q_85,usm_0.66_1.00_0.01/81af6121f84c41a5b4391d7d37fce12a.webp"></img> */}
             </div>
         
