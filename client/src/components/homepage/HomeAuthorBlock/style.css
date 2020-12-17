@@ -1,6 +1,7 @@
 .author-content{
     display:flex;
     width:100%;
+    max-width:1200px;
 }
 
 .auth-text{
@@ -9,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     margin:50px;
-    padding:75px;
+    padding:50px;
 }
 
 .auth-text h2 {
@@ -43,4 +44,19 @@
 .auth-img {
     width:458px;
     height:591px;
+}
+
+@media (max-width:750px) {
+    .author-content{
+       flex-direction:column;
+       width:100%;
+       /* margin:0px auto; */
+    }
+    .auth-text{ 
+    width:100%;
+    margin:0;
+    }
+    .auth-pic{ 
+    width:100%;
+    }
 }
