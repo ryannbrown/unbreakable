@@ -1,0 +1,16 @@
+.subscribe-block{
+    display:flex;
+    justify-content: center;
+}
+
+.subscribe-content{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.subscribe-content h2 {
+    color:#196196;
+    margin:25px; 
+}

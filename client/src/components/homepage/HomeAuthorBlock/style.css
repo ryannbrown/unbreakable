@@ -1,0 +1,10 @@
+.author-content{
+    display:flex;
+}
+
+.auth-text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:50px;
+}

@@ -1,0 +1,33 @@
+
+
+.darkfooter {
+  background-color:#F4F4F4;
+  color:#868686;
+  height:375px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.darkfooter h1 {
+  font-size:15px;
+  letter-spacing:2px;
+  font-family: 'ivymode', sans-serif;
+  font-weight:300;
+}
+
+.link-wrapper{
+  display:flex;
+  max-width:980px;
+  margin:25px auto;
+}
+
+
+.social-wrapper > * {
+  margin:10px 15px;
+}
+.link-wrapper a {
+ margin:10px 25px;
+ text-align:center;
+}

@@ -3,15 +3,19 @@
   overflow-x:hidden;
 } */
 
+
+/* @font-face {
+  font-family:"ivymode";
+  src:url("https://use.typekit.net/ksp6ipm.css") format("woff2");
+  font-display:auto;font-style:normal;font-weight:400;
+  } */
+
 * {
-  font-family: 'adelle';
+  font-family: 'ivymode';
 }
 
-
-.light {
-  font-family: 'adelle-ultrathin';
-font-weight: 100;
-font-style: normal;
+.inner{
+  width:100%;
 }
 
 .App {
@@ -20,8 +24,15 @@ font-style: normal;
 }
 
 h1, h2 {
-/* font-family: 'adelle'; */
-  /* font-family: serif; */
+  font-family: 'ivymode', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.brand-title{
+  letter-spacing:5px !important;
+  /* line-height:5px; */
+  color:#868686;
 }
 
 h1 {
@@ -33,16 +44,6 @@ p, li, h3, h4, h5, a, button {
   /* font-family: adelle, serif; */
   letter-spacing:.1rem
 }
-
-.libre {
-  font-family: 'Libre Baskerville', serif;
-}
-
-.rob {
-  font-family: 'Roboto', sans-serif;
-}
-
-
 /* .App {
   background-image:url(../src/media/moroccan-flower.png);
   box-shadow: inset 0 0 0 1000px rgba(217, 189, 189, .7);

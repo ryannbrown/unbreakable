@@ -9,8 +9,10 @@ import {
   Link,
   useParams
 } from "react-router-dom";
+import Navbar from "./components/Nav"
+
+// import Page from "./pages/Homepage/index"
 import Homepage from "./pages/Homepage/index"
-import Contact from "./pages/Contact/index"
 import createHistory from 'history/createBrowserHistory';
 
 
@@ -25,7 +27,7 @@ function App() {
     <div className="App">
          <Router history = {history}>
            <Switch>
-             <Route path="/contact" component={Contact}/>
+             {/* <Route path="/" component={Page}/> */}
              <Route path="/" component={Homepage}/>
            </Switch>
          </Router>

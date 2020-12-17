@@ -1,0 +1,237 @@
+/**---- Fade-In/Out Effect ----**/
+
+.nav-options{
+  width:33.3em;
+}
+  
+  /**---- Header ----**/
+  
+  .header {
+      visibility: hidden;
+      opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 60px;
+    width: 100%;
+    height: 100%;
+    background-color: #0E3B62;
+    overflow-y: scroll;
+    text-align: center;
+    color: #eee;
+      /* transition:.6s; */
+      z-index:5;
+      font-family: 'adelle';
+      overflow:hidden;
+  }
+
+  .header a:hover{
+opacity:.5;
+  }
+
+  /* this has potential to be a bug, as the menu flashes when minimizing on desktop, however setting this at 
+  500px appears to do the trick */
+  @media (max-width:500px) {
+      .header{
+          transition:.6s;
+      }
+  }
+  
+
+li {
+    list-style: none;
+}
+
+  .header nav,
+  .header ul {
+    height: 100%;
+  }
+  
+  .header li {
+    border: none;
+  }
+  
+  .header a {
+      color:#0E3B62;
+    display: block;
+    padding: 35px;
+    -webkit-transition: background-color 300ms ease-in;
+    transition: background-color 300ms ease-in;
+  }
+
+  /**---- Mobile Bar ----**/
+
+.menu-toggle {
+    display: none;
+  }
+  
+  .mobile-bar {
+    z-index: 10;
+    position: fixed;
+    right: 0;
+    left: 0;
+    padding: 0 25px;
+    width: 100%;
+    height: 60px;
+    background-color: #0E3B62;
+    /* -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
+  }
+  
+  /**---- Menu Icon ----**/
+  
+  .menu-icon {
+    display: block;
+    /* position: relative; */
+    text-align:left;
+    position: absolute;
+    top:5px;
+    right:25px;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 300ms ease-in;
+    transition: -webkit-transform 300ms ease-in;
+    transition: transform 300ms ease-in;
+    transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  }
+  
+  .menu-icon > span {
+    display: block;
+    position: absolute;
+    top: 55%;
+    margin-top: -0.3em;
+    width: 100%;
+    height: 0.3em;
+    border-radius: 1px;
+    background-color: #0E3B62;
+    -webkit-transition: -webkit-transform 300ms ease-in;
+    transition: -webkit-transform 300ms ease-in;
+    transition: transform 300ms ease-in;
+    transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  }
+  
+  .menu-icon > span:before,
+  .menu-icon > span:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1px;
+    background-color:#0E3B62;
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+  }
+  
+  .menu-icon > span:before {
+    -webkit-transform: translateY(-0.6em);
+    transform: translateY(-0.6em);
+  }
+  
+  .menu-icon > span:after {
+    -webkit-transform: translateY(0.6em);
+    transform: translateY(0.6em);
+  }
+  
+  /**---- Menu Icon Effects ----**/
+  
+  .menu-toggle:checked + .mobile-bar .menu-icon {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .menu-toggle:checked + .mobile-bar span:before,
+  .menu-toggle:checked + .mobile-bar span:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+
+  @media (min-width: 725px) {
+
+    .mobile-bar {
+      display: none;
+    }
+    
+    .header {
+      z-index: 5;
+      position: fixed;
+      left: 0;
+      padding-top: 60px;
+      width: 100%;
+      height: auto;
+      overflow: auto;
+      visibility: visible;
+      opacity: 1;
+      background-color:transparent;
+      overflow:hidden;
+      /* -webkit-transition: opacity 300ms ease-in, visibility 0s ease-in 300ms;
+      transition: opacity 300ms ease-in, visibility 0s ease-in 300ms; */
+    }
+  
+    .header li {
+      display: inline-block;
+      margin-right: -6px; /* fix the inline-block gap */
+      border: none;
+    }
+  
+    .header a {
+      padding: 12px 25px;
+    }
+  }
+
+  .mobile-header{
+    visibility: visible;
+    opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 15vh;
+  width: 100%;
+  height: 100%;
+  background-color: #0E3B62;
+  overflow-y: scroll;
+  text-align: center;
+  color: #eee;
+  transition:.6s;
+  z-index:5;
+  }
+
+ .mobile-bar {
+      background-color: transparent;
+  }
+
+  .mobile-header nav,
+  .mobile-header ul {
+    height: 100%;
+  }
+  
+  .mobile-header li {
+    /* border-bottom: 1px solid #eee; */
+  }
+  
+  .mobile-header a {
+      font-size:22px;
+      color:white;
+    display: block;
+    padding: 25px;
+    text-align:left;
+    /* -webkit-transition: background-color 300ms ease-in;
+    transition: background-color 300ms ease-in; */
+  }
+  
+  /* .mobile-header a:hover {
+    background-color: #C62828;
+  } */
+
+
+    .mobile-header ~ .mobile-bar .menu-icon > span {
+        background-color:white;
+    }
+
+    .mobile-header ~ .mobile-bar .menu-icon > span:before,
+    .mobile-header ~ .mobile-bar .menu-icon > span:after {
+        background-color:white;
+    }

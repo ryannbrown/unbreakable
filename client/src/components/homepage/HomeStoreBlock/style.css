@@ -1,0 +1,11 @@
+.home-store-block{
+/* display:flex; */
+justify-content: flex-start;
+}
+.home-store-content{
+    display:flex;
+    /* width:200px; */
+    flex-direction: column;
+    padding-left:15%;
+    align-items:flex-start;
+}

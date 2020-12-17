@@ -1,0 +1,22 @@
+.bb-text-content{
+    display:flex;
+    flex-direction: column;
+    color:#F9FAFB
+}
+
+.bb-text-content h1 {
+    font-size:5rem;
+    padding:5rem;
+}
+
+.bb-text-content p {
+    margin:15px;
+}
+
+.vert-line {
+    height:25px;
+    width:5px;
+    border-left:2px solid white;
+    opacity:.25;
+    margin:10px auto;
+}
