@@ -28,20 +28,20 @@ export default class Footer extends Component {
         <div className="darkfooter">
           <div>
             {/* <h1 className="brand-title">UNBREAKABLE</h1> */}
-            <img className="footer-brand" src={logo}></img>
+            <a href="/"><img className="footer-brand" src={logo}></img></a>
             <br></br>
             {/* <hr></hr> */}
           </div>
             <div className="link-wrapper">
-              <a><p>Shop</p></a>
-              <a><p>Blog</p></a>
-              <a><p>Resources</p></a>
-              <a><p>About</p></a>
+              <a  href="/"><p>Shop</p></a>
+              <a  href="/"><p>Blog</p></a>
+              <a  href="/"><p>Resources</p></a>
+              <a  href="/"><p>About</p></a>
             </div>
             <div className="social-wrapper">
-             <img src={fbLogo}></img>
-             <img src={instaLogo}></img>
-             <img src={cartLogo}></img>
+             <a href="/"><img src={fbLogo}></img></a>
+             <a  href="/"><img src={instaLogo}></img></a>
+             <a  href="/"><img src={cartLogo}></img></a>
          
               {/* <img src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_19,h_19,al_c,q_85,usm_0.66_1.00_0.01/81af6121f84c41a5b4391d7d37fce12a.webp"></img> */}
             </div>

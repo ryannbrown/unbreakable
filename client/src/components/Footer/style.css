@@ -23,6 +23,11 @@
   margin:25px auto;
 }
 
+.link-wrapper a:hover {
+  opacity:.5;
+}
+
+
 
 .social-wrapper > * {
   margin:10px 15px;
@@ -44,3 +49,5 @@
 .social-wrapper img:hover {
 opacity:.5;
 }
+
+

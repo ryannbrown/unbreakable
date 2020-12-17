@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import "./style.css";
-var _ = require("lodash");
 // import Mobile from "./mobile"
+import logo from "../../media/logo.png"
+import fbLogo from "../../media/fb-grey.png"
+import instaLogo from "../../media/insta-grey.png"
+import cartLogo from "../../media/cart-grey.png"
+var _ = require("lodash");
 
 export default class Nav extends Component {
   constructor(props) {
@@ -69,6 +73,14 @@ export default class Nav extends Component {
               </li>
             </ul>
           </nav>
+          <div className="nav-brand">
+            <img src={logo}></img>
+          </div>
+          <div className="nav-right">
+             <a  href="/"><img src={instaLogo}></img></a>
+          <a href="/"><img src={fbLogo}></img></a>
+             <a  href="/"><img src={cartLogo}></img></a>
+          </div>
         </header>
         <input type="checkbox" class="menu-toggle" id="menu-toggle" onClick={this.toggleNav} />
         <div class="mobile-bar">
