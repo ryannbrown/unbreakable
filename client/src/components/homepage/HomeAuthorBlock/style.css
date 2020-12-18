@@ -4,6 +4,10 @@
     max-width:1200px;
 }
 
+.home-author-block {
+    min-height:50vh;
+    height:100%;
+}
 .auth-text{
     width:50%;
     display:flex;
@@ -54,9 +58,19 @@
     }
     .auth-text{ 
     width:100%;
-    margin:0;
+    margin:15px 0px;
+    padding: 35px 25px;
+    }
+    .auth-text p {
+        padding:10px;
     }
     .auth-pic{ 
     width:100%;
+    }
+    .auth-img {
+        width:100%;
+        height:auto;
+        border:5px solid white;
+        padding:25px;
     }
 }

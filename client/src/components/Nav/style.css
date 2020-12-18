@@ -20,6 +20,7 @@
 .nav-options{
   width:50em;
   text-align:left;
+  z-index:10;
 }
 
 .nav-brand{

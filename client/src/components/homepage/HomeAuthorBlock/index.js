@@ -46,7 +46,7 @@ export default class HomeAuthorBlock extends Component {
             backgroundRepeat: `no-repeat`,
             backgroundAttachment: `fixed`,
             // height: `${this.props.height}`,
-            height: `100vh`,
+            // height: `100vh`,
             display: `flex`,
             alignItems: `center`,
             position: `relative`,

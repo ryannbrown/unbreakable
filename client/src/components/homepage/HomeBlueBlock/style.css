@@ -2,6 +2,7 @@
     display:flex;
     flex-direction: column;
     color:#F9FAFB;
+    /* justify-content: center; */
 }
 
 .home-blue-block img {
@@ -27,4 +28,20 @@ width:75px;
     border-left:2px solid white;
     opacity:.25;
     margin:10px auto;
+}
+@media(max-width:750px){
+    .home-blue-block {
+        min-height:100% !important;
+        height:100vh !important;
+    }
+    .bb-text-content p{
+    font-size:1rem !important;
+    max-width:100%;
+    padding:25px;
+}
+.bb-text-content h1 {
+    padding:25px 0rem;
+    font-size:2rem;
+    letter-spacing: .25rem;
+}
 }

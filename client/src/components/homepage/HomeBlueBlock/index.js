@@ -55,7 +55,7 @@ export default class HomeBlueBlock extends Component {
             position: `relative`
           }}>
             {/* <img className="hero-logo" src={placeHolder}></img> */}
-            <img src={favWhite}></img>
+            {/* <img src={favWhite}></img> */}
               <div className="bb-text-content">
                 <h1>You are not alone.</h1>
                
