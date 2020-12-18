@@ -62,7 +62,7 @@ handleNavigation = (e) => {
 
   componentDidMount() {
     this.prev = window.scrollY;
-    window.addEventListener('scroll', e => this.handleNavigation(e));
+    // window.addEventListener('scroll', e => this.handleNavigation(e));
 
 
     if (window.innerWidth > 750) {
@@ -162,11 +162,19 @@ handleNavigation = (e) => {
           id="menu-toggle"
           onClick={this.toggleNav}
         />
-        <div class={this.state.hideNav ? 'mobile-bar-hidden': 'mobile-bar' }>
+        {/* <div class={this.state.hideNav ? 'mobile-bar-hidden': 'mobile-bar' }> */}
+        <div class='mobile-bar'>
           <label for="menu-toggle" class="menu-icon">
             <span></span>
           </label>
+          <div className="mobile-nav-brand">
+            <img src={logo}></img>
+          </div>
+          <a href="/">
+             <img className='mbar-cart' src={cartLogo}></img>
+           </a>
         </div>
+     
       </div>
     );
   }
