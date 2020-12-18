@@ -3,11 +3,12 @@
 .darkfooter {
   background-color:#F4F4F4;
   color:#868686;
-  height:375px;
+  height:400px;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position:relative;
 }
 
 .darkfooter h1 {

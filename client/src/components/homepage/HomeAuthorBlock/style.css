@@ -48,6 +48,7 @@
 .auth-img {
     width:458px;
     height:591px;
+    margin:75px 0px;
 }
 
 @media (max-width:750px) {

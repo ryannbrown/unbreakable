@@ -4,6 +4,7 @@ import React, { Component } from "react";
 // import logo from "../../media/stamplogo.png";
 import "./style.css";
 import logo from "../../media/logo.png"
+import jsLogo from "../../media/redlogo.png"
 import fbLogo from "../../media/fb-grey.png"
 import instaLogo from "../../media/insta-grey.png"
 import cartLogo from "../../media/cart-grey.png"
@@ -45,7 +46,12 @@ export default class Footer extends Component {
          
               {/* <img src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_19,h_19,al_c,q_85,usm_0.66_1.00_0.01/81af6121f84c41a5b4391d7d37fce12a.webp"></img> */}
             </div>
-        
+            <div className="soup-block">
+            <a target="_blank" href="https://www.justsoup.io">
+              <img width="20px" src={jsLogo}></img>
+              <p>Powered by Just Soup</p>
+            </a>
+            </div>
         </div>
       </div>
     );
