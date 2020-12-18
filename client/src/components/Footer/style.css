@@ -51,4 +51,9 @@
 opacity:.5;
 }
 
+.soup-block {
+  position: absolute;
+  bottom: 5px;
+}
+
 
