@@ -20,13 +20,15 @@
 
 .hero-book-block{
     width:50%;
+    display:flex;
+    flex-direction: column;
 }
 
 .typewriter{
     font-size:40px;
     /* padding:50px; */
     color:#868686;
-    min-height:200px;
+    min-height:75px;
 }
 
 .typewriter-section{
