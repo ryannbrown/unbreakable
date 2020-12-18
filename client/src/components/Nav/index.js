@@ -20,8 +20,8 @@ export default class Nav extends Component {
       status: "top",
       mobileNavToggle: false,
       scrollingUp: false,
-      hideNav: false
-      // isMobile: false
+      hideNav: false,
+      isMobile: false
     };
   }
 
@@ -39,6 +39,9 @@ export default class Nav extends Component {
 
 
 handleNavigation = (e) => {
+
+  if (window.innerWidth < 750) {
+
   const window = e.currentTarget;
 
   if (this.prev > window.scrollY) {
@@ -55,6 +58,7 @@ handleNavigation = (e) => {
   }
   this.prev = window.scrollY;
 };
+}
 
   componentDidMount() {
     this.prev = window.scrollY;
