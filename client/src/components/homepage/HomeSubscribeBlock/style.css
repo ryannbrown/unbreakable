@@ -20,12 +20,21 @@
     padding:5px 30px;
     background-color:transparent;
 }
+
+.subscribe-content button:hover {
+    background-color:#196196;
+    color:white;
+    /* padding: 10px 30px;
+    width:250px; */
+    margin:0px auto;
+    border: 1px solid#196196;
+    transition:.6s
+}
+
+
+
 .subscribe-content input {
     border:1px solid #868686;
     background-color:transparent;
     padding:5px;
-}
-
-.subscribe-content input::placeholder{
-    padding:10px;
 }

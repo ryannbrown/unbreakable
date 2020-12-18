@@ -4,15 +4,20 @@
     color:#F9FAFB;
 }
 
+.home-blue-block img {
+width:75px;
+}
+
 .bb-text-content h1 {
     font-size:4rem;
     padding:5rem;
-    letter-spacing:1rem;
+    letter-spacing:.5rem;
 }
 
 .bb-text-content p {
     font-size:2rem;
-    margin:15px;
+    max-width:50%;   
+    margin:0px auto;
     color:#F9FAFB;
 }
 

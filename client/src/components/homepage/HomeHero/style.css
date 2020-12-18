@@ -1,0 +1,43 @@
+.hero-content-section{
+    display:flex;
+    width:100%;
+    max-width:1200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text-block{
+    width:50%;
+    padding:15px;
+}
+
+.hero-text-block h3 {
+    color: #196196;
+}
+.hero-text-block h1 {
+    color: #868686;
+}
+
+.hero-book-block{
+    width:50%;
+}
+
+.typewriter{
+    font-size:40px;
+    /* padding:50px; */
+    color:#868686;
+    min-height:200px;
+}
+
+.typewriter-section{
+    padding:50px;
+    display:flex;
+    width:100%;
+    justify-content: center;
+}
+
+
+.typewriter-section span {
+   margin-top:20px;
+   margin-left:2.5px;
+}

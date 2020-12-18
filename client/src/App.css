@@ -6,6 +6,11 @@
 
 * {
   font-family: 'ivymode';
+
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 .inner{

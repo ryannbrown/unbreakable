@@ -1,28 +1,34 @@
+import React, { Component } from "react";
 
-import React, { Component } from 'react';
-
-import './style.css';
+import "./style.css";
 // import profPic from "../../media/5.PNG"
 // import placeHolder from "../../../media/placeholder.png"
-import bookImg from "../../../media/book-img.png"
-
-
-
+import bookImg from "../../../media/book-img.png";
+import Typed from "typed.js";
 
 export default class Hero extends Component {
-
   constructor(props) {
     super(props);
 
     this.listener = null;
     this.state = {
-      status: "top"
+      status: "top",
+      // typed: ''
     };
   }
 
-
   componentDidMount() {
- 
+    var typed3 = new Typed(".typewriter", {
+      strings: [
+        "Breaking the Silence.",
+        "Finding My Voice.",
+        "Sharing My Story.",
+      ],
+      typeSpeed: 100,
+      backSpeed: 0,
+      smartBackspace: true, // this is a default
+      loop: true,
+    });
   }
 
   componentDidUpdate() {
@@ -30,36 +36,47 @@ export default class Hero extends Component {
   }
 
   render() {
-
-
-
-
-
     return (
-      <div className="home-img" style={{
-        // backgroundImage: `url(${heroImg})`,
-        backgroundColor: `#f9fafb`,
-        opacity: `100%`,
-        backgroundBlendMode: `multiply`,
-        backgroundPosition: `center`,
-        backgroundSize: `cover`,
-        backgroundRepeat: `no-repeat`,
-        backgroundAttachment: `fixed`,
-        // height: `${this.props.height}`,
-        height: `100vh`,
-        width:'100%',
-        display: `flex`,
-        alignItems: `center`,
-        justifyContent: 'center',
-        position: `relative`
-      }}>
-        <img className="hero-logo" src={bookImg}></img>
-   
+      <div
+        className="home-img"
+        style={{
+          // backgroundImage: `url(${heroImg})`,
+          backgroundColor: `#f9fafb`,
+          opacity: `100%`,
+          backgroundBlendMode: `multiply`,
+          backgroundPosition: `center`,
+          backgroundSize: `cover`,
+          backgroundRepeat: `no-repeat`,
+          backgroundAttachment: `fixed`,
+          // height: `${this.props.height}`,
+          height: `100vh`,
+          width: "100%",
+          display: `flex`,
+          alignItems: `center`,
+          justifyContent: "center",
+          position: `relative`,
+        }}
+      >
+        {/* <div className="typewriter"></div> */}
+        <div className="hero-content-section">
+          <div className="hero-text-block">
+            <div>
+              <h3>UNBREAKABLE</h3>
+            </div>
+            <div className="typewriter-section">
+            <div className="typewriter"></div>
+            </div>
 
-        <br></br>
+          </div>
+
+          <div className="hero-book-block">
+            <img className="hero-book-img" src={bookImg}></img>
+          </div>
+        </div>
+
+        {/* <br></br> */}
         {/* <p style={{color:'#0e3b62'}} className="action-button">February 2021</p> */}
       </div>
-    )
-
+    );
   }
 }
