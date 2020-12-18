@@ -19,6 +19,8 @@ export default class Nav extends Component {
     this.state = {
       status: "top",
       mobileNavToggle: false,
+      scrollingUp: false,
+      hideNav: false
       // isMobile: false
     };
   }
@@ -35,7 +37,30 @@ export default class Nav extends Component {
     }
   };
 
+
+handleNavigation = (e) => {
+  const window = e.currentTarget;
+
+  if (this.prev > window.scrollY) {
+    // console.log("scrolling up")
+      this.setState({
+        hideNav: false
+      })
+  } 
+  else if (this.prev < window.scrollY) {
+    console.log("scroll down, hide nav")
+      this.setState({
+        hideNav:true
+      })
+  }
+  this.prev = window.scrollY;
+};
+
   componentDidMount() {
+    this.prev = window.scrollY;
+    window.addEventListener('scroll', e => this.handleNavigation(e));
+
+
     if (window.innerWidth > 750) {
       this.setState({
         isMobile: true,
@@ -44,6 +69,16 @@ export default class Nav extends Component {
   }
 
   componentDidUpdate() {
+
+// if (this.state.lastPosition > 0) {
+//   console.log("here boy")
+//       if (position < this.state.lastPosition) {
+//         // console.log(position, "scrolling up")
+//         // console.log("scrolling up")
+//       }
+//     }
+
+    
     window.addEventListener(
       "resize",
       _.debounce(() => {
@@ -123,7 +158,7 @@ export default class Nav extends Component {
           id="menu-toggle"
           onClick={this.toggleNav}
         />
-        <div class="mobile-bar">
+        <div class={this.state.hideNav ? 'mobile-bar-hidden': 'mobile-bar' }>
           <label for="menu-toggle" class="menu-icon">
             <span></span>
           </label>

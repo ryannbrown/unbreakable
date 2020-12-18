@@ -247,7 +247,13 @@ li {
   }
 
  .mobile-bar {
-      background-color: transparent;
+      /* background-color: transparent; */
+      background-color: white;
+      transition:.6s;
+  }
+
+  .menu-toggle:checked + .mobile-bar {
+    background-color:transparent;
   }
 
   .mobile-header nav,
