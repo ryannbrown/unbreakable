@@ -186,13 +186,13 @@ li {
   }
   
   .menu-icon > span:before {
-    -webkit-transform: translateY(-0.6em);
-    transform: translateY(-0.6em);
+    -webkit-transform: translateY(-0.45em);
+    transform: translateY(-0.45em);
   }
   
   .menu-icon > span:after {
-    -webkit-transform: translateY(0.6em);
-    transform: translateY(0.6em);
+    -webkit-transform: translateY(0.45em);
+    transform: translateY(0.45em);
   }
   
   /**---- Menu Icon Effects ----**/
