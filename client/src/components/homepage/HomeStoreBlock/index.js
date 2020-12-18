@@ -35,30 +35,28 @@ export default class HomeStoreBlock extends Component {
 
 
     return (
-        <div>
-          <div className="home-store-block" style={{
+    
+           <div className="home-store-content">
+             <div className="home-store-text">
+             {/* <div> */}
+               <h2>Online store</h2>
+               <h2> coming soon!</h2>
+             {/* </div> */}
+             </div>
+             <div className="home-store-img" style={{
             backgroundImage: `url(${merch})`,
-            backgroundColor: `#F9F8F0`,
+            // backgroundColor: `rgb(244 244 236)`,
             opacity: `90%`,
             backgroundBlendMode: `multiply`,
             backgroundPosition: `center right`,
             backgroundSize: `cover`,
             backgroundRepeat: `no-repeat`,
             // backgroundAttachment: `fixed`,
-            height: `100vh`,
-            display: `flex`,
-            alignItems: `center`,
-            position: `relative`
-          }}>
-           
-           <div className="home-store-content">
-             {/* <div> */}
-               <h2>Online store</h2>
-               <h2> coming soon!</h2>
-             {/* </div> */}
+            width: '75%',
+            height: `100vh`
+          }}></div>
            </div>
-          </div>
-        </div>
+
     )
 
   }
