@@ -52,7 +52,7 @@ export default class HomeStoreBlock extends Component {
             backgroundSize: `cover`,
             backgroundRepeat: `no-repeat`,
             // backgroundAttachment: `fixed`,
-            width: '75%',
+            width: '100%',
             height: `100vh`
           }}></div>
            </div>
