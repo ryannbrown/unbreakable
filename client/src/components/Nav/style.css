@@ -47,11 +47,14 @@ top:25px;
 
 @media (max-width:725px) {
   .nav-right{
-    flex-direction:column;
+    flex-direction:row !important;
     /* display:none; */
   }
-  .nav-right a {
-    padding-left: 60px !important;
+  .nav-right a:first-child {
+    padding-left: 65px !important;
+}
+.nav-right a {
+  padding:15px !important;
 }
 
 }
