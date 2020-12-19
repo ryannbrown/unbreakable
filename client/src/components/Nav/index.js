@@ -46,7 +46,7 @@ handleNavigation = (e) => {
   const window = e.currentTarget;
 
   if (this.prev > window.scrollY) {
-    // console.log("scrolling up")
+    console.log("scrolling up")
       this.setState({
         hideNav: false
       })
@@ -66,12 +66,16 @@ handleNavigation = (e) => {
     window.addEventListener('scroll', e => this.handleNavigation(e));
 
 
-    if (window.innerWidth > 750) {
+    if (window.innerWidth < 725) {
       this.setState({
         isMobile: true,
       });
-    }
+    } else if (window.innerWidth < 725) {
+      this.setState({
+        isMobile: false,
+      });
   }
+}
 
   componentDidUpdate() {
 
@@ -87,13 +91,17 @@ handleNavigation = (e) => {
     window.addEventListener(
       "resize",
       _.debounce(() => {
-        if (window.innerWidth > 750) {
+        if (window.innerWidth > 725) {
           this.setState({
             mobileNavToggle: false,
+            isMobile: false
           });
           document.getElementById("navvy-bar").className = "header";
           document.getElementById("menu-toggle").checked = false;
-        } else if (window.innerWidth < 750) {
+        } else if (window.innerWidth < 725) {
+          this.setState({
+            isMobile:true
+          })
           if (this.state.mobileNavToggle) {
             document.getElementById("menu-toggle").checked = true;
           }
@@ -107,7 +115,8 @@ handleNavigation = (e) => {
       <div className="nav-section">
         <header
           id="navvy-bar"
-          class={this.state.mobileNavToggle ? "mobile-header" : 'header' + (this.state.hideNav ? '-hidden' : '')}
+          class={this.state.mobileNavToggle ? "mobile-header" : 'header'}
+          // class={this.state.mobileNavToggle ? "mobile-header" : 'header' + (this.state.hideNav ? '-hidden' : '')}
         >
           <nav className="nav-options">
             <ul>
@@ -133,7 +142,7 @@ handleNavigation = (e) => {
           <div className="nav-brand">
             <img src={logo}></img>
           </div>
-          { this.state.isMobile?  <div className="nav-right">
+          { !this.state.isMobile?  <div className="nav-right">
             <a href="/">
               <img src={instaLogo}></img>
             </a>

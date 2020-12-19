@@ -217,6 +217,8 @@ li {
     .mobile-bar {
       display: none;
     }
+
+  
     
     .header {
       z-index: 5;
@@ -249,6 +251,10 @@ li {
     .header a {
       padding: 25px 15px;
     }
+
+    /* .header-hidden{
+      display:none;
+    } */
   }
 
   .mobile-header{
@@ -284,6 +290,9 @@ li {
   }
 
   .menu-toggle:checked + .mobile-bar .mobile-nav-brand img {
+    display:none;
+  }
+  .menu-toggle:checked + .mobile-bar .mbar-cart {
     display:none;
   }
 
