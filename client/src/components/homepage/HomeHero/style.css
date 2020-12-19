@@ -41,8 +41,9 @@
 
 
 .typewriter-section span {
-   margin-top:20px;
-   margin-left:2.5px;
+    margin-left: 2.5px;
+    font-size: 2.75rem;
+    color: #868686;
 }
 
 @media(max-width:1000px) {
@@ -63,11 +64,12 @@
     .typewriter {
         font-size:1.75rem;
     }
+    .typewriter-section span {
+        font-size: 1.75rem;
+        color: #868686;
+    }
     .typewriter-section {
         padding:15px;
-    }
-    .typewriter-section span {
-        margin-top:10px;
     }
     .hero-content-section h3 {
         font-size:1.25rem;
