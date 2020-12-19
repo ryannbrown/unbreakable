@@ -220,7 +220,7 @@ li {
     
     .header {
       z-index: 5;
-      position: absolute;
+      position: fixed;
       left: 0;
       /* padding-top: 60px; */
       width: 100%;
@@ -228,16 +228,22 @@ li {
       overflow: auto;
       visibility: visible;
       opacity: 1;
-      background-color:transparent;
+      background-color:white;
       overflow:hidden;
       /* -webkit-transition: opacity 300ms ease-in, visibility 0s ease-in 300ms;
       transition: opacity 300ms ease-in, visibility 0s ease-in 300ms; */
+      transition:.6s;
+    }
+
+    .header > * {
+      transition:.6s;
     }
   
     .header li {
       display: inline-block;
       margin-right: -6px; /* fix the inline-block gap */
       border: none;
+      
     }
   
     .header a {

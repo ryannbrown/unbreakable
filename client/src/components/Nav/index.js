@@ -39,8 +39,9 @@ export default class Nav extends Component {
 
 
 handleNavigation = (e) => {
+  // console.log("handling nav");
 
-  if (window.innerWidth < 750) {
+  // if (window.innerWidth < 750) {
 
   const window = e.currentTarget;
 
@@ -57,12 +58,12 @@ handleNavigation = (e) => {
       })
   }
   this.prev = window.scrollY;
-};
+// };
 }
 
   componentDidMount() {
     this.prev = window.scrollY;
-    // window.addEventListener('scroll', e => this.handleNavigation(e));
+    window.addEventListener('scroll', e => this.handleNavigation(e));
 
 
     if (window.innerWidth > 750) {
@@ -106,7 +107,7 @@ handleNavigation = (e) => {
       <div className="nav-section">
         <header
           id="navvy-bar"
-          class={this.state.mobileNavToggle ? "mobile-header" : "header"}
+          class={this.state.mobileNavToggle ? "mobile-header" : 'header' + (this.state.hideNav ? '-hidden' : '')}
         >
           <nav className="nav-options">
             <ul>
