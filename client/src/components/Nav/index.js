@@ -115,8 +115,8 @@ handleNavigation = (e) => {
       <div className="nav-section">
         <header
           id="navvy-bar"
+          // class={this.state.mobileNavToggle ? "mobile-header" + (this.state.hideNav ? '-hidden' : '') : 'header' + (this.state.hideNav ? '-hidden' : '')}
           class={this.state.mobileNavToggle ? "mobile-header" : 'header'}
-          // class={this.state.mobileNavToggle ? "mobile-header" : 'header' + (this.state.hideNav ? '-hidden' : '')}
         >
           <nav className="nav-options">
             <ul>

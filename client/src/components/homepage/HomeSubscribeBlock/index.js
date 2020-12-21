@@ -1,25 +1,19 @@
 import React, { Component } from "react";
-
 import "./style.css";
 // import profPic from "../../media/5.PNG"
 import tanWaves from "../../../media/tan-waves.png";
-
 export default class HomeSubscribeBlock extends Component {
   constructor(props) {
     super(props);
-
     this.listener = null;
     this.state = {
       status: "top",
     };
   }
-
   componentDidMount() {}
-
   componentDidUpdate() {
     document.removeEventListener("scroll", this.listener);
   }
-
   render() {
     return (
       <div

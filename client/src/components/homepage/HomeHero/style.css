@@ -1,77 +1,71 @@
-.hero-content-section{
-    display:flex;
-    width:100%;
-    max-width:1200px;
+.hero-content-section {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
     align-items: center;
     justify-content: center;
-}
-
-
-.hero-text-block{
-    width:50%;
-    padding:15px;
-}
-
-.hero-text-block h3 {
+  }
+  .hero-text-block {
+    width: 50%;
+    padding: 15px;
+  }
+  .hero-text-block h3 {
     color: #196196;
-}
-.hero-text-block h1 {
+    font-weight: 300;
+    letter-spacing: 0.6rem;
+  }
+  .hero-text-block h1 {
     color: #868686;
-}
-
-.hero-book-block{
-    max-width:50%;
-    display:flex;
+  }
+  .hero-book-block {
+    max-width: 75%;
+    display: flex;
     flex-direction: column;
-}
-
-.typewriter{
+  }
+  .typewriter {
     font-size: 2.75rem;
     /* padding:50px; */
-    color:#868686;
-    min-height:75px;
-}
-
-.typewriter-section{
-    padding:50px;
-    display:flex;
-    width:100%;
+    color: #868686;
+    min-height: 75px;
+    letter-spacing: 0.2rem;
+  }
+  .typewriter-section {
+    padding: 50px;
+    display: flex;
+    width: 100%;
     justify-content: center;
-}
-
-
-.typewriter-section span {
+  }
+  .typewriter-section span {
     margin-left: 2.5px;
     font-size: 2.75rem;
     color: #868686;
-}
-
-@media(max-width:1000px) {
+  }
+  @media (max-width: 1000px) {
     img.hero-book-img {
-        width: 100%;
-        margin: 50% 0%;
-        padding-top: 25%;
+      width: 100%;
+      margin: 42% 0%;
+      padding-top: 5%;
     }
-    .hero-content-section{
-        flex-direction: column-reverse;
+    .hero-content-section {
+      flex-direction: column-reverse;
     }
     .hero-book-block {
-        width:auto;
+      width: auto;
     }
     .hero-text-block {
-        width:100%;
+      width: 100%;
     }
     .typewriter {
-        font-size:1.75rem;
+      font-size: 1.75rem;
     }
     .typewriter-section span {
-        font-size: 1.75rem;
-        color: #868686;
+      font-size: 1.75rem;
+      color: #868686;
     }
     .typewriter-section {
-        padding:15px;
+      padding: 15px;
     }
     .hero-content-section h3 {
-        font-size:1.25rem;
+      font-size: 1.25rem;
     }
-}
+  }
