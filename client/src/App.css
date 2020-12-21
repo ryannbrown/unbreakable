@@ -58,3 +58,11 @@ a:hover {
   text-decoration:none;
 }
 
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
