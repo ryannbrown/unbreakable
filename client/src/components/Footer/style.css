@@ -21,7 +21,7 @@
 .link-wrapper{
   display:flex;
   max-width:980px;
-  margin:25px auto;
+  margin:25px 0px;
 }
 
 .link-wrapper a:hover {
@@ -54,6 +54,13 @@ opacity:.5;
 .soup-block {
   position: absolute;
   bottom: 5px;
+}
+
+@media(max-width:750px){
+  .link-wrapper a {
+    margin:10px 15px;
+    text-align:center;
+   }
 }
 
 

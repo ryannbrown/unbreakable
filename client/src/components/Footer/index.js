@@ -48,7 +48,7 @@ export default class Footer extends Component {
             </div>
             <div className="soup-block">
             <a target="_blank" href="https://www.justsoup.io">
-              <img width="20px" src={jsLogo}></img>
+              {/* <img width="20px" src={jsLogo}></img> */}
               <p>Powered by Just Soup</p>
             </a>
             </div>
