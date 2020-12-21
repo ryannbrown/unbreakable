@@ -24,6 +24,7 @@ export default class Hero extends Component {
         "Finding My Voice.",
         "Sharing My Story.",
       ],
+      backDelay: 1000,
       typeSpeed: 100,
       backSpeed: 0,
       smartBackspace: true, // this is a default

@@ -17,6 +17,10 @@ html{
   width:100%;
 }
 
+body {
+  font-weight:300;
+}
+
 .App {
   text-align: center;
   overflow-x: hidden !important;

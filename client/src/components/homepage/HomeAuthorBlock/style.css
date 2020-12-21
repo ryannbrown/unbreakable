@@ -24,6 +24,7 @@
     margin: 0 auto;
     transition: 0.6s;
     margin-top: 10px;
+    border: 1px solid;
   }
   .auth-text button:hover {
     background-color: #196196;
