@@ -37,7 +37,8 @@
     }
     .home-store-img{
         width:100% !important;
-        background-size: contain !important;
+        background-size: cover !important;
         height: 75vh !important;
+        background-position-x: 60% !important;
     }
 }

@@ -30,6 +30,28 @@
     border-top: 1px solid #868686;
     border-right: none;
     background-color: transparent;
-    padding: 1.4em 2.338em;
+    padding: 1.4em 7em 1.4em 2em;
+    /* padding: 1.4em 2.338em; */
     letter-spacing: .1rem;
+}
+
+  @media(max-width:725px) {
+    .subscribe-content input {
+        padding: 1.4em 2.338em !important;
+    }
+      .form-parent {
+        max-width: 85%;
+        margin: 0px auto;
+      }
+      .subscribe-form{
+          display:flex;
+      }
+      .subscribe-content button {
+        border: 1px solid #868686;
+        padding: 1em 2em;
+        background-color: transparent;
+      }
+      .subscribe-content input {
+          width:100%;
+      }
   }
