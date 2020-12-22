@@ -3,7 +3,7 @@
   width: 17px;
 }
 .nav-brand img {
-  margin-top: 25px;
+  /* margin-top: 25px; */
   width: 150px;
 }
 .mobile-nav-brand img {
@@ -26,7 +26,8 @@
   z-index: 10;
 }
 .nav-brand {
-  width: 100%;
+  /* width: 100%; */
+  z-index:400;
   margin-left: -35em;
 }
 @media (max-width: 1100px) {

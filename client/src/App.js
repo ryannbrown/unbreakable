@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { Container, Nav, Button, Col, Row, Card } from 'react-bootstrap'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,9 +9,10 @@ import {
   Link,
   useParams
 } from "react-router-dom";
-import Navbar from "./components/Nav"
+
 
 // import Page from "./pages/Homepage/index"
+import About from "./pages/About"
 import Homepage from "./pages/Homepage/index"
 import createHistory from 'history/createBrowserHistory';
 
@@ -28,6 +29,7 @@ function App() {
          <Router history = {history}>
            <Switch>
              {/* <Route path="/" component={Page}/> */}
+             <Route path="/about" component={About}/>
              <Route path="/" component={Homepage}/>
            </Switch>
          </Router>

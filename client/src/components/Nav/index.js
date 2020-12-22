@@ -121,17 +121,17 @@ handleNavigation = (e) => {
           <nav className="nav-options">
             <ul>
               <li>
-                <a href="#">About</a>
+                <a href="/about">About</a>
               </li>
               <li>
                 <a href="#">Blog</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#">Resources</a>
               </li>
               <li>
                 <a href="">Shop</a>
-              </li>
+              </li> */}
             </ul>
           </nav>
           {/* <div className="mobile-nav-logos">
@@ -140,10 +140,11 @@ handleNavigation = (e) => {
              <a  href="/"><img src={cartLogo}></img></a>
           </div> */}
           <div className="nav-brand">
-            <img src={logo}></img>
+            <a href="/"><img src={logo}></img>
+              </a>
           </div>
           { !this.state.isMobile?  <div className="nav-right">
-            <a href="/">
+            <a href="https://www.instagram.com/Carolyn9787/">
               <img src={instaLogo}></img>
             </a>
             <a href="/">
@@ -154,7 +155,7 @@ handleNavigation = (e) => {
             </a>
           </div> : 
            <div className="nav-right">
-           <a href="/">
+           <a href="https://www.instagram.com/Carolyn9787/">
              <img src={instaLogoW}></img>
            </a>
            <a href="/">
