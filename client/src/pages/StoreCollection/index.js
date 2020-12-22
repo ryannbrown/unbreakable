@@ -90,26 +90,26 @@ export default class StoreCollection extends Component {
         });
       }
 
-    componentDidMount() {
-console.log("heyyyy collections")
-      console.log(this.props.match.params);
-      let param = Object.values(this.props.match.params);
-      console.log("param", param);
-
-      let collectionId = param.toString();
-
-        console.log(collectionId)
-
-
-        this.props.client.collection.fetchWithProducts(collectionId, {productsFirst: 10}).then((collection) => {
-          // Do something with the collection
-          console.log("this collection", collection);
-          console.log("this collection products:", collection.products);
-          this.setState({products: collection.products})
-        });
-
-
-    }
+      componentDidMount() {
+        console.log("heyyyy collections")
+              console.log(this.props.match.params);
+              let param = Object.values(this.props.match.params);
+              console.log("param", param);
+        
+              let handle = param.toString();
+        
+                console.log(handle)
+        
+        
+                this.props.client.collection.fetchByHandle(handle, {productsFirst: 10}).then((collection) => {
+                  // Do something with the collection
+                  console.log("this collection", collection);
+                  console.log("this collection products:", collection.products);
+                  this.setState({products: collection.products})
+                });
+        
+        
+            }
 
 componentDidUpdate(){
     // console.log("store", this.state.isCartOpen)
@@ -123,7 +123,7 @@ componentDidUpdate(){
         if (collections.length > 0) {
             var collectionList = collections.map((item) => {
                 return (
-                  <a href={`/shop/${item.id}`}>{item.title}</a>
+                  <a href={`/shop/${item.handle}`}>{item.title}</a>
                 )
             })
         }

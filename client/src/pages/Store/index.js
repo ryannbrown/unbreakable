@@ -22,6 +22,14 @@ export default class Store extends Component {
             collections: this.props.collections,
             updateCartClose: this.props.updateCartClose
           };
+        // this.state = {
+        //     isCartOpen: false,
+        //     checkout: { lineItems: [] },
+        //     products: [],
+        //     shop: {},
+        //     collections: [],
+        //     updateCartClose: false
+        //   };
           this.handleCartClose = this.handleCartClose.bind(this);
           this.addVariantToCart = this.addVariantToCart.bind(this);
           this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
@@ -77,43 +85,55 @@ export default class Store extends Component {
       }
 
       
-    handleCartClose() {
+    handleCartClose = () => {
         console.log("clicked to close")
         this.setState({
           isCartOpen: false,
         });
       }
     handleCartOpen = () =>  {
-        console.log("clicked to close")
+        console.log("clicked to open store")
         this.setState({
           isCartOpen: true,
         });
       }
 
     componentDidMount() {
-        console.log(this.props.client.checkout)
+       console.log(this.props.products)
     }
 
-componentDidUpdate(){
-    // console.log("store", this.state.isCartOpen)
+componentDidUpdate(oldProps){
+    if (oldProps.data !== this.props.data) {
+        this.state = ({
+            isCartOpen: this.props.isCartOpen,
+            checkout: this.props.checkout,
+            products: this.props.products,
+            shop: this.props.shop,
+            collections: this.props.collections,
+            updateCartClose: this.props.updateCartClose
+          });
+
+    }
+   
 }
 
     render() {
         const {collections} = this.props;
+        // console.log("products", this.state.products)
 
-        console.log(collections)
+        console.log("collections", collections)
 
         if (collections.length > 0) {
             var collectionList = collections.map((item) => {
                 return (
-                    <a href={`/shop/${item.id}`}>{item.title}</a>
+                    <a href={`/shop/${item.handle}`}>{item.title}</a>
                 )
             })
         }
 
         return (
             <div className="App">
-                <Nav isCartOpen={this.state.isCartOpen} handleCartClose={this.handleCartClose} handleCartOpen={this.handleCartOpen}></Nav>
+                {/* <Nav isCartOpen={this.state.isCartOpen} handleCartClose={this.handleCartClose} handleCartOpen={this.handleCartOpen}></Nav> */}
               <header className="App__header">
                 {!this.state.isCartOpen && (
                   <div className="App__view-cart-wrapper">

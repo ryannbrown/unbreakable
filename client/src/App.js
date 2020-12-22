@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { Container, Nav, Button, Col, Row, Card } from 'react-bootstrap'
+// import { Container, Nav, Button, Col, Row, Card } from 'react-bootstrap'
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,7 +9,7 @@ import {
   Link,
   useParams
 } from "react-router-dom";
-import Navbar from "./components/Nav"
+import Nav from "./components/Nav"
 
 // import Page from "./pages/Homepage/index"
 import Shop from "./pages/Store/index"
@@ -64,16 +64,28 @@ class App extends Component {
     });
   }
 
+  handleCartClose = () => {
+    console.log("clicked to close")
+    this.setState({
+      isCartOpen: false,
+    });
+  }
+handleCartOpen = () =>  {
+    console.log("clicked to open")
+    this.setState({
+      isCartOpen: true,
+    });
+  }
   
  
 
   componentDidUpdate(prevState) {
-    if (this.state.updateCartClose !== prevState.updateCartClose && this.state.isCartOpen == true) {
-      console.log(this.state.isCartOpen, "updated app")
-      this.setState({
-        updateCartClose: true
-      })
-    }
+    // if (this.state.updateCartClose !== prevState.updateCartClose && this.state.isCartOpen == true) {
+    //   console.log(this.state.isCartOpen, "updated app")
+    //   this.setState({
+    //     updateCartClose: true
+    //   })
+    // }
   }
 
   render() {
@@ -83,6 +95,7 @@ class App extends Component {
     return (
       <div className="App">
            <Router>
+           <Nav checkout={checkout} isCartOpen={this.state.isCartOpen} handleCartClose={this.handleCartClose} handleCartOpen={this.handleCartOpen}></Nav>
              <Switch>
                {/* <Route path="/" component={Page}/> */}
                <Route exact path="/shop" render={(props) => <Shop client={this.props.client} {...props} isCartOpen={isCartOpen} checkout={checkout} products={products } shop={shop} collections={collections} addVariantToCart={this.addVariantToCart}
