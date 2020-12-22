@@ -1,0 +1,30 @@
+.blog-wrapper {
+    display:flex;
+    max-width:780px;
+    margin:50px auto;
+    align-content:center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.blog-post {
+    flex: 0 0 41%;
+    margin:10px;
+    text-align:center;
+    justify-content: center;
+    align-items:center;
+}
+
+.blog-post p {
+    margin:10px;
+}
+
+.blog-img {
+    height:200px;
+    width:auto;
+}
+.blog-img:hover {
+    box-shadow: 0 0 0 3px #196196;
+    transition: .3s;
+    cursor: pointer;
+}

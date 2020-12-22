@@ -9,11 +9,11 @@ import {
   Link,
   useParams
 } from "react-router-dom";
-
-
 // import Page from "./pages/Homepage/index"
 import About from "./pages/About"
 import Homepage from "./pages/Homepage/index"
+import Blog from "./pages/Blog/index"
+import BlogPost from "./pages/BlogPost/index"
 import createHistory from 'history/createBrowserHistory';
 
 
@@ -29,6 +29,8 @@ function App() {
          <Router history = {history}>
            <Switch>
              {/* <Route path="/" component={Page}/> */}
+             <Route path="/blog/:post" component={BlogPost}/>
+             <Route path="/blog" component={Blog}/>
              <Route path="/about" component={About}/>
              <Route path="/" component={Homepage}/>
            </Switch>
