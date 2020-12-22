@@ -36,6 +36,7 @@
     "react-https-redirect": "^1.1.0",
     "react-router-hash-link": "^1.2.2",
     "react-scroll-into-view": "^1.8.2",
+    "shopify-buy": "^2.11.0",
     "typed.js": "^2.0.11"
   },
   "devDependencies": {

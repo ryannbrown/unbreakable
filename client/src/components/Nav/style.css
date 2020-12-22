@@ -5,6 +5,7 @@
 .nav-brand img {
   margin-top: 25px;
   width: 150px;
+  display:unset;
 }
 .mobile-nav-brand img {
   width: 150px;

@@ -130,7 +130,7 @@ handleNavigation = (e) => {
                 <a href="#">Resources</a>
               </li>
               <li>
-                <a href="">Shop</a>
+                <a href="/shop">Shop</a>
               </li>
             </ul>
           </nav>
@@ -149,9 +149,12 @@ handleNavigation = (e) => {
             <a href="/">
               <img src={fbLogo}></img>
             </a>
-            <a href="/">
+            {!this.props.isCartOpen ?
+            <a onClick={this.props.handleCartOpen}>
               <img src={cartLogo}></img>
-            </a>
+            </a> : <a onClick={this.props.handleCartClose}>
+              <img src={cartLogo}></img>
+            </a> }
           </div> : 
            <div className="nav-right">
            <a href="/">
