@@ -1,11 +1,10 @@
-
 import React, { Component } from "react";
 // import Navigation from "../../components/Navigation";
 import "./style.css";
 // import logo from "../../media/moons.png";
 // import blueLogo from "../../media/bluemoons.png";
 import portrait from "../../media/about-pic.jpeg";
-import Nav from "../../components/Nav"
+import Nav from "../../components/Nav";
 
 export default class About extends Component {
   constructor(props) {
@@ -15,7 +14,7 @@ export default class About extends Component {
     this.state = {
       status: "top",
       showModal: false,
-      forms: []
+      forms: [],
     };
   }
 
@@ -26,28 +25,27 @@ export default class About extends Component {
   render() {
     return (
       <div className="about-page">
-          <Nav></Nav>
+        <Nav></Nav>
         <div className="about-content">
           <div className="white-block">
             <div className="img-container">
               <div
                 className="about-img"
                 style={{
-                  backgroundImage: `linear-gradient(to top, transparent 85%, #ffffff ),url(${portrait})`,
+                  backgroundImage: `linear-gradient(to top, transparent 100%, #ffffff ),url(${portrait})`,
                   // backgroundColor: `#FF8686`,
                   // opacity: `90%`,
                   // backgroundBlendMode: `lighten`,
                   backgroundPosition: `center`,
                   position: `absolute`,
                   overflow: `hidden`,
-                  backgroundSize: 'contain',
-                  backgroundRepeat: 'no-repeat',
-                  height: '75vh',
-                  width: '100%',
-                  top: '35%',
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  height: "75vh",
+                  width: "100%",
+                  top: "35%",
                 }}
-              >
-              </div>
+              ></div>
             </div>
           </div>
           <div className="pink-block">
@@ -57,7 +55,14 @@ export default class About extends Component {
             <div className="about">
               <h1>Hi There!</h1>
               <p>
-              My name is, Carolyn Skowron, and I am the author of Unbreakable. I wrote this book because I want to help raise awareness of mental health issues, and help end the stigma. We need to start talking about mental health and be less judgmental of each other. We need to start treating one another with more respect and empathy, as well as recognize that we are all unique, special, and should never give up. In writing this book, my hope is that it might save at least one life.
+                My name is, Carolyn Skowron, and I am the author of Unbreakable.
+                I wrote this book because I want to help raise awareness of
+                mental health issues, and help end the stigma. We need to start
+                talking about mental health and be less judgmental of each
+                other. We need to start treating one another with more respect
+                and empathy, as well as recognize that we are all unique,
+                special, and should never give up. In writing this book, my hope
+                is that it might save at least one life.
               </p>
             </div>
           </div>
@@ -65,15 +70,17 @@ export default class About extends Component {
             <div className="about-contact">
               <h1>Feel free to reach out!</h1>
               <p>
-                Email me at <a href="mailto:carolyn.skowron@gmail.com">carolyn.skowron@gmail.com</a>
+                Email me at{" "}
+                <a href="mailto:carolyn.skowron@gmail.com">
+                  carolyn.skowron@gmail.com
+                </a>
                 {/* Contact me anytime, just fill out the   
                 <a href="/connect"> Connect Form
                 </a> */}
               </p>
               <p>
-                Also... Follow me on:
-                <a href="https://www.instagram.com/Carolyn9787/"> @instagram
-                </a>
+                Follow me on:
+                <a href="https://www.instagram.com/Carolyn9787/"> @instagram</a>
                 {/* <a href="https://www.facebook.com/milliegrace22"> @facebook</a> */}
               </p>
             </div>
