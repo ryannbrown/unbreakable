@@ -45,3 +45,14 @@
     letter-spacing: 0.25rem;
   }
 }
+
+
+.the-button {
+    color:white;
+    width:17.5rem;
+    margin:50px auto;
+    border: 1px solid white;
+    padding: 1.2em 2.2em;
+    background-color: transparent;
+  }
+

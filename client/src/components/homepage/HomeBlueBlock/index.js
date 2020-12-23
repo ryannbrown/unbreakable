@@ -55,6 +55,7 @@ export default class HomeBlueBlock extends Component {
             United States alone. If you or someone you know struggles with
             mental health, know that you are not alone.
           </p>
+          <button className="the-button">View Resources</button>
         </div>
         {/* <p style={{color:'#0e3b62'}} className="action-button">February 2021</p> */}
       </div>
