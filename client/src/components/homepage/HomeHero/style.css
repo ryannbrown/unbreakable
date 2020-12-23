@@ -1,73 +1,82 @@
 .hero-content-section {
-    display: flex;
+  display: flex;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+}
+.hero-text-block {
+  width: 50%;
+  padding: 15px;
+}
+.hero-text-block h3 {
+  color: #196196;
+  font-weight: 300;
+  letter-spacing: 0.3rem;
+}
+.hero-text-block h1 {
+  color: #868686;
+}
+.hero-book-block {
+  max-width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.typewriter {
+  font-size: 2.75rem;
+  /* padding:50px; */
+  color: #868686;
+  min-height: 75px;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+}
+.typewriter-section {
+  padding: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.typewriter-section span {
+  margin-left: 2.5px;
+  font-size: 2.75rem;
+  color: #868686;
+}
+@media (min-width: 1000px) {
+  .hero-content-section {
     width: 100%;
-    max-width: 1200px;
-    align-items: center;
-    justify-content: center;
   }
-  .hero-text-block {
-    width: 50%;
-    padding: 15px;
+}
+@media (max-width: 1000px) {
+  img.hero-book-img {
+    width: 100%;
+    margin: 42% 0%;
+    padding-top: 5%;
   }
-  .hero-text-block h3 {
-    color: #196196;
-    font-weight: 300;
-    letter-spacing: 0.3rem;
-  }
-  .hero-text-block h1 {
-    color: #868686;
+  .hero-content-section {
+    flex-direction: column-reverse;
   }
   .hero-book-block {
-    max-width: 75%;
-    display: flex;
-    flex-direction: column;
+    width: auto;
+    height: 75vh;
+  }
+  .hero-text-block {
+    width: 100%;
   }
   .typewriter {
-    font-size: 2.75rem;
-    /* padding:50px; */
-    color: #868686;
-    min-height: 75px;
-    letter-spacing: 0.2rem;
-    font-weight:300;
-  }
-  .typewriter-section {
-    padding: 50px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
+    font-size: 1.75rem;
   }
   .typewriter-section span {
-    margin-left: 2.5px;
-    font-size: 2.75rem;
+    font-size: 1.75rem;
     color: #868686;
   }
-  @media (max-width: 1000px) {
-    img.hero-book-img {
-      width: 100%;
-      margin: 42% 0%;
-      padding-top: 5%;
-    }
-    .hero-content-section {
-      flex-direction: column-reverse;
-    }
-    .hero-book-block {
-      width: auto;
-   height:75vh;
-    }
-    .hero-text-block {
-      width: 100%;
-    }
-    .typewriter {
-      font-size: 1.75rem;
-    }
-    .typewriter-section span {
-      font-size: 1.75rem;
-      color: #868686;
-    }
-    .typewriter-section {
-      padding: 15px;
-    }
-    .hero-content-section h3 {
-      font-size: 1.25rem;
-    }
+  .typewriter-section {
+    padding: 15px;
   }
+  .hero-content-section h3 {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 450px) {
+  .hero-text-block {
+    margin-top: -100px;
+  }
+}
