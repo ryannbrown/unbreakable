@@ -1,24 +1,21 @@
-
 /* * {
   overflow-x:hidden;
 } */
 
-
 * {
-  font-family: 'ivymode';
-
+  font-family: "ivymode";
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-.inner{
-  width:100%;
+.inner {
+  width: 100%;
 }
 
 body {
-  font-weight:300;
+  font-weight: 300;
 }
 
 .App {
@@ -26,28 +23,36 @@ body {
   overflow-x: hidden !important;
 }
 
-h1, h2 {
-  font-family: 'ivymode', sans-serif;
+h1,
+h2 {
+  font-family: "ivymode", sans-serif;
   font-weight: 300;
   font-style: normal;
-  letter-spacing:2.5px;
+  letter-spacing: 2.5px;
+  font-size: 2rem;
 }
 
-.brand-title{
-  letter-spacing:5px !important;
+.brand-title {
+  letter-spacing: 5px !important;
   /* line-height:5px; */
-  color:#868686;
+  color: #868686;
 }
 
 h1 {
-  margin:0;
+  margin: 0;
 }
 
-p, li, h3, h4, h5, a, button {
-  color:#868686;
+p,
+li,
+h3,
+h4,
+h5,
+a,
+button {
+  color: #868686;
   /* font-family: 'Roboto', sans-serif; */
   /* font-family: adelle, serif; */
-  letter-spacing:.1rem
+  letter-spacing: 0.09rem;
 }
 /* .App {
   background-image:url(../src/media/moroccan-flower.png);
@@ -55,7 +60,7 @@ p, li, h3, h4, h5, a, button {
 } */
 
 a:hover {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 input {
@@ -67,6 +72,6 @@ textarea,
 input[type="text"],
 input[type="button"],
 input[type="submit"] {
-     -webkit-appearance: none;
-     border-radius: 0;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
