@@ -3,8 +3,11 @@ import React, { Component, useState } from "react";
 import "./style.css";
 import Prismic from "prismic-javascript";
 import { Date, Link, RichText } from "prismic-reactjs";
+import fbGrey from "../../media/fb-grey.png"
+import linkedGrey from "../../media/linked-grey.png"
 import linkResolver from "../../utils/linkResolver";
 import waveImg from "../../media/wave-img.jpg";
+import {Helmet} from "react-helmet"
 import { FacebookShareCount, FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, LinkedinShareButton, LinkedinIcon } from "react-share";
 
 // import "./style.css"
@@ -51,12 +54,19 @@ export default function BlogPost(props) {
 
   return (
     <div>
+        
       <div className="blog-post-page">
         <div className="back-link">
           <a href="/blog">back</a>
         </div>
         {doc ? (
           <div className="blog-content">
+               <Helmet>
+                <meta charSet="utf-8" />
+                <title>{RichText.asText(doc.data.title)}</title>
+                <meta name="description" content={doc.data.short_description[0].text} charSet="utf-8" />
+                <link rel="canonical" href={shareUrl} />
+            </Helmet>
             {/* <div className="off-image-container">
                               <img
                                 className="works-image img-responsive"
@@ -76,9 +86,15 @@ export default function BlogPost(props) {
         )}
         <div className="share-block">
         <div className="share-btns">
-          <FacebookShareButton url={shareUrl}><FacebookIcon size={32} round={true}></FacebookIcon></FacebookShareButton>
+          <FacebookShareButton url={shareUrl}>
+              {/* <FacebookIcon size={32} round={true}></FacebookIcon> */}
+              <img className="social-share-icon" src={fbGrey}/>
+              </FacebookShareButton>
           <TwitterShareButton url={shareUrl}><TwitterIcon size={32} round={true}></TwitterIcon></TwitterShareButton>
-          <LinkedinShareButton url={shareUrl}><LinkedinIcon size={32} round={true}></LinkedinIcon></LinkedinShareButton>
+          <LinkedinShareButton url={shareUrl}>
+              {/* <LinkedinIcon size={32} round={true}> */}
+              <img className="social-share-icon" src={linkedGrey}/>
+             </LinkedinShareButton>
         </div>
         <p>Share</p>
         </div>

@@ -44,7 +44,7 @@ export default class HomeAuthorBlock extends Component {
             <div className="auth-text">
               <h2>Carolyn S. Skowron</h2>
               <p>Author of Unbreakable</p>
-              <button>Get to know me</button>
+              <a href="/about"><button>Get to know me</button></a>
             </div>
           </div>
           <br></br>
