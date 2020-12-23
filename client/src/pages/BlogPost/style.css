@@ -38,6 +38,15 @@
     width:100%;
 }
 
+.share-btns *{
+    margin:5px;
+}
+
+.share-block  p{
+    text-align:center;
+    margin:5px;
+}
+
 
 
 @media screen and (min-width: 750px){

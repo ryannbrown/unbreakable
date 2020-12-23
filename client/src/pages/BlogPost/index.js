@@ -5,6 +5,8 @@ import Prismic from "prismic-javascript";
 import { Date, Link, RichText } from "prismic-reactjs";
 import linkResolver from "../../utils/linkResolver";
 import waveImg from "../../media/wave-img.jpg";
+import { FacebookShareCount, FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, LinkedinShareButton, LinkedinIcon } from "react-share";
+
 // import "./style.css"
 // import logo from '../../media/logo.png'
 const { REACT_APP_PRISMIC_API, REACT_APP_PRISMIC_TOKEN } = process.env;
@@ -16,6 +18,7 @@ export default function BlogPost(props) {
   const Client = Prismic.client(apiEndpoint, { accessToken });
 
   const [doc, setDocData] = React.useState(null);
+  const [shareUrl, setShareUrl] = React.useState(null);
 
   React.useEffect(() => {
     // let id = Object.values(this.props.match.params);
@@ -31,109 +34,53 @@ export default function BlogPost(props) {
       }
     };
     fetchData();
-  }, []);
+    const fetchPlugins = () => {
+      const script = document.createElement("script");
 
-  // if (doc) {
-  //     var data = doc.map((post) =>
-  //     <div>
-  //         <a href={`/blog/${post.slugs[0]}`}>
-  //         <div>{post.data.title[0].text}</div>
-  //         <img alt='cover' src={post.data.blog_image.url} />
-  //         </a>
-  //     </div>
-  //     // <div>post</div>
-  //     // <h1>{RichText.asText(doc.data.title)}</h1>
-  // );
-  // }
+      script.src =
+        "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=668236647227571&autoLogAppEvents=1";
+      script.async = true;
+      var url = 'https://unbreakable.herokuapp.com/' + window.location.pathname;
+      console.log("url", url);
+      setShareUrl(url);
+
+      document.body.appendChild(script);
+    };
+    fetchPlugins();
+  }, []);
 
   return (
     <div>
-      {/* <Navigation textColor="#86BFFF" scrolledTextColor="#ffffff7a" logo={blueLogo} scrolledLogo={logo} scrolledDistance='5'/> */}
-      {/* <Navigation /> */}
       <div className="blog-post-page">
-          <div className="back-link">
-            <a href="/blog">back</a>
-          </div>
-          {doc ? (
-            <div className="blog-content">
-              {/* <div className="off-image-container">
+        <div className="back-link">
+          <a href="/blog">back</a>
+        </div>
+        {doc ? (
+          <div className="blog-content">
+            {/* <div className="off-image-container">
                               <img
                                 className="works-image img-responsive"
                                 src={doc.data.blog_image.url}
                               />
                             </div> */}
-                  <h1 className="blog-title">
-                    {RichText.asText(doc.data.title)}
-                  </h1>
-                  <RichText
-                    className="modal-description"
-                    render={doc.data.blog_text}
-                    linkResolver={linkResolver}
-                  />
-                  {/* <p >{thisModal.description}</p> */}
-                </div>
-          ) : (
-            <div> Loading</div>
-          )}
-
-          {/* <div className="nav-box">
-                  <div>
-                    <a href="/menu">Back to Menu</a>
-                  </div>
-                  <div className="prev-next">
-                    {prevModal && <a href={`/food/${prevId}`}>Previous</a>}
-                    {prevModal && nextModal && <span> | </span>}
-                    {nextModal && <a href={`/food/${nextId}`}>Next</a>}
-                  </div>
-                </div> */}
+            <h1 className="blog-title">{RichText.asText(doc.data.title)}</h1>
+            <RichText
+              className="modal-description"
+              render={doc.data.blog_text}
+              linkResolver={linkResolver}
+            />
+            {/* <p >{thisModal.description}</p> */}
+          </div>
+        ) : (
+          <div> Loading</div>
+        )}
+        <div className="share-block">
+        <div className="share-btns">
+          <FacebookShareButton url={shareUrl}><FacebookIcon size={32} round={true}></FacebookIcon></FacebookShareButton>
+          <TwitterShareButton url={shareUrl}><TwitterIcon size={32} round={true}></TwitterIcon></TwitterShareButton>
+          <LinkedinShareButton url={shareUrl}><LinkedinIcon size={32} round={true}></LinkedinIcon></LinkedinShareButton>
         </div>
-      </div>
-  );
-
-  return (
-    <div className="blog-page">
-      <div
-        className="blog-blue-block"
-        style={{
-          backgroundImage: `url(${waveImg})`,
-          // backgroundColor: `#196196`,
-          // opacity: `100%`,
-          backgroundBlendMode: `multiply`,
-          backgroundPosition: `center`,
-          backgroundSize: `cover`,
-          backgroundRepeat: `no-repeat`,
-          // backgroundAttachment: `fixed`,
-          // height: `${this.props.height}`,
-          height: `25vh`,
-          width: "100%",
-          color: "white",
-          display: `flex`,
-          flexDirection: "column",
-          alignItems: `center`,
-          justifyContent: "center",
-          position: `relative`,
-        }}
-      >
-        {" "}
-        <h1>this blog</h1>
-      </div>
-      <div className="home-wrapper">
-        <div>
-          {doc ? (
-            <div>
-              <a href="/blog">back</a>
-              <h1>{RichText.asText(doc.data.title)}</h1>
-              <img alt="cover" src={doc.data.blog_image.url} />
-              {/* <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
-              {/* <p>{doc.data.blog_text[0].text}</p> */}
-              <RichText
-                render={doc.data.blog_text}
-                linkResolver={linkResolver}
-              />
-            </div>
-          ) : (
-            <div>No content</div>
-          )}
+        <p>Share</p>
         </div>
       </div>
     </div>
