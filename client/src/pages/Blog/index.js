@@ -22,10 +22,11 @@ export default function Blog() {
   const [doc, setDocData] = React.useState(null);
 
   React.useEffect(() => {
-    console.log("hey man!");
+  
     const fetchData = async () => {
       const response = await Client.query(
-        Prismic.Predicates.at("document.type", "blog")
+        Prismic.Predicates.at("document.type", "blog"),
+        { orderings : '[my.blog.post_date desc]' } 
       );
       if (response) {
         setDocData(response.results);
@@ -40,13 +41,15 @@ export default function Blog() {
       (post) => (
         <div className="blog-post">
           <a href={`/blog/${post.uid}`}>
-            <img
+            {/* <img
               className="blog-img"
               alt="cover"
               src={post.data.blog_image.url}
-              />
-              <p>{post.data.title[0].text}</p>
+              /> */}
+              <h1>{post.data.title[0].text}</h1>
           </a>
+              <p>{post.data.post_date}</p>
+              <p>{post.data.short_description[0].text}</p>
         </div>
       )
       // <div>post</div>
