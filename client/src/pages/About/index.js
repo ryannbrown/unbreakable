@@ -37,13 +37,12 @@ export default class About extends Component {
                   // opacity: `90%`,
                   // backgroundBlendMode: `lighten`,
                   backgroundPosition: `center`,
+                  backgroundPositionY: "30%",
                   position: `absolute`,
-                  overflow: `hidden`,
-                  backgroundSize: "contain",
+                  backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   height: "75vh",
                   width: "100%",
-                  top: "35%",
                 }}
               ></div>
             </div>
@@ -53,7 +52,7 @@ export default class About extends Component {
       
             </div> */}
             <div className="about">
-              <h1>Hi There!</h1>
+              <h1>Let's have a conversation...</h1>
               <p>
                 My name is, Carolyn Skowron, and I am the author of Unbreakable.
                 I wrote this book because I want to help raise awareness of
@@ -68,7 +67,7 @@ export default class About extends Component {
           </div>
           <div className="white-block">
             <div className="about-contact">
-              <h1>Feel free to reach out!</h1>
+              <h1>I'm only a click away!</h1>
               <p>
                 Email me at{" "}
                 <a href="mailto:carolyn.skowron@gmail.com">
