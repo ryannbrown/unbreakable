@@ -4,6 +4,7 @@ import "./style.css";
 import Prismic from "prismic-javascript";
 import { Date, Link, RichText } from "prismic-reactjs";
 import fbGrey from "../../media/fb-grey.png"
+import twitGrey from "../../media/twitter-grey.png"
 import linkedGrey from "../../media/linked-grey.png"
 import linkResolver from "../../utils/linkResolver";
 import waveImg from "../../media/wave-img.jpg";
@@ -90,7 +91,7 @@ export default function BlogPost(props) {
               {/* <FacebookIcon size={32} round={true}></FacebookIcon> */}
               <img className="social-share-icon" src={fbGrey}/>
               </FacebookShareButton>
-          <TwitterShareButton url={shareUrl}><TwitterIcon size={32} round={true}></TwitterIcon></TwitterShareButton>
+          <TwitterShareButton url={shareUrl}><img className="social-share-icon" src={twitGrey}/></TwitterShareButton>
           <LinkedinShareButton url={shareUrl}>
               {/* <LinkedinIcon size={32} round={true}> */}
               <img className="social-share-icon" src={linkedGrey}/>

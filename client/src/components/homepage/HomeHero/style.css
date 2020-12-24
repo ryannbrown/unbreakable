@@ -75,8 +75,8 @@
     font-size: 1.25rem;
   }
 }
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
   .hero-text-block {
     margin-top: -150px;
   }
-}
+} */

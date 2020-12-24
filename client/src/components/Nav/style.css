@@ -82,8 +82,8 @@
     transition: 0.6s;
   }
 }
-li {
-  /* list-style: none; */
+.nav-options li {
+  list-style: none;
 }
 .header nav,
 .header ul {

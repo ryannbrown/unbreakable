@@ -179,7 +179,8 @@ handleNavigation = (e) => {
             <span></span>
           </label>
           <div className="mobile-nav-brand">
-            <img src={logo}></img>
+          <a href="/"><img src={logo}></img>
+              </a>
           </div>
           <a href="/">
              <img className='mbar-cart' src={cartLogo}></img>
