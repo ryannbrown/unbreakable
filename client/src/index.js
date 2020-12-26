@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import HttpsRedirect from 'react-https-redirect';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import HttpsRedirect from "react-https-redirect";
+import { ThemeContextProvider } from "./utils/themeContext";
 ReactDOM.render(
   <React.StrictMode>
     <HttpsRedirect>
-    <App />
+      <ThemeContextProvider value={"Day"}>
+        <App />
+      </ThemeContextProvider>
     </HttpsRedirect>
-   
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

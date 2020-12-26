@@ -2,7 +2,8 @@ import React, { Component, useState } from "react";
 // import logo from './logo.svg';
 import "./style.css";
 import Prismic from "prismic-javascript";
-import { Date, Link, RichText } from "prismic-reactjs";
+import { RichText } from "prismic-reactjs";
+import {Link} from "react-router-dom"
 import fbGrey from "../../media/fb-grey.png"
 import twitGrey from "../../media/twitter-grey.png"
 import linkedGrey from "../../media/linked-grey.png"
@@ -58,7 +59,7 @@ export default function BlogPost(props) {
         
       <div className="blog-post-page">
         <div className="back-link">
-          <a href="/blog">back</a>
+          <Link to="/blog">back</Link>
         </div>
         {doc ? (
           <div className="blog-content">

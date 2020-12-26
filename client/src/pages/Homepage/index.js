@@ -27,7 +27,7 @@ export default class Homepage extends Component {
 
     render() {
         return (<div>
-             <Navbar></Navbar>
+             {/* <Navbar></Navbar> */}
             <div className="homepage-content">
                <HomeHero></HomeHero> 
                <HomeBlueBlock></HomeBlueBlock>

@@ -25,7 +25,7 @@ export default class About extends Component {
   render() {
     return (
       <div className="about-page">
-        <Nav></Nav>
+        {/* <Nav></Nav> */}
         <div className="about-content">
           <div className="white-block">
             <div className="img-container">

@@ -5,10 +5,18 @@ import logo from "../../media/logo.png";
 import fbLogo from "../../media/fb-grey.png";
 import instaLogo from "../../media/insta-grey.png";
 import cartLogo from "../../media/cart-grey.png";
-
+import { ThemeContextConsumer, ThemeContextProvider } from "../../utils/themeContext";
 import fbLogoW from "../../media/fb-white.png";
 import instaLogoW from "../../media/insta-white.png";
 import cartLogoW from "../../media/cart-white.png";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
+
 var _ = require("lodash");
 
 export default class Nav extends Component {
@@ -112,6 +120,8 @@ handleNavigation = (e) => {
 
   render() {
     return (
+      <ThemeContextConsumer>
+        {context => (
       <div className="nav-section">
         <header
           id="navvy-bar"
@@ -121,10 +131,10 @@ handleNavigation = (e) => {
           <nav className="nav-options">
             <ul>
               <li>
-                <a href="/about">About</a>
+                <Link to="/about" >About</Link>
               </li>
               <li>
-                <a href="/blog">Blog</a>
+              <Link to="/blog" >Blog</Link>
               </li>
               {/* <li>
                 <a href="#">Resources</a>
@@ -150,8 +160,8 @@ handleNavigation = (e) => {
             <a href="/">
               <img src={fbLogo}></img>
             </a>
-            <a href="/">
-              <img src={cartLogo}></img>
+            <a >
+              <img className="myimg" onClick={context.toggleCartOpen} src={cartLogo}></img>
             </a>
           </div> : 
            <div className="nav-right">
@@ -188,6 +198,8 @@ handleNavigation = (e) => {
         </div>
      
       </div>
+             )} 
+      </ThemeContextConsumer>
     );
   }
 }

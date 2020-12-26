@@ -2,9 +2,11 @@ import React, { Component, useState } from "react";
 
 import "./style.css";
 import Prismic from "prismic-javascript";
-import { Date, Link, RichText } from "prismic-reactjs";
+// import { Date, Link, RichText } from "prismic-reactjs";
 import linkResolver from "../../utils/linkResolver";
 // import logo from '../../media/logo.png'
+import {Link} from "react-router-dom"
+import Test from "../../components/Test"
 import Nav from "../../components/Nav"
 import waveImg from "../../media/wave-img.jpg";
 require("dotenv").config();
@@ -40,14 +42,14 @@ export default function Blog() {
     var data = doc.map(
       (post) => (
         <div className="blog-post">
-          <a href={`/blog/${post.uid}`}>
+          <Link to={`/blog/${post.uid}`}>
             {/* <img
               className="blog-img"
               alt="cover"
               src={post.data.blog_image.url}
               /> */}
               <h1>{post.data.title[0].text}</h1>
-          </a>
+          </Link>
               <p>{post.data.post_date}</p>
               <p>{post.data.short_description[0].text}</p>
         </div>
@@ -59,7 +61,7 @@ export default function Blog() {
 
   return (
     <div>
-      <Nav></Nav>
+      {/* <Nav></Nav> */}
       <div
         className="blog-blue-block"
         style={{
@@ -97,6 +99,7 @@ export default function Blog() {
               <div>No content</div>
             )}
           </div>
+          <Test></Test>
         </div>
     </div>
   );
