@@ -28,7 +28,9 @@
   opacity:.5;
 }
 
-
+.social-wrapper {
+  display:flex;
+}
 
 .social-wrapper > * {
   margin:10px 15px;

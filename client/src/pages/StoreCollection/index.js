@@ -1,7 +1,7 @@
 // import { Container, Nav, Button, Image, Row, Col } from 'react-bootstrap'
 // import Navbar from 'react-bootstrap/Navbar'
 import React, { Component } from 'react';
-import './style.css';
+// import './style.css';
 import Products from "../../components/StoreComponents/Products";
 import Cart from "../../components/StoreComponents/Cart";
 import Nav from "../../components/Nav"
@@ -130,7 +130,7 @@ componentDidUpdate(){
 
         return (
             <div className="App">
-                <Nav isCartOpen={this.state.isCartOpen} handleCartClose={this.handleCartClose} handleCartOpen={this.handleCartOpen}></Nav>
+                {/* <Nav isCartOpen={this.state.isCartOpen} handleCartClose={this.handleCartClose} handleCartOpen={this.handleCartOpen}></Nav> */}
               <header className="App__header">
                 {!this.state.isCartOpen && (
                   <div className="App__view-cart-wrapper">
