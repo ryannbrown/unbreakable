@@ -5,10 +5,18 @@ import logo from "../../media/logo.png";
 import fbLogo from "../../media/fb-grey.png";
 import instaLogo from "../../media/insta-grey.png";
 import cartLogo from "../../media/cart-grey.png";
-
+import { ThemeContextConsumer, ThemeContextProvider } from "../../utils/themeContext";
 import fbLogoW from "../../media/fb-white.png";
 import instaLogoW from "../../media/insta-white.png";
 import cartLogoW from "../../media/cart-white.png";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from "react-router-dom";
+
 var _ = require("lodash");
 
 export default class Nav extends Component {
@@ -112,6 +120,8 @@ handleNavigation = (e) => {
 
   render() {
     return (
+      <ThemeContextConsumer>
+        {context => (
       <div className="nav-section">
         <header
           id="navvy-bar"
@@ -121,17 +131,17 @@ handleNavigation = (e) => {
           <nav className="nav-options">
             <ul>
               <li>
-                <a href="#">About</a>
+                <Link to="/about" >About</Link>
               </li>
               <li>
-                <a href="#">Blog</a>
+              <Link to="/blog" >Blog</Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#">Resources</a>
               </li>
               <li>
-                <a href="/shop">Shop</a>
-              </li>
+                <a href="">Shop</a>
+              </li> */}
             </ul>
           </nav>
           {/* <div className="mobile-nav-logos">
@@ -140,24 +150,22 @@ handleNavigation = (e) => {
              <a  href="/"><img src={cartLogo}></img></a>
           </div> */}
           <div className="nav-brand">
-            <img src={logo}></img>
+            <a href="/"><img src={logo}></img>
+              </a>
           </div>
           { !this.state.isMobile?  <div className="nav-right">
-            <a href="/">
+            <a href="https://www.instagram.com/Carolyn9787/">
               <img src={instaLogo}></img>
             </a>
             <a href="/">
               <img src={fbLogo}></img>
             </a>
-            {!this.props.isCartOpen ?
-            <a onClick={this.props.handleCartOpen}>
-              <img src={cartLogo}></img>
-            </a> : <a onClick={this.props.handleCartClose}>
-              <img src={cartLogo}></img>
-            </a> }
+            <a >
+              <img className="myimg" onClick={context.toggleCartOpen} src={cartLogo}></img>
+            </a>
           </div> : 
            <div className="nav-right">
-           <a href="/">
+           <a href="https://www.instagram.com/Carolyn9787/">
              <img src={instaLogoW}></img>
            </a>
            <a href="/">
@@ -181,7 +189,8 @@ handleNavigation = (e) => {
             <span></span>
           </label>
           <div className="mobile-nav-brand">
-            <img src={logo}></img>
+          <a href="/"><img src={logo}></img>
+              </a>
           </div>
           <a href="/">
              <img className='mbar-cart' src={cartLogo}></img>
@@ -189,6 +198,15 @@ handleNavigation = (e) => {
         </div>
      
       </div>
+             )} 
+      </ThemeContextConsumer>
     );
   }
 }
+
+// {!this.props.isCartOpen ?
+//   <a onClick={this.props.handleCartOpen}>
+//     <img src={cartLogo}></img>
+//   </a> : <a onClick={this.props.handleCartClose}>
+//     <img src={cartLogo}></img>
+//   </a> }

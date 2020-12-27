@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 // import logo from './logo.svg';
 import './App.css';
 // import { Container, Nav, Button, Col, Row, Card } from 'react-bootstrap'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,13 +10,20 @@ import {
   Link,
   useParams
 } from "react-router-dom";
-import Nav from "./components/Nav"
 
 // import Page from "./pages/Homepage/index"
 import Shop from "./pages/Store/index"
 import ShopCollection from "./pages/StoreCollection/index"
+// import Page from "./pages/Homepage/index"
+import About from "./pages/About"
 import Homepage from "./pages/Homepage/index"
+import Blog from "./pages/Blog/index"
+import BlogPost from "./pages/BlogPost/index"
+import Nav from "./components/Nav/index"
 import createHistory from 'history/createBrowserHistory';
+import {Helmet} from "react-helmet";
+
+// const MyContext = React.createContext();
 
 
 class App extends Component {
@@ -76,6 +84,7 @@ handleCartOpen = () =>  {
       isCartOpen: true,
     });
   }
+
   
  
 
@@ -95,15 +104,27 @@ handleCartOpen = () =>  {
     return (
       <div className="App">
            <Router>
-           <Nav checkout={checkout} isCartOpen={this.state.isCartOpen} handleCartClose={this.handleCartClose} handleCartOpen={this.handleCartOpen}></Nav>
+               <Helmet>
+                      <meta charSet="utf-8" />
+                      <title>Unbreakable</title>
+                      <content>Unbreakable by Carolyn Skowron</content>
+                      {/* <link rel="canonical" href="http://www.colemandefense.com/" /> */}
+                  </Helmet>
+               <Nav></Nav>
              <Switch>
                {/* <Route path="/" component={Page}/> */}
+               <Route path="/blog/:post" component={BlogPost}/>
+             <Route path="/blog" component={Blog}/>
+             <Route path="/about" component={About}/>
+             <Route exact path="/" component={Homepage}/>
                <Route exact path="/shop" render={(props) => <Shop client={this.props.client} {...props} isCartOpen={isCartOpen} checkout={checkout} products={products } shop={shop} collections={collections} addVariantToCart={this.addVariantToCart}
               handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} />
-
               <Route path="/shop/:collection" render={(props) => <ShopCollection client={this.props.client} {...props} isCartOpen={isCartOpen} checkout={checkout} products={products } shop={shop} collections={collections} addVariantToCart={this.addVariantToCart}
              handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} />
                <Route path="/" component={Homepage}/>
+             
+             {/* <Route path="/" component={Page}/> */}
+           
              </Switch>
            </Router>
       </div>

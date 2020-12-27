@@ -36,7 +36,7 @@ export default class HomeSubscribeBlock extends Component {
       >
         {/* <img className="hero-logo" src={logo}></img> */}
         <div className="subscribe-content">
-          <h2>Stay up to date with the latest</h2>
+          <h2>Stay up to date with everything Unbreakable</h2>
           <div className="form-parent">
             <form className="subscribe-form">
               <input placeholder="Your email"></input>

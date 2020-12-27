@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import HttpsRedirect from 'react-https-redirect';
 import Client from 'shopify-buy';
+import { ThemeContextProvider } from "./utils/themeContext";
 require('dotenv').config();
 
 
@@ -17,11 +18,12 @@ const client = Client.buildClient({
 ReactDOM.render(
   <React.StrictMode>
     <HttpsRedirect>
-    <App client={client} />
+      <ThemeContextProvider value={"Day"}>
+      <App client={client} />
+      </ThemeContextProvider>
     </HttpsRedirect>
-   
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
