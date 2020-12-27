@@ -203,3 +203,10 @@ handleNavigation = (e) => {
     );
   }
 }
+
+// {!this.props.isCartOpen ?
+//   <a onClick={this.props.handleCartOpen}>
+//     <img src={cartLogo}></img>
+//   </a> : <a onClick={this.props.handleCartClose}>
+//     <img src={cartLogo}></img>
+//   </a> }

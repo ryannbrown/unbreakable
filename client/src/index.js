@@ -1,15 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-import HttpsRedirect from "react-https-redirect";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import HttpsRedirect from 'react-https-redirect';
+import Client from 'shopify-buy';
 import { ThemeContextProvider } from "./utils/themeContext";
+require('dotenv').config();
+
+
+const client = Client.buildClient({
+  domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
+  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_TOKEN,
+  
+});
+
 ReactDOM.render(
   <React.StrictMode>
     <HttpsRedirect>
       <ThemeContextProvider value={"Day"}>
-        <App />
+      <App client={client} />
       </ThemeContextProvider>
     </HttpsRedirect>
   </React.StrictMode>,

@@ -34,7 +34,7 @@ export default class Footer extends Component {
             {/* <hr></hr> */}
           </div>
             <div className="link-wrapper">
-              <a  href="/"><p>Shop</p></a>
+              <a  href="/shop"><p>Shop</p></a>
               <a  href="/"><p>Blog</p></a>
               <a  href="/"><p>Resources</p></a>
               <a  href="/"><p>About</p></a>
