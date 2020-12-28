@@ -205,9 +205,9 @@ handleNavigation = (e) => {
           </div>
           <a>
              <img onClick={context.handleCartOpen} className='mbar-cart' src={cartLogo}></img>
-             {context.checkout.lineItems.length > 0 &&
+             {/* {context.checkout.lineItems.length > 0 &&
               <p className="mb-cart-count">{context.checkout.lineItems.length}</p>
-            }
+            } */}
            </a>
         </div>
         <Cart
