@@ -28,7 +28,7 @@ export default class Store extends Component {
     }
 
     render() {
-        const {collections} = this.props;
+        const {collections, products} = this.props;
 
 
         if (collections.length > 0) {
@@ -37,6 +37,18 @@ export default class Store extends Component {
                   <Link to={`/shop/${item.handle}`}>{item.title}</Link>
                 )
             })
+        }
+        if (products.length > 0) {
+          console.log(products)
+          var productList = products.map((item) => {
+            return (
+                //  <Link to={`/shop/item/${this.props.product.handle}`}>
+             
+                 <Link to={`/shop`}>
+                   <img className="product-image" src={item.images[0].src} className="prod-img"></img>
+                 </Link>
+            )
+          } )
         }
 
         return (  
@@ -71,13 +83,20 @@ export default class Store extends Component {
                     </h1>
                 </div>
               </header>
-              <Products
+              <h1 className="collection-title">All Merchandise</h1>
+              <div className="products-block">
+              <div className="products-wrapper">
+                {productList}
+                </div>
+              {/* <Products
                 products={this.props.products}
                 client={this.props.client}
                 addVariantToCart={context.addVariantToCart}
-              />
+              /> */}
               <div className="collection-nav">
+
                 {collectionList}
+              </div>
               </div>
             </div>
           )}

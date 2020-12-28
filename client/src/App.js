@@ -15,6 +15,9 @@ import history from "./utils/history"
 // import Page from "./pages/Homepage/index"
 import Shop from "./pages/Store/index"
 import ShopCollection from "./pages/StoreCollection/index"
+import ShopItem from "./pages/StoreItem/index"
+import Product from "./components/StoreComponents/Product"
+import Products from "./components/StoreComponents/Products"
 // import Page from "./pages/Homepage/index"
 import About from "./pages/About"
 import Homepage from "./pages/Homepage/index"
@@ -70,10 +73,19 @@ class App extends Component {
              <Route path="/blog" component={Blog}/>
              <Route path="/about" component={About}/>
              <Route exact path="/" component={Homepage}/>
-               <Route exact path="/shop" render={(props) => <Shop client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
-              handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} />
-              <Route path="/shop/:collection" render={(props) => <ShopCollection hisotry={history} client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
+             {/* <Route exact path="/shop" component={Shop}/>
+             <Route exact path="/shop/:collection" component={ShopCollection}/> */}
+
+               {/* <Route exact path="/shop" render={(props) => <Shop client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
+              handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} /> */}
+
+              <Route exact path="/shop/:collection/:item" render={(props) => <Products history={history} client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
              handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} />
+
+              <Route path="/shop/:collection" render={(props) => <ShopCollection history={history} client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
+             handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} />
+              {/* <Route exact path="/getit" render={(props) => <ShopItem history={history} client={context.client} {...props} isCartOpen={context.isCartOpen} checkout={context.checkout} products={context.products } shop={context.shop} collections={context.collections} addVariantToCart={this.addVariantToCart}
+             handleCartClose={this.handleCartClose} updateCartClose={this.updateCartClose} updateQuantityInCart={this.updateQuantityInCart} removeLineItemInCart={this.removeLineItemInCart} />} /> */}
                <Route path="/" component={Homepage}/>
              
              {/* <Route path="/" component={Page}/> */}

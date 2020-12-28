@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom"
 import VariantSelector from './VariantSelector';
 
 class Product extends Component {
@@ -65,20 +66,6 @@ class Product extends Component {
     }
   }
 
-  resetQuantity() {
-    // this.setState({
-    //   selectedVariantQuantity: 0
-    // })
-  }
-
-  componentDidUpdate() {
-    // console.log(this.props)
-    // if (this.state.itemAdded) {
-    //   this.setState({
-    //     selectedVariantQuantity: 0
-    //   })
-    // }
-  }
 
   render() {
     // console.log(this.props.product);
@@ -97,20 +84,34 @@ class Product extends Component {
     });
     return (
       <div className="Product">
+        <div className="prod-left">
+        {/* <Link to={`/shop/item/${this.props.product.handle}`}> */}
         {this.props.product.images.length ? <img src={variantImage.src} alt={`${this.props.product.title} product shot`}/> : null}
-        <h5 className="Product__title">{this.props.product.title}</h5>
-        {/* <span className="Product__price">${variant.price}</span> */}
-        {/* {variantSelectors} */}
+        </div>
+        <div className="prod-right">
+
+
+        <div className="product-col">
+        <h1 className="prod-title">{this.props.product.title}</h1>
+        <span className="prod-price">${variant.price}</span>
+        <div className="prod-description" dangerouslySetInnerHTML={this.props.product.descriptionHtml.value}>{this.props.product.description}</div>
+        {variantSelectors}
         {/* <label className="Product__option">
           Quantity */}
-          <div className="quantity-box">
-          <span onClick={()=>{this.quantChange('+', variant.id, variantQuantity)}}>+</span>
+          {/* <div className="quantity-box"> */}
+          <div className="product-row">
+          {/* <span onClick={()=>{this.quantChange('+', variant.id, variantQuantity)}}>+</span> */}
+          <div className="qty-product">QTY</div>
           <input min="0" type="number" defaultValue={0} value={variantQuantity} onChange={this.handleQuantityChange}></input>
-          <span onClick={()=>{this.quantChange('-', variant.id, variantQuantity)}}>-</span>
+          {/* <span onClick={()=>{this.quantChange('-', variant.id, variantQuantity)}}>-</span> */}
+        <button className="Product__buy button" onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>Add to cart</button>
+          </div>
+        {/* </div> */}
         </div>
          
         {/* </label> */}
-        <button className="Product__buy button" onClick={() => this.props.addVariantToCart(variant.id, variantQuantity)}>+ </button>
+        {/* </Link> */}
+          </div>
       </div>
     );
   }

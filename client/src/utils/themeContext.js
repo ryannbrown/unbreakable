@@ -23,7 +23,8 @@ const client = Client.buildClient({
        shop: {},
        collections: [],
        isCartOpen: false,
-       collectionProds: []
+       collectionProds: [],
+       thisProduct: []
        
      };
      this.addVariantToCart = this.addVariantToCart.bind(this);
@@ -91,9 +92,23 @@ handleCartOpen = () =>  {
 
 
 grabCollection = (handle) => {client.collection.fetchByHandle(handle, {productsFirst: 10}).then((collection) => {
+  if (handle) {
     this.setState({collectionProds: collection.products})
+  }
   });
 }
+
+grabProduct = (handle) => {client.product.fetchByHandle(handle).then((product) => {
+  // Do something with the product
+  console.log("product in context", product);
+  this.setState({thisProduct: product})
+  // this.setState({})
+});}
+
+grabProductById = (id) => {client.product.fetch(id).then((product) => {
+  // Do something with the product
+  console.log("id in context", product);
+});}
 
 
 addVariantToCart(variantId, quantity) {
@@ -161,7 +176,10 @@ removeLineItemInCart(lineItemId) {
             removeLineItemInCart: this.removeLineItemInCart,
             updateQuantityInCart: this.updateQuantityInCart,
             grabCollection: this.grabCollection,
-            collectionProds: this.state.collectionProds
+            collectionProds: this.state.collectionProds,
+            grabProduct: this.grabProduct,
+            grabProductById: this.grabProductById,
+            thisProduct: this.state.thisProduct
            }}
       >
         {this.props.children}

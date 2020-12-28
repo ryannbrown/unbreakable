@@ -34,6 +34,7 @@ export default class StoreCollection extends Component {
   };
 
   componentDidMount() {
+    
     const ourContext = this.context;
     // console.log("heyyyy collections");
     // console.log(this.props.match.params);
@@ -48,7 +49,7 @@ export default class StoreCollection extends Component {
   render() {
     const ourContext = this.context;
 
-    console.log(ourContext);
+    console.log(ourContext.collectionProds);
 
     const { products } = this.state;
 
@@ -67,6 +68,19 @@ export default class StoreCollection extends Component {
           </Link>
         );
       });
+    }
+
+    if (ourContext.collectionProds.length > 0) {
+      // console.log(products)
+      var productList = ourContext.collectionProds.map((item) => {
+        return (
+            //  <Link to={`/shop/item/${this.props.product.handle}`}>
+            //  <Link to={`/shop/${this.state.handle}/${item.handle}`}>
+             <Link to={`/shop/${this.state.handle}/${item.handle}`}>
+               <img className="product-image" src={item.images[0].src} className="prod-img"></img>
+             </Link>
+        )
+      } )
     }
 
     return (
@@ -101,12 +115,15 @@ export default class StoreCollection extends Component {
               </div>
             </header>
               <h1 className="collection-title">{this.state.handle}</h1>
-            <div className="product-block">
-              <Products
+            <div className="products-block">
+            <div className="products-wrapper">
+                {productList}
+                </div>
+              {/* <Products
                 products={context.collectionProds}
                 client={context.client}
                 addVariantToCart={context.addVariantToCart}
-              />
+              /> */}
             <div className="collection-nav">{collectionList}</div>
             </div>
           </div>
