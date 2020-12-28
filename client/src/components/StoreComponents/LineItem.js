@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { ThemeContextConsumer, ThemeContextProvider } from "../../utils/themeContext";
 
 class LineItem extends Component {
   constructor(props) {
@@ -18,8 +19,14 @@ class LineItem extends Component {
     this.props.updateQuantityInCart(lineItemId, updatedQuantity);
   }
 
+  componentDidMount() {
+    console.log(this.props.line_item, "line item props")
+  }
+
   render() {
-    return (
+    return (      
+    <ThemeContextConsumer>
+      {context => (
       <li className="Line-item">
         <div className="Line-item__img">
           {this.props.line_item.variant.image ? <img src={this.props.line_item.variant.image.src} alt={`${this.props.line_item.title} product shot`}/> : null}
@@ -42,10 +49,13 @@ class LineItem extends Component {
             <span className="Line-item__price">
               $ { (this.props.line_item.quantity * this.props.line_item.variant.price).toFixed(2) }
             </span>
-            <button className="Line-item__remove" onClick={()=> this.props.removeLineItemInCart(this.props.line_item.id)}>×</button>
+            <button className="Line-item__remove" onClick={()=> context.removeLineItemInCart(this.props.line_item.id)}>×</button>
           </div>
         </div>
       </li>
+      )
+  }
+  </ThemeContextConsumer>
     );
   }
 }

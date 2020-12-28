@@ -321,6 +321,9 @@ input[type=number] {
     position: absolute;
   }
   
+  .Line-item__img img {
+    width:65px;
+  }
   .Line-item__content {
     width: 100%;
     padding-left: 75px;

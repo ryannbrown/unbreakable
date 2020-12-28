@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import LineItem from './LineItem';
-
+import { ThemeContextConsumer, ThemeContextProvider } from "../../utils/themeContext";
 class Cart extends Component {
   constructor(props) {
     super(props);
@@ -17,12 +17,22 @@ class Cart extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.props.isCartOpen)
-    // console.log(this.props.updateQuantityInCart)
+  
+
+    // initially to get the local Storage, I grabbed the props coming from checkout, and set that as the state 
+    // of this component. This would load the previous session but make it unable to be mutated because of a different checkout ID. 
+    // I could also use the below code to set the state of the new props equal to the current state which wouldn't pull in the local storage
+    // if ( prevProps.checkout !== this.props.checkout){
+    //   this.setState({
+    //     checkout: this.props.checkout
+    //   })
+    // }
+
   }
 
   render() {
-    console.log("update cart close", this.props.updateCartClose)
+    
+    // console.log("update cart close", this.props.updateCartClose)
     let line_items = this.props.checkout.lineItems.map((line_item) => {
       return (
         <LineItem
@@ -35,11 +45,13 @@ class Cart extends Component {
     });
 
     return (
+      <ThemeContextConsumer>
+      {context => (
       <div className={`Cart ${this.props.isCartOpen && !this.props.updateCartClose ? 'Cart--open' : ''}`}>
         <header className="Cart__header">
           <h2>Your cart</h2>
           <button
-            onClick={this.props.handleCartClose}
+            onClick={context.handleCartClose}
             className="Cart__close">
             ×
           </button>
@@ -73,6 +85,8 @@ class Cart extends Component {
           <button className="Cart__checkout button" onClick={this.openCheckout}>Checkout</button>
         </footer>
       </div>
+      )}
+      </ThemeContextConsumer>
     )
   }
 }

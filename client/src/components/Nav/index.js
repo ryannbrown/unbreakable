@@ -3,6 +3,7 @@ import "./style.css";
 // import Mobile from "./mobile"
 import logo from "../../media/logo.png";
 import fbLogo from "../../media/fb-grey.png";
+import Cart from "../StoreComponents/Cart"
 import instaLogo from "../../media/insta-grey.png";
 import cartLogo from "../../media/cart-grey.png";
 import { ThemeContextConsumer, ThemeContextProvider } from "../../utils/themeContext";
@@ -54,13 +55,13 @@ handleNavigation = (e) => {
   const window = e.currentTarget;
 
   if (this.prev > window.scrollY) {
-    console.log("scrolling up")
+    // console.log("scrolling up")
       this.setState({
         hideNav: false
       })
   } 
   else if (this.prev < window.scrollY) {
-    console.log("scroll down, hide nav")
+    // console.log("scroll down, hide nav")
       this.setState({
         hideNav:true
       })
@@ -70,6 +71,7 @@ handleNavigation = (e) => {
 }
 
   componentDidMount() {
+
     this.prev = window.scrollY;
     window.addEventListener('scroll', e => this.handleNavigation(e));
 
@@ -160,8 +162,11 @@ handleNavigation = (e) => {
             <a href="/">
               <img src={fbLogo}></img>
             </a>
-            <a >
-              <img className="myimg" onClick={context.toggleCartOpen} src={cartLogo}></img>
+            <a>
+              <img className="myimg" onClick={context.handleCartOpen} src={cartLogo}></img>
+              {context.checkout.lineItems.length > 0 &&
+              <p className="cart-count">{context.checkout.lineItems.length}</p>
+            }
             </a>
           </div> : 
            <div className="nav-right">
@@ -173,6 +178,9 @@ handleNavigation = (e) => {
            </a>
            <a href="/">
              <img src={cartLogoW}></img>
+             {context.checkout.lineItems.length > 0 &&
+              <p className="mb-checked-cart-count">{context.checkout.lineItems.length}</p>
+            }
            </a>
          </div> }
          
@@ -192,11 +200,21 @@ handleNavigation = (e) => {
           <a href="/"><img src={logo}></img>
               </a>
           </div>
-          <a href="/">
-             <img className='mbar-cart' src={cartLogo}></img>
+          <a>
+             <img onClick={context.handleCartOpen} className='mbar-cart' src={cartLogo}></img>
+             {context.checkout.lineItems.length > 0 &&
+              <p className="mb-cart-count">{context.checkout.lineItems.length}</p>
+            }
            </a>
         </div>
-     
+        <Cart
+                // updateCartClose={this.state.updateCartClose}
+                checkout={context.checkout}
+                isCartOpen={context.isCartOpen}
+                handleCartClose={context.handleCartClose}
+                updateQuantityInCart={context.updateQuantityInCart}
+                // removeLineItemInCart={this.removeLineItemInCart}
+              />
       </div>
              )} 
       </ThemeContextConsumer>

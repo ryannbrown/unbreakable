@@ -5,6 +5,8 @@ import './style.css';
 import Products from "../../components/StoreComponents/Products";
 import Cart from "../../components/StoreComponents/Cart";
 import Nav from "../../components/Nav"
+import {Link} from "react-router-dom"
+import { ThemeContextConsumer, ThemeContextProvider } from "../../utils/themeContext";
 
 
 
@@ -30,108 +32,38 @@ export default class Store extends Component {
         //     collections: [],
         //     updateCartClose: false
         //   };
-          this.handleCartClose = this.handleCartClose.bind(this);
-          this.addVariantToCart = this.addVariantToCart.bind(this);
-          this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
-          this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
+          // this.handleCartClose = this.handleCartClose.bind(this);
+          // this.addVariantToCart = this.addVariantToCart.bind(this);
+          // this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
+          // this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
     }
 
 
-    addVariantToCart(variantId, quantity) {
-        console.log(variantId, quantity)
-        variantId.replace("=", "")
-        // console.log("adding: ", quantity)
-        this.setState({
-          isCartOpen: true,
-        });
-    
-        const lineItemsToAdd = [{ variantId, quantity: parseInt(quantity, 10) }];
-        const checkoutId = this.props.checkout.id;
-    
-        return this.props.client.checkout
-          .addLineItems(checkoutId, lineItemsToAdd)
-          .then((res) => {
-            this.setState({
-              checkout: res,
-            });
-          });
-      }
-    
-      updateQuantityInCart(lineItemId, quantity) {
-        const checkoutId = this.state.checkout.id;
-        const lineItemsToUpdate = [
-          { id: lineItemId, quantity: parseInt(quantity, 10) },
-        ];
-    
-        return this.props.client.checkout
-          .updateLineItems(checkoutId, lineItemsToUpdate)
-          .then((res) => {
-            this.setState({
-              checkout: res,
-            });
-          });
-      }
-    
-      removeLineItemInCart(lineItemId) {
-        const checkoutId = this.state.checkout.id;
-    
-        return this.props.client.checkout
-          .removeLineItems(checkoutId, [lineItemId])
-          .then((res) => {
-            this.setState({
-              checkout: res,
-            });
-          });
-      }
-
-      
-    handleCartClose = () => {
-        console.log("clicked to close")
-        this.setState({
-          isCartOpen: false,
-        });
-      }
-    handleCartOpen = () =>  {
-        console.log("clicked to open store")
-        this.setState({
-          isCartOpen: true,
-        });
-      }
-
-    componentDidMount() {
-       console.log(this.props.products)
-    }
-
-componentDidUpdate(oldProps){
-    if (oldProps.data !== this.props.data) {
-        this.state = ({
-            isCartOpen: this.props.isCartOpen,
-            checkout: this.props.checkout,
-            products: this.props.products,
-            shop: this.props.shop,
-            collections: this.props.collections,
-            updateCartClose: this.props.updateCartClose
-          });
-
-    }
-   
-}
+    // updateHandle = (handle) => {
+    //   const ourContext = this.context;
+    //   console.log("updating handle")
+    //   ourContext.grabCollection(handle);
+    // }
 
     render() {
+      // console.log(this.props)
         const {collections} = this.props;
         // console.log("products", this.state.products)
 
-        console.log("collections", collections)
+        // console.log("collections", collections)
 
         if (collections.length > 0) {
             var collectionList = collections.map((item) => {
                 return (
-                    <a href={`/shop/${item.handle}`}>{item.title}</a>
+                  // <Link onClick={() => {this.updateHandle(item.handle)}} to={`/shop/${item.handle}`}>{item.title}</Link>
+                  <Link to={`/shop/${item.handle}`}>{item.title}</Link>
                 )
             })
         }
 
-        return (
+        return (  
+           <ThemeContextConsumer>
+          {context => (
             <div className="App">
                 {/* <Nav isCartOpen={this.state.isCartOpen} handleCartClose={this.handleCartClose} handleCartOpen={this.handleCartOpen}></Nav> */}
               <header className="App__header">
@@ -154,21 +86,23 @@ componentDidUpdate(oldProps){
               <Products
                 products={this.props.products}
                 client={this.props.client}
-                addVariantToCart={this.addVariantToCart}
+                addVariantToCart={context.addVariantToCart}
               />
-              <Cart
+              {/* <Cart
                 updateCartClose={this.state.updateCartClose}
                 checkout={this.state.checkout}
                 isCartOpen={this.state.isCartOpen}
                 handleCartClose={this.handleCartClose}
                 updateQuantityInCart={this.updateQuantityInCart}
                 removeLineItemInCart={this.removeLineItemInCart}
-              />
+              /> */}
               <div>
                 {collectionList}
               </div>
               {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQssDY4fiPH8ZpRknYiyASe_94K2PyODp6bcN7_HsWFEI0Gg/viewform?embedded=true" width="640" height="1014" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
             </div>
-          );
-    }
-}
+          )}
+          </ThemeContextConsumer>
+        )
+            }
+          }
