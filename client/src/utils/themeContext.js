@@ -18,7 +18,7 @@ const client = Client.buildClient({
      this.state = {
        isCartOpen: false,
        checkout: { lineItems: [] },
-       checkout: (JSON.parse(localStorage.getItem('checkout'))) || null,
+      //  checkout: (JSON.parse(localStorage.getItem('checkout'))) || null,
        products: [],
        shop: {},
        collections: [],
