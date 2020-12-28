@@ -5,12 +5,22 @@
 
 .collection-nav {
   display:flex;
-  flex-direction:column;
+  flex-direction:column-reverse;
+  justify-content: flex-end;
+}
+.collection-nav > a {
+  margin:10px 0px;
 }
 .product-block {
   display: flex;
   flex-direction: row-reverse;
+  max-width: 75%;
+  margin: 0px auto;
 }
+.collection-title {
+  margin: 75px 50px 25px 50px;
+}
+
 
 
 .Product {
