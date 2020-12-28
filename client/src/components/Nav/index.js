@@ -138,6 +138,9 @@ handleNavigation = (e) => {
               <li>
               <Link to="/blog" >Blog</Link>
               </li>
+              <li>
+              <Link to="/shop" >Shop</Link>
+              </li>
               {/* <li>
                 <a href="#">Resources</a>
               </li>
