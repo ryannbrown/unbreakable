@@ -9,17 +9,17 @@ import { ThemeContextProvider } from "./utils/themeContext";
 require('dotenv').config();
 
 
-const client = Client.buildClient({
-  domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
-  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_TOKEN,
+// const client = Client.buildClient({
+//   domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
+//   storefrontAccessToken: process.env.REACT_APP_SHOPIFY_TOKEN,
   
-});
+// });
 
 ReactDOM.render(
   <React.StrictMode>
     <HttpsRedirect>
-      <ThemeContextProvider value={"Day"}>
-      <App client={client} />
+      <ThemeContextProvider>
+      <App />
       </ThemeContextProvider>
     </HttpsRedirect>
   </React.StrictMode>,
