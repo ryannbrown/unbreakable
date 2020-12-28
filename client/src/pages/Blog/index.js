@@ -5,9 +5,9 @@ import Prismic from "prismic-javascript";
 // import { Date, Link, RichText } from "prismic-reactjs";
 import linkResolver from "../../utils/linkResolver";
 // import logo from '../../media/logo.png'
-import {Link} from "react-router-dom"
-import Test from "../../components/Test"
-import Nav from "../../components/Nav"
+import { Link } from "react-router-dom";
+import Test from "../../components/Test";
+import Nav from "../../components/Nav";
 import waveImg from "../../media/wave-img.jpg";
 require("dotenv").config();
 const { REACT_APP_PRISMIC_API, REACT_APP_PRISMIC_TOKEN } = process.env;
@@ -24,11 +24,10 @@ export default function Blog() {
   const [doc, setDocData] = React.useState(null);
 
   React.useEffect(() => {
-  
     const fetchData = async () => {
       const response = await Client.query(
         Prismic.Predicates.at("document.type", "blog"),
-        { orderings : '[my.blog.post_date desc]' } 
+        { orderings: "[my.blog.post_date desc]" }
       );
       if (response) {
         setDocData(response.results);
@@ -48,10 +47,10 @@ export default function Blog() {
               alt="cover"
               src={post.data.blog_image.url}
               /> */}
-              <h1>{post.data.title[0].text}</h1>
+            <h1>{post.data.title[0].text}</h1>
           </Link>
-              <p>{post.data.post_date}</p>
-              <p>{post.data.short_description[0].text}</p>
+          <p>{post.data.post_date}</p>
+          <p>{post.data.short_description[0].text}</p>
         </div>
       )
       // <div>post</div>
@@ -76,7 +75,7 @@ export default function Blog() {
           // height: `${this.props.height}`,
           height: `50vh`,
           width: "100%",
-          color: 'white',
+          color: "white",
           display: `flex`,
           flexDirection: "column",
           alignItems: `center`,
@@ -84,23 +83,23 @@ export default function Blog() {
           position: `relative`,
         }}
       >
-        <h1>Blog Posts</h1>
+        <h1>The Unbreakable Blog</h1>
       </div>
       <div className="home-wrapper">
-          <div>
-            {doc ? (
-              <div className="blog-wrapper">
-                {data}
-                {/* <h1>{RichText.asText(doc.data.title)}</h1>
+        <div>
+          {doc ? (
+            <div className="blog-wrapper">
+              {data}
+              {/* <h1>{RichText.asText(doc.data.title)}</h1>
                              <img alt='cover' src={doc.data.blog_image.url} />
                             <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
-              </div>
-            ) : (
-              <div>No content</div>
-            )}
-          </div>
-          <Test></Test>
+            </div>
+          ) : (
+            <div>No content</div>
+          )}
         </div>
+        <Test></Test>
+      </div>
     </div>
   );
 }
