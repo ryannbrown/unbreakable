@@ -167,9 +167,9 @@ handleNavigation = (e) => {
             </a>
             <a>
               <img className="myimg" onClick={context.handleCartOpen} src={cartLogo}></img>
-              {/* {context.checkout.lineItems.length > 0 &&
+              {context.checkout.lineItems.length > 0 &&
               <p className="cart-count">{context.checkout.lineItems.length}</p>
-            } */}
+            }
             </a>
           </div> : 
            <div className="nav-right">
@@ -181,9 +181,9 @@ handleNavigation = (e) => {
            </a>
            <a href="/">
              <img src={cartLogoW}></img>
-             {/* {context.checkout.lineItems.length > 0 &&
+             {context.checkout.lineItems.length > 0 &&
               <p className="mb-checked-cart-count">{context.checkout.lineItems.length}</p>
-            } */}
+            }
            </a>
          </div> }
          
@@ -205,9 +205,9 @@ handleNavigation = (e) => {
           </div>
           <a>
              <img onClick={context.handleCartOpen} className='mbar-cart' src={cartLogo}></img>
-             {/* {context.checkout.lineItems.length > 0 &&
+             {context.checkout.lineItems.length > 0 &&
               <p className="mb-cart-count">{context.checkout.lineItems.length}</p>
-            } */}
+            }
            </a>
         </div>
         <Cart
