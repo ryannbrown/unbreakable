@@ -36,20 +36,10 @@ const client = Client.buildClient({
   componentDidMount() {
 
     console.log(this.state.checkout)
-//    const getSavedCheckout = () => {
-//       var storedCheckout = localStorage.getItem('checkout')
-//       var parsedCheckout = JSON.parse(storedCheckout)
-// // console.log(parsedCheckout, "retrieved from storage");
-// // this.setState({checkout: storedCheckout})
-//     }
 
-//     getSavedCheckout();
-  
 
  client.collection.fetchAllWithProducts().then((collections) => {
-    // Do something with the collections
-    // console.log(collections);
-    // console.log(collections[1].title);
+
     this.setState({
       collections: collections,
     });
@@ -76,10 +66,6 @@ const client = Client.buildClient({
   });
 }
 
-componentDidUpdate() {
-  // console.log(this.state.checkout);
-  // console.log(this.state.checkout.lineItems);
-}
 
   toggleTheme = () => {
     console.log('toggle theme')
@@ -105,10 +91,6 @@ handleCartOpen = () =>  {
 
 
 grabCollection = (handle) => {client.collection.fetchByHandle(handle, {productsFirst: 10}).then((collection) => {
-    // Do something with the collection
-    // console.log("this collection", collection);
-    // console.log("this collection products:", collection.products);
-    // this.setState({collectionProds: collection.products})
     this.setState({collectionProds: collection.products})
   });
 }
@@ -168,8 +150,6 @@ removeLineItemInCart(lineItemId) {
     return (
       <Provider
         value={{ 
-          // theme: this.state.theme,
-          //  toggleTheme: this.toggleTheme, 
            isCartOpen: this.state.isCartOpen,
             handleCartOpen: this.handleCartOpen,
             handleCartClose: this.handleCartClose,

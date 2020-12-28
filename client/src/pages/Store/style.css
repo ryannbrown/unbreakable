@@ -2,6 +2,17 @@
     max-width:50% !important;
 }
 
+
+.collection-nav {
+  display:flex;
+  flex-direction:column;
+}
+.product-block {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
 .Product {
     display:flex;
     flex: 1 1 50% !important;
@@ -97,13 +108,13 @@ input[type=number] {
   
   /* BASE APP
    * ============================== */
-  .App__header {
+  /* .App__header {
     background-color: #222;
     background-image: url('https://unsplash.it/1000/300?image=823');
     background-size: cover;
     color: white;
     padding: 10px 10px;
-  }
+  } */
   
   .App__nav{
     width: 100%;
