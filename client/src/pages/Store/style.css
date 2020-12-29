@@ -640,7 +640,7 @@ span.prod-price {
   color: #c23628;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 750px) {
   .Product {
     display: flex;
     flex-direction: column;
