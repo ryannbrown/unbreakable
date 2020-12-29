@@ -219,8 +219,9 @@ export default class Nav extends Component {
                   <a href="/">
                     <img src={fbLogoW}></img>
                   </a>
-                  <a href="/">
-                    <img src={cartLogoW}></img>
+                  <a style={{cursor: 'pointer'}} onClick={context.handleCartOpen}>
+                    <img
+                    src={cartLogoW}></img>
                     {context.checkout.lineItems.length > 0 && (
                       <p className="mb-checked-cart-count">
                         {context.checkout.lineItems.length}
