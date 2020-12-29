@@ -12,7 +12,7 @@
 .bb-text-content h1 {
   font-size: 2.5rem;
   padding: 2rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.09rem;
 }
 
 .bb-text-content p {
@@ -55,4 +55,9 @@
   margin: 50px auto;
   border: 1px solid #fff;
   background-color: transparent;
+}
+
+.the-button:hover {
+  background: #196196;
+  border: 1px solid #fff0;
 }
