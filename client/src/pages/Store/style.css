@@ -153,8 +153,10 @@ input::-webkit-inner-spin-button {
     justify-content: space-between;
   }
   .Product img {
-    width: 75px;
+    /* width: 75px; */
+    width: 100%;
     border-radius: 25px;
+    margin-top:10vh;
   }
 }
 
