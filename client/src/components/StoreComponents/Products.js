@@ -30,10 +30,10 @@ componentDidMount() {
 
 }
 
-componentDidUpdate() {
-  const ourContext = this.context;
-  console.log(ourContext.thisProduct)
-}
+// componentDidUpdate() {
+//   const ourContext = this.context;
+//   console.log(ourContext, "updated")
+// }
 
   render() {
     const ourContext = this.context;
@@ -49,7 +49,7 @@ if (ourContext.thisProduct.options) {
       <Product
       updateQuantityInCart={context.updateQuantityInCart}
         addVariantToCart={context.addVariantToCart}
-        client={this.props.client}
+        client={context.client}
         key={context.thisProduct.id.toString()}
         product={context.thisProduct}
         lineItemId={this.props.lineItemId}

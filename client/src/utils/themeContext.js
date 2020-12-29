@@ -24,7 +24,8 @@ const client = Client.buildClient({
        collections: [],
        isCartOpen: false,
        collectionProds: [],
-       thisProduct: []
+       thisProduct: [],
+       client: []
        
      };
      this.addVariantToCart = this.addVariantToCart.bind(this);
@@ -35,6 +36,10 @@ const client = Client.buildClient({
 
 
   componentDidMount() {
+
+    this.setState({
+      client: client
+    })
 
     console.log(this.state.checkout)
 
@@ -65,6 +70,10 @@ const client = Client.buildClient({
       shop: res,
     });
   });
+}
+
+componentDidUpdate(){
+  // console.log(this.state.client)
 }
 
 
@@ -179,7 +188,8 @@ removeLineItemInCart(lineItemId) {
             collectionProds: this.state.collectionProds,
             grabProduct: this.grabProduct,
             grabProductById: this.grabProductById,
-            thisProduct: this.state.thisProduct
+            thisProduct: this.state.thisProduct,
+            client: this.state.client
            }}
       >
         {this.props.children}

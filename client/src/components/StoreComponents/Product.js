@@ -35,10 +35,7 @@ class Product extends Component {
     let selectedOptions = this.state.selectedOptions;
     selectedOptions[target.name] = target.value;
 
-    const selectedVariant = this.props.client.product.helpers.variantForOptions(
-      this.props.product,
-      selectedOptions
-    );
+    const selectedVariant = this.props.client.product.helpers.variantForOptions(this.props.product,selectedOptions);
 
     this.setState({
       selectedVariant: selectedVariant,
@@ -68,6 +65,7 @@ class Product extends Component {
       });
     }
   }
+
 
   render() {
     // console.log(this.props.product);
