@@ -352,7 +352,9 @@ input::-webkit-inner-spin-button {
   margin: 0;
   padding: 20px;
 }
-
+.Cart-info__small.Cart-info__small {
+  float: left;
+}
 .Cart__footer {
   padding: 20px;
   border-top: 1px solid #e5e5e5;
