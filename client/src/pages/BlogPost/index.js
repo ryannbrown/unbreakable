@@ -85,7 +85,7 @@ export default function BlogPost(props) {
             {/* <p >{thisModal.description}</p> */}
           </div>
         ) : (
-          <div className="blog-content">
+          <div className="loading-block">
           <ClipLoader
           // css={override}
           size={35}

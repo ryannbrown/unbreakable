@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Product from './Product';
+import "./style.css"
 import {
   ThemeContextConsumer,
   ThemeContextProvider,
 } from "../../utils/themeContext";
 import {Link} from "react-router-dom"
+import ClipLoader from "react-spinners/ClipLoader";
 
 class Products extends Component {
   static contextType = ThemeContextConsumer;
@@ -62,7 +64,17 @@ if (ourContext.thisProduct.options) {
     )}
     </ThemeContextConsumer>
   );
-} else return (<div>Nothing here bro</div>)
+} else return (
+  <div className="loading-block">
+
+  <ClipLoader
+  // css={override}
+  className="clippy"
+  size={35}
+  color={"#196196"}
+  // loading={this.state.loading}
+/>
+</div>)
   }
 }
 

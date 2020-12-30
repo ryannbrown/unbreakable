@@ -94,7 +94,7 @@ export default function Blog() {
               {data}
             </div>
           ) : (
-            <div className="blog-wrapper">
+            <div className="loading-block">
             <ClipLoader
             // css={override}
             size={35}

@@ -62,14 +62,10 @@ export default class Store extends Component {
             <div className="App">
               <header  style={{
           backgroundImage: `url(${waveImg})`,
-          // backgroundColor: `#196196`,
-          // opacity: `100%`,
           backgroundBlendMode: `multiply`,
           backgroundPosition: `center top`,
           backgroundSize: `cover`,
           backgroundRepeat: `no-repeat`,
-          // backgroundAttachment: `fixed`,
-          // height: `${this.props.height}`,
           height: `25vh`,
           width: "100%",
           color: 'white',
@@ -93,13 +89,7 @@ export default class Store extends Component {
               <div className="products-wrapper">
                 {productList}
                 </div>
-              {/* <Products
-                products={this.props.products}
-                client={this.props.client}
-                addVariantToCart={context.addVariantToCart}
-              /> */}
               <div className="collection-nav">
-
                 {collectionList}
               </div>
               </div>

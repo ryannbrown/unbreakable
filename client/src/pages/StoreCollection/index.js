@@ -126,8 +126,6 @@ export default class StoreCollection extends Component {
             <header
               style={{
                 backgroundImage: `url(${waveImg})`,
-                // backgroundColor: `#196196`,
-                // opacity: `100%`,
                 backgroundBlendMode: `multiply`,
                 backgroundPosition: `center top`,
                 backgroundSize: `cover`,
@@ -155,11 +153,6 @@ export default class StoreCollection extends Component {
             <div className="products-wrapper">
                 {productList}
                 </div>
-              {/* <Products
-                products={context.collectionProds}
-                client={context.client}
-                addVariantToCart={context.addVariantToCart}
-              /> */}
             <div className="collection-nav">{collectionList}</div>
             </div>
           </div>

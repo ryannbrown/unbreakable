@@ -8,6 +8,10 @@
   margin: 0px auto;
 }
 
+.Product__option option {
+  font-size: 22px !important;
+}
+
 .cart-desktop, .cart-mobile  {
   cursor:pointer;
 }
