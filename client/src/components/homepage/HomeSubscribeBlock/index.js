@@ -59,3 +59,19 @@ export default class HomeSubscribeBlock extends Component {
     );
   }
 }
+
+// can use with mailchimp hopefully
+// import jsonp from 'jsonp';
+// import queryString from 'query-string';
+
+// // ...
+
+// const subscribeToNewsLetter = () => {
+//   const formData = {
+//     EMAIL: // your email string,
+//   };
+//   jsonp(`YOUR_URL/subscribe/post-json?u=YOUR_U&amp;id=YOUR_ID&${queryString.stringify(formData)}`, { param: 'c' }, (err, data) => {
+//     console.log('err:', err);
+//     console.log('data:', data);
+//   });
+// }
