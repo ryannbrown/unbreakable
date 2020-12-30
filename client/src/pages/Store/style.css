@@ -222,6 +222,10 @@ input::-webkit-inner-spin-button {
     text-align:unset;
   }
 
+  .prod-img {
+    width: 75%;
+  }
+
   .collection-nav a {
     /* margin:15px 5px; */
     flex: 1 0 20%;
@@ -231,7 +235,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     flex-wrap: wrap;
     min-width: 75%;
-    padding: 0px;
+    padding: 25px;
     max-width: 100%;
     margin: 0px auto;
 }
