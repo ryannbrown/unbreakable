@@ -46,11 +46,16 @@
   }
 }
 @media (max-width: 1000px) {
-  img.hero-book-img {
+  /* img.hero-book-img {
     width: 100%;
     margin: 42% 0%;
     padding-top: 5%;
-  }
+  } */
+  img.hero-book-img {
+    width: 100%;
+    margin: 35% 0% 0% 0%;
+    /* padding-top: 5%; */
+}
   .hero-content-section {
     flex-direction: column-reverse;
   }
@@ -60,6 +65,7 @@
   }
   .hero-text-block {
     width: 100%;
+    margin-top:-50px;
     /* margin-top: -100px; */
     /* z-index: 50000; */
   }

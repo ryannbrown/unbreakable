@@ -243,9 +243,9 @@ export default class Nav extends Component {
                 <span></span>
               </label>
               <div className="mobile-nav-brand">
-                <a href="/">
+                <Link to="/">
                   <img src={logo}></img>
-                </a>
+                </Link>
               </div>
               <a className="cart-mobile">
                 <img
