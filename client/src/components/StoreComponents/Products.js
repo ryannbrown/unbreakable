@@ -20,7 +20,8 @@ class Products extends Component {
       handle: "",
       item: "",
       collection: '',
-      thisProduct: []
+      thisProduct: [],
+      itemLoaded: false
     };
   }
 
@@ -29,9 +30,15 @@ componentDidMount() {
   let collection = this.props.match.params.collection;
   let item = this.props.match.params.item
   this.setState({ item: item
-  , collection: collection });
+  , collection: collection});
   // console.log(handle);
   ourContext.grabProduct(item);
+
+}
+
+clearCurrentItem = () => {
+  const ourContext = this.context;
+  ourContext.clearCurrentItem()
 
 }
 
@@ -50,7 +57,7 @@ if (ourContext.thisProduct.options) {
       <div className="App">
         {/* <h1>{context.thisProduct.title}</h1> */}
         <div className="product-block">
-        <Link className="product-back-btn" to={`/shop/${this.state.collection}/${this.state.handle}`}> Back to <span style={{textTransform:'capitalize'}}>{this.state.collection}</span></Link>
+        <Link className="product-back-btn" onClick={this.clearCurrentItem} to={`/shop/${this.state.collection}/${this.state.handle}`}> Back to <span style={{textTransform:'capitalize'}}>{this.state.collection}</span></Link>
       <Product
       updateQuantityInCart={context.updateQuantityInCart}
         addVariantToCart={context.addVariantToCart}

@@ -5,7 +5,7 @@
 .product-block {
   position:relative;
   max-width: 75%;
-  margin: 0px auto;
+  margin: 100px auto;
 }
 
 .Product__option option {
@@ -89,6 +89,7 @@
 
 .prod-img {
   width: 100%;
+  min-width:200px;
 }
 
 .collection-nav {
@@ -221,6 +222,8 @@ input::-webkit-inner-spin-button {
 .product-row {
   display: flex;
 }
+
+
 
 
 @media(max-width:750px) {
@@ -846,7 +849,11 @@ span.prod-price {
   }
 }
 
-
+@media (max-width:1200px) {
+  .products-wrapper {
+    padding:10px 50px;
+    }
+}
 
 
 

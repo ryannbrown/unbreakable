@@ -35,7 +35,7 @@ export default class Homepage extends Component {
                <HomeSubscribeBlock></HomeSubscribeBlock>
                <HomeStoreBlock></HomeStoreBlock>
             </div>
-            <Footer></Footer>
+            
         </div>
         )
     }

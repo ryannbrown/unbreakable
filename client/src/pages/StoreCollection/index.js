@@ -77,9 +77,6 @@ export default class StoreCollection extends Component {
   render() {
     
     const ourContext = this.context;
-
-    console.log(ourContext.collectionProds);
-
     const { products } = this.state;
 
     // if (ourContext.collections.length > 0) {

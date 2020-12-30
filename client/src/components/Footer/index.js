@@ -8,6 +8,7 @@ import jsLogo from "../../media/redlogo.png"
 import fbLogo from "../../media/fb-grey.png"
 import instaLogo from "../../media/insta-grey.png"
 import cartLogo from "../../media/cart-grey.png"
+import {Link} from 'react-router-dom'
 var _ = require("lodash");
 
 export default class Footer extends Component {
@@ -29,15 +30,15 @@ export default class Footer extends Component {
         <div className="darkfooter">
           <div>
             {/* <h1 className="brand-title">UNBREAKABLE</h1> */}
-            <a href="/"><img className="footer-brand" src={logo}></img></a>
+            <Link to="/"><img className="footer-brand" src={logo}></img></Link>
             <br></br>
             {/* <hr></hr> */}
           </div>
             <div className="link-wrapper">
-              <a  href="/shop"><p>Shop</p></a>
-              <a  href="/"><p>Blog</p></a>
-              <a  href="/"><p>Resources</p></a>
-              <a  href="/"><p>About</p></a>
+              <Link  to="/shop/most-popular"><p>Shop</p></Link>
+              <Link  to="/blog"><p>Blog</p></Link>
+              <Link  to="/resources"><p>Resources</p></Link>
+              <Link  to="/about"><p>About</p></Link>
             </div>
             <div className="social-wrapper">
              <a href="/"><img src={fbLogo}></img></a>

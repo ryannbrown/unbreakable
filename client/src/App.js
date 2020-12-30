@@ -24,6 +24,7 @@ import Homepage from "./pages/Homepage/index"
 import Blog from "./pages/Blog/index"
 import BlogPost from "./pages/BlogPost/index"
 import Nav from "./components/Nav/index"
+import Footer from "./components/Footer"
 import { ThemeContextConsumer, ThemeContextProvider } from "./utils/themeContext";
 import createHistory from 'history/createBrowserHistory';
 import {Helmet} from "react-helmet";
@@ -91,6 +92,7 @@ class App extends Component {
              {/* <Route path="/" component={Page}/> */}
            
              </Switch>
+             <Footer></Footer>
            </Router>
          )}
          </ThemeContextConsumer>

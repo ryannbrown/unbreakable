@@ -87,16 +87,23 @@ componentDidUpdate(){
   };
 
   handleCartClose = () => {
-    console.log("clicked to close")
+    // console.log("clicked to close")
     this.setState({
       isCartOpen: false,
     });
   }
 handleCartOpen = () =>  {
-    console.log("clicked to open")
+    // console.log("clicked to open")
     this.setState({
       isCartOpen: true,
     });
+  }
+
+  clearCurrentItem = () => {
+    console.log("clear current item")
+    this.setState({
+      thisProduct: []
+    })
   }
 
 
@@ -189,7 +196,8 @@ removeLineItemInCart(lineItemId) {
             grabProduct: this.grabProduct,
             grabProductById: this.grabProductById,
             thisProduct: this.state.thisProduct,
-            client: this.state.client
+            client: this.state.client,
+            clearCurrentItem: this.clearCurrentItem
            }}
       >
         {this.props.children}
