@@ -26,15 +26,38 @@ export default class StoreCollection extends Component {
     };
   }
 
-  updateHandle = (handle) => {
+  updateHandle = (handle, i) => {
+    let activeClass = document.getElementsByClassName('is-lit');
+    if (activeClass.length > 0) {
+      activeClass[0].classList.remove('is-lit')
+    }
+    // console.log(activeClass)
     this.setState({ handle: handle });
     const ourContext = this.context;
     console.log("updating handle");
     ourContext.grabCollection(handle);
+    let makeActive = document.getElementById(`store-link-${i}`);
+    // console.log(thisHere.classList);
+    makeActive.classList.add("is-lit")
   };
 
+  makeFirstLinkActive = () => {
+    // will only fire if no other links are active 
+    if (document.getElementsByClassName('is-lit').length == 0) {
+      // saves arrays as object
+      let thisHere = document.getElementsByClassName('linkz')
+      // grabs last one which happens to be most popular. Would be better if it were the first one 
+      // though to keep it consistent
+      let mostPop = thisHere[thisHere.length - 1]
+      if (mostPop) {
+        // makes it bold
+        mostPop.classList.add('is-lit')
+      }
+    }
+  }
   componentDidMount() {
-    
+
+  
     const ourContext = this.context;
     // console.log("heyyyy collections");
     // console.log(this.props.match.params);
@@ -46,21 +69,32 @@ export default class StoreCollection extends Component {
     ourContext.grabCollection(handle);
   }
 
+  componentDidUpdate() {
+    this.makeFirstLinkActive()
+ 
+  }
+
   render() {
+    
     const ourContext = this.context;
 
     console.log(ourContext.collectionProds);
 
     const { products } = this.state;
 
+    // if (ourContext.collections.length > 0) {
+    //   document.getElementById('store-link-0').classList.add("is-lit")
+    // }
+
     // console.log(collections)
 
     if (ourContext.collections.length > 0) {
-      var collectionList = ourContext.collections.map((item) => {
+      
+      var collectionList = ourContext.collections.map((item,i) => {
         return (
-          <Link
+          <Link className="linkz" id={`store-link-${i}`}
             onClick={() => {
-              this.updateHandle(item.handle);
+              this.updateHandle(item.handle, i);
             }}
             to={`/shop/${item.handle}`}
           >

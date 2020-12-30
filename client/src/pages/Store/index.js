@@ -27,6 +27,10 @@ export default class Store extends Component {
           };
     }
 
+    makeActiveLink = () => {
+      console.log("make active")
+    }
+
     render() {
         const {collections, products} = this.props;
 
@@ -43,7 +47,7 @@ export default class Store extends Component {
           var productList = products.map((item, i) => {
             return (
               <div className={`prod-block ${i}`}>
-                <Link to={`/shop/item/${this.props.product.handle}`}>
+                <Link onClick={this.makeActiveLink} to={`/shop/item/${this.props.product.handle}`}>
                  {/* <Link to={`/shop`}> */}
                     <img src={item.images[0].src} className={`prod-img ${i}`}></img>
                  </Link>

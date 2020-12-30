@@ -86,7 +86,15 @@
 }
 .collection-nav > a {
   margin: 10px 0px;
+  opacity:.5;
 }
+
+
+
+.is-lit {
+  opacity:1 !important;
+}
+
 .products-block {
   display: flex;
   flex-direction: row-reverse;
@@ -203,8 +211,13 @@ input::-webkit-inner-spin-button {
 
 @media(max-width:750px) {
 
+  .collection-title {
+    display:none;
+  }
+
   .collection-nav {
     flex-direction:row-reverse;
+    padding:25px;
   }
 
   .collection-nav a {
