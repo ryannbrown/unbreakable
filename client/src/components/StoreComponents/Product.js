@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import VariantSelector from "./VariantSelector";
 
+
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -68,6 +69,9 @@ class Product extends Component {
 
 
   render() {
+
+
+    // console.log(htmlDescription)
     // console.log(this.props.product);
     // console.log( this.state.selectedVariantQuantity)
     let variantImage =
@@ -98,16 +102,13 @@ class Product extends Component {
           <div className="product-col">
             <h1 className="prod-title">{this.props.product.title}</h1>
             <span className="prod-price">${variant.price}</span>
+            <div className="prod-description"/>
             <div
-              className="prod-description"
-              dangerouslySetInnerHTML={this.props.product.descriptionHtml.value}
-            >
-              {this.props.product.description}
-            </div>
+  dangerouslySetInnerHTML={{
+    __html: this.props.product.descriptionHtml
+  }}></div>
+
             {variantSelectors}
-            {/* <label className="Product__option">
-          Quantity */}
-            {/* <div className="quantity-box"> */}
             <div className="product-row">
               {/* <span onClick={()=>{this.quantChange('+', variant.id, variantQuantity)}}>+</span> */}
               <div className="qty-product">Qty</div>
@@ -128,11 +129,7 @@ class Product extends Component {
                 Add to cart
               </button>
             </div>
-            {/* </div> */}
           </div>
-
-          {/* </label> */}
-          {/* </Link> */}
         </div>
       </div>
     );

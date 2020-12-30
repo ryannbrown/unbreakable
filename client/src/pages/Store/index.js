@@ -40,13 +40,14 @@ export default class Store extends Component {
         }
         if (products.length > 0) {
           console.log(products)
-          var productList = products.map((item) => {
+          var productList = products.map((item, i) => {
             return (
-                //  <Link to={`/shop/item/${this.props.product.handle}`}>
-             
-                 <Link to={`/shop`}>
-                   <img className="product-image" src={item.images[0].src} className="prod-img"></img>
+              <div className={`prod-block ${i}`}>
+                <Link to={`/shop/item/${this.props.product.handle}`}>
+                 {/* <Link to={`/shop`}> */}
+                    <img src={item.images[0].src} className={`prod-img ${i}`}></img>
                  </Link>
+             </div>
             )
           } )
         }

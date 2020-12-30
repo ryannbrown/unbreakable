@@ -16,10 +16,64 @@
   /* flex-direction:column; */
   flex-wrap: wrap;
   min-width: 75%;
+  padding:10px 100px;
+  max-width:75%;
+  margin:0px auto;
+  /* grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,20vh);
+    grid-gap: 15px; */
 }
 
+.prod-block {
+  margin:25px;
+  width: 50%;
+  /* height: 100%; */
+  flex: 0 0 40%;
+  /* background-color:#F4F4F4; */
+}
+
+.prod-block:hover {
+  opacity:.75;
+}
+
+.prod-block a {
+  width:100%;
+  height:100%;
+}
+
+/* .prod-block img {
+  flex: 0 0 25%;
+} */
+
+/* .prod-block .2 {
+  align-items:center
+} */
+
+ /* .products-wrapper a:nth-child(even)  .prod-img{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.products-wrapper a:nth-child(odd) .prod-img {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+} */
+
+
+/* .prod-block:nth-child(even){
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+}
+.prod-block:nth-child(odd){
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 1;
+} */
+
 .prod-img {
-  width: 125px;
+  width: 100%;
 }
 
 .collection-nav {
@@ -34,7 +88,8 @@
 .products-block {
   display: flex;
   flex-direction: row-reverse;
-  max-width: 75%;
+  /* max-width: 75%; */
+  max-width:75%;
   margin: 0px auto;
 }
 .collection-title {
