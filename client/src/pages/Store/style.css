@@ -105,6 +105,7 @@
 .collection-title {
   color: #868686;
   margin: 75px 50px 25px 50px;
+  text-transform: capitalize;
 }
 
 .Product {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./style.css";
 import merch from "../../../media/merch.png";
+import {Link} from "react-router-dom"
 
 export default class HomeStoreBlock extends Component {
   constructor(props) {
@@ -24,8 +25,10 @@ export default class HomeStoreBlock extends Component {
       <div className="home-store-content">
         <div className="home-store-text">
           {/* <div> */}
-          <h2>My online store</h2>
-          <h2>is coming soon!</h2>
+          <Link to="/shop/most-popular">
+          <h2>Check out</h2>
+          <h2>my online store!</h2>
+          </Link>
           {/* </div> */}
         </div>
         <div

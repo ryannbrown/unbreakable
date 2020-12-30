@@ -102,8 +102,7 @@ class Product extends Component {
           <div className="product-col">
             <h1 className="prod-title">{this.props.product.title}</h1>
             <span className="prod-price">${variant.price}</span>
-            <div className="prod-description"/>
-            <div
+            <div className="prod-description"
   dangerouslySetInnerHTML={{
     __html: this.props.product.descriptionHtml
   }}></div>

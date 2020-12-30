@@ -186,9 +186,9 @@ export default class Nav extends Component {
              <a  href="/"><img src={cartLogo}></img></a>
           </div> */}
               <div className="nav-brand">
-                <a href="/">
+                <Link to="/">
                   <img src={logo}></img>
-                </a>
+                </Link>
               </div>
               {!this.state.isMobile ? (
                 <div className="nav-right">
