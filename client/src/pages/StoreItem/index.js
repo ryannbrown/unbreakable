@@ -23,13 +23,16 @@ export default class StoreItem extends Component {
     this.state = {
       products: [],
       handle: "",
+      collection: ""
     };
   }
 
   componentDidMount() {
     const ourContext = this.context;
+    let collection = this.props.match.params.collection;
     let item = this.props.match.params.item
-    this.setState({ item: item });
+    this.setState({ item: item
+    , collection: collection });
     // console.log(handle);
     ourContext.grabProduct(item);
   }
@@ -61,7 +64,7 @@ export default class StoreItem extends Component {
       <ThemeContextConsumer>
         {(context) => (
           <div className="App">
-              <Link className="product-back-btn" to="/shop">Back to Shop</Link>
+              <Link className="product-back-btn" to={`/${this.state.collection}/${this.state.handle}`}> Back to {this.state.collection}</Link>
             <div className="product-block">
               <div className="product-description">
               </div>

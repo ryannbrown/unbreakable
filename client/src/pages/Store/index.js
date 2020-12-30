@@ -70,7 +70,7 @@ export default class Store extends Component {
           backgroundRepeat: `no-repeat`,
           // backgroundAttachment: `fixed`,
           // height: `${this.props.height}`,
-          height: `50vh`,
+          height: `25vh`,
           width: "100%",
           color: 'white',
           display: `flex`,

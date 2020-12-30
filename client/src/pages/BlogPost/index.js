@@ -9,6 +9,7 @@ import twitGrey from "../../media/twitter-grey.png"
 import linkedGrey from "../../media/linked-grey.png"
 import linkResolver from "../../utils/linkResolver";
 import waveImg from "../../media/wave-img.jpg";
+import ClipLoader from "react-spinners/ClipLoader";
 import {Helmet} from "react-helmet"
 import { FacebookShareCount, FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, LinkedinShareButton, LinkedinIcon } from "react-share";
 
@@ -84,7 +85,14 @@ export default function BlogPost(props) {
             {/* <p >{thisModal.description}</p> */}
           </div>
         ) : (
-          <div> Loading</div>
+          <div className="blog-content">
+          <ClipLoader
+          // css={override}
+          size={35}
+          color={"#196196"}
+          // loading={this.state.loading}
+        />
+        </div>
         )}
         <div className="share-block">
         <div className="share-btns">

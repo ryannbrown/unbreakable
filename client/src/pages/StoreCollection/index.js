@@ -132,7 +132,7 @@ export default class StoreCollection extends Component {
                 backgroundPosition: `center top`,
                 backgroundSize: `cover`,
                 backgroundRepeat: `no-repeat`,
-                height: `50vh`,
+                height: `25vh`,
                 width: "100%",
                 color: "white",
                 display: `flex`,

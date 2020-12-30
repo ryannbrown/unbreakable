@@ -17,14 +17,17 @@ class Products extends Component {
       products: [],
       handle: "",
       item: "",
+      collection: '',
       thisProduct: []
     };
   }
 
 componentDidMount() {
   const ourContext = this.context;
+  let collection = this.props.match.params.collection;
   let item = this.props.match.params.item
-  this.setState({ item: item });
+  this.setState({ item: item
+  , collection: collection });
   // console.log(handle);
   ourContext.grabProduct(item);
 
@@ -43,9 +46,9 @@ if (ourContext.thisProduct.options) {
     <ThemeContextConsumer>
     {(context) => (
       <div className="App">
-          <Link className="product-back-btn" to="/shop/most-popular">Back to Shop</Link>
         {/* <h1>{context.thisProduct.title}</h1> */}
         <div className="product-block">
+        <Link className="product-back-btn" to={`/shop/${this.state.collection}/${this.state.handle}`}> Back to <span style={{textTransform:'capitalize'}}>{this.state.collection}</span></Link>
       <Product
       updateQuantityInCart={context.updateQuantityInCart}
         addVariantToCart={context.addVariantToCart}

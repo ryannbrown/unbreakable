@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import Test from "../../components/Test";
 import Nav from "../../components/Nav";
 import waveImg from "../../media/wave-img.jpg";
+import { css } from "@emotion/core";
+import ClipLoader from "react-spinners/ClipLoader";
 require("dotenv").config();
 const { REACT_APP_PRISMIC_API, REACT_APP_PRISMIC_TOKEN } = process.env;
 
@@ -73,7 +75,7 @@ export default function Blog() {
           backgroundRepeat: `no-repeat`,
           // backgroundAttachment: `fixed`,
           // height: `${this.props.height}`,
-          height: `50vh`,
+          height: `25vh`,
           width: "100%",
           color: "white",
           display: `flex`,
@@ -90,15 +92,19 @@ export default function Blog() {
           {doc ? (
             <div className="blog-wrapper">
               {data}
-              {/* <h1>{RichText.asText(doc.data.title)}</h1>
-                             <img alt='cover' src={doc.data.blog_image.url} />
-                            <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
             </div>
           ) : (
-            <div>No content</div>
+            <div className="blog-wrapper">
+            <ClipLoader
+            // css={override}
+            size={35}
+            color={"#196196"}
+            // loading={this.state.loading}
+          />
+          </div>
           )}
         </div>
-        <Test></Test>
+        {/* <Test></Test> */}
       </div>
     </div>
   );
