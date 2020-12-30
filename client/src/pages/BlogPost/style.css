@@ -3,6 +3,10 @@
   margin: 50px auto;
 }
 
+.icon-margin {
+  margin:0px 15px;
+}
+
 .back-link {
   text-align: left;
   margin-top:20px;

@@ -9,6 +9,8 @@ import twitGrey from "../../media/twitter-grey.png"
 import linkedGrey from "../../media/linked-grey.png"
 import linkResolver from "../../utils/linkResolver";
 import waveImg from "../../media/wave-img.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 import ClipLoader from "react-spinners/ClipLoader";
 import {Helmet} from "react-helmet"
 import { FacebookShareCount, FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, LinkedinShareButton, LinkedinIcon } from "react-share";
@@ -60,7 +62,7 @@ export default function BlogPost(props) {
         
       <div className="blog-post-page">
         <div className="back-link">
-          <Link to="/blog">back</Link>
+          <Link to="/blog"><FontAwesomeIcon className="icon-margin" icon={faChevronLeft}></FontAwesomeIcon>back</Link>
         </div>
         {doc ? (
           <div className="blog-content">

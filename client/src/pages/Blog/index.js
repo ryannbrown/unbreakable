@@ -11,6 +11,7 @@ import Nav from "../../components/Nav";
 import waveImg from "../../media/wave-img.jpg";
 import { css } from "@emotion/core";
 import ClipLoader from "react-spinners/ClipLoader";
+
 require("dotenv").config();
 const { REACT_APP_PRISMIC_API, REACT_APP_PRISMIC_TOKEN } = process.env;
 

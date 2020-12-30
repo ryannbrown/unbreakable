@@ -6,6 +6,8 @@ import {
   ThemeContextProvider,
 } from "../../utils/themeContext";
 import {Link} from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 import ClipLoader from "react-spinners/ClipLoader";
 
 class Products extends Component {
@@ -57,7 +59,7 @@ if (ourContext.thisProduct.options) {
       <div className="App">
         {/* <h1>{context.thisProduct.title}</h1> */}
         <div className="product-block">
-        <Link className="product-back-btn" onClick={this.clearCurrentItem} to={`/shop/${this.state.collection}/${this.state.handle}`}> Back to <span style={{textTransform:'capitalize'}}>{this.state.collection}</span></Link>
+        <Link className="product-back-btn" onClick={this.clearCurrentItem} to={`/shop/${this.state.collection}/${this.state.handle}`}><FontAwesomeIcon className="icon-margin" icon={faChevronLeft}></FontAwesomeIcon> Back to <span style={{textTransform:'capitalize'}}>{this.state.collection}</span></Link>
       <Product
       updateQuantityInCart={context.updateQuantityInCart}
         addVariantToCart={context.addVariantToCart}
