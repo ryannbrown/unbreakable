@@ -218,10 +218,13 @@ input::-webkit-inner-spin-button {
   .collection-nav {
     flex-direction:row-reverse;
     padding:25px;
+    flex-wrap:wrap;
+    text-align:unset;
   }
 
   .collection-nav a {
-    margin:10px auto;
+    /* margin:15px 5px; */
+    flex: 1 0 20%;
   }
   
   .products-wrapper {
@@ -233,7 +236,7 @@ input::-webkit-inner-spin-button {
     margin: 0px auto;
 }
 .prod-block {
-  margin: 25px;
+  margin: 25px auto;
   width: 100%;
   flex: 1 0 100%;
 }
