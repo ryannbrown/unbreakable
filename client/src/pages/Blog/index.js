@@ -83,6 +83,7 @@ export default function Blog() {
           alignItems: `center`,
           justifyContent: "center",
           position: `relative`,
+          
         }}
       >
         <h1>The Unbreakable Blog</h1>

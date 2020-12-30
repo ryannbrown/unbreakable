@@ -74,6 +74,7 @@ export default class Store extends Component {
           alignItems: `center`,
           justifyContent: "center",
           position: `relative`,
+          marginTop: '80px'
         }} className="App__header">
                 {!this.state.isCartOpen && (
                   <div className="App__view-cart-wrapper">

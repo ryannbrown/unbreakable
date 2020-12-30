@@ -105,13 +105,12 @@ export default class StoreCollection extends Component {
     }
 
     if (ourContext.collectionProds.length > 0) {
-      // console.log(products)
       var productList = ourContext.collectionProds.map((item, i) => {
         return (
-            //  <Link to={`/shop/item/${this.props.product.handle}`}>
+   
             <div className={`prod-block number-${i}`}>
                 <Link to={`/shop/${this.state.handle}/${item.handle}`}>
-            {/* <Link to={`/shop`}> */}
+         
                <img src={item.images[0].src} className={`prod-img item-${i}`}></img>
             </Link>
         </div>
@@ -138,6 +137,7 @@ export default class StoreCollection extends Component {
                 alignItems: `center`,
                 justifyContent: "center",
                 position: `relative`,
+                
               }}
               className="App__header"
             >

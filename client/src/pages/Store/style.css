@@ -350,6 +350,19 @@ input::-webkit-inner-spin-button {
     padding: 10px 10px;
   } */
 
+  /* margin the size of the nav bar for mobile heros */
+@media(max-width:750px) {
+  .App__header {
+    margin-top:80px;
+  }
+  .blog-blue-block {
+    margin-top:80px;
+  }
+  .about-img {
+    margin-top:80px;
+  }
+}
+
 .App__nav {
   width: 100%;
   list-style: none;
