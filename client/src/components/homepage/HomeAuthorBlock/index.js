@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 // import profPic from "../../media/5.PNG"
 import portrait from "../../../media/portrait.png";
+import {Link} from "react-router-dom"
 export default class HomeAuthorBlock extends Component {
   constructor(props) {
     super(props);
@@ -44,7 +45,7 @@ export default class HomeAuthorBlock extends Component {
             <div className="auth-text">
               <h2>Carolyn S. Skowron</h2>
               <p>Author of Unbreakable</p>
-              <a href="/about"><button>Get to know me</button></a>
+              <Link to="/about"><button>Get to know me</button></Link>
             </div>
           </div>
           <br></br>
