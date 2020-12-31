@@ -30,6 +30,10 @@
   margin: 15px;
 }
 
+.blog-post p:first-of-type{
+  color:#196196;
+}
+
 .blog-post h1:first-of-type:hover {
   opacity: 0.5;
 }
