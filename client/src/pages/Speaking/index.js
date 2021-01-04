@@ -58,7 +58,7 @@ export default function Speaking() {
                 name="email"
                 placeholder="Email"
               />
-             {/* <label>Name</label> */}
+             <label>Date of event</label>
               <input
                 type="date"
                 name="event_date"
