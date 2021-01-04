@@ -21,6 +21,7 @@
   height: 30vh;
 }
 
+
 .home-store-content {
   background-color: rgb(248 249 249);
   display: flex;
@@ -45,4 +46,26 @@
     height: 75vh !important;
     background-position-x: 60% !important;
   }
+}
+
+
+.home-store-content .the-button {
+  color: #868686 !important;
+  width: 17.5rem;
+  padding: 1.4em 2.338em;
+  transition: 0.6s;
+  max-width: 230px;
+  margin: 50px auto;
+  border: 1px solid #707070;
+  background-color: transparent;
+}
+
+.home-store-content .the-button:hover {
+  color:#F9FAFB !important;
+  background: #196196;
+  border: 1px solid #fff0;
+}
+
+.home-store-text {
+  margin:25px;
 }

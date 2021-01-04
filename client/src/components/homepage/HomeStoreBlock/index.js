@@ -25,9 +25,9 @@ export default class HomeStoreBlock extends Component {
       <div className="home-store-content">
         <div className="home-store-text">
           {/* <div> */}
-          <Link to="/shop/most-popular">
           <h2>Check out</h2>
           <h2>my online store!</h2>
+          <Link to="/shop/most-popular"><button className="the-button">Shop</button>
           </Link>
           {/* </div> */}
         </div>
