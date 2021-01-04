@@ -30,6 +30,7 @@
 
 .social-wrapper {
   display:flex;
+  margin:25px 0px;
 }
 
 .social-wrapper > * {
@@ -54,7 +55,7 @@ opacity:.5;
 }
 
 .soup-block {
-  position: absolute;
+  /* position: absolute; */
   bottom: 5px;
 }
 
