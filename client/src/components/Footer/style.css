@@ -11,6 +11,10 @@
   position:relative;
 }
 
+.darkfooter * {
+  margin:10px 0px;
+}
+
 .darkfooter h1 {
   font-size:15px;
   letter-spacing:2px;
@@ -21,7 +25,7 @@
 .link-wrapper{
   display:flex;
   max-width:980px;
-  margin:25px 0px;
+  /* margin:25px 0px; */
 }
 
 .link-wrapper a:hover {
@@ -30,14 +34,14 @@
 
 .social-wrapper {
   display:flex;
-  margin:25px 0px;
+  /* margin:25px 0px; */
 }
 
 .social-wrapper > * {
   margin:10px 15px;
 }
 .link-wrapper a {
- margin:10px 25px;
+ margin:0px 25px;
  text-align:center;
 }
 
