@@ -46,7 +46,7 @@
   }
 } */
 
-.the-button {
+.resources-page .the-button {
   color: #868686;
   width: 17.5rem;
   padding: 1.4em 2.338em;
@@ -73,7 +73,7 @@
   /* max-width:980px; */
   margin:25px 0px;
   display:flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   /* margin: 0px 5px; */
   flex-wrap:wrap;

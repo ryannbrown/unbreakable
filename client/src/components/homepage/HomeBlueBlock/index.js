@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {Link} from "react-router-dom"
 import "./style.css";
 // import profPic from "../../media/5.PNG"
 import waveImg from "../../../media/wave-img.jpg";
@@ -55,7 +55,9 @@ export default class HomeBlueBlock extends Component {
             United States alone. If you or someone you know struggles with
             mental health, know that you are not alone.
           </p>
-          <button className="the-button">View Resources</button>
+          <Link to="/resources">
+            <button className="the-button">View Resources</button>
+            </Link>
         </div>
         {/* <p style={{color:'#0e3b62'}} className="action-button">February 2021</p> */}
       </div>
