@@ -48,7 +48,7 @@ export default class StoreCollection extends Component {
       let thisHere = document.getElementsByClassName('linkz')
       // grabs last one which happens to be most popular. Would be better if it were the first one 
       // though to keep it consistent
-      let mostPop = thisHere[thisHere.length - 1]
+      let mostPop = thisHere[0]
       if (mostPop) {
         // makes it bold
         mostPop.classList.add('is-lit')
