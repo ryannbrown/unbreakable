@@ -46,8 +46,7 @@ export default class StoreCollection extends Component {
     if (document.getElementsByClassName('is-lit').length == 0) {
       // saves arrays as object
       let thisHere = document.getElementsByClassName('linkz')
-      // grabs last one which happens to be most popular. Would be better if it were the first one 
-      // though to keep it consistent
+      // grabs last one which happens to be most popular. If Most Popular collection gets deleted, we will have issues.
       let mostPop = thisHere[0]
       if (mostPop) {
         // makes it bold
@@ -147,9 +146,11 @@ export default class StoreCollection extends Component {
             </header>
               <h1 className="collection-title">{this.state.handle}</h1>
             <div className="products-block">
+              {context.collectionProds.length > 0 ?
             <div className="products-wrapper">
                 {productList}
-                </div>
+                </div> : <div className="products-wrapper collection-empty"><i>Sorry, but there appear to be no items available in this collection, try another!</i></div>
+              }
             <div className="collection-nav">{collectionList}</div>
             </div>
           </div>

@@ -71,6 +71,9 @@
   opacity:.5;
 }
 
+.products-wrapper.collection-empty {
+  margin: 50px 0px;
+}
 
 
 .is-lit {
