@@ -59,8 +59,7 @@ opacity:.5;
 }
 
 .soup-block {
-  /* position: absolute; */
-  bottom: 5px;
+font-size:.75rem;
 }
 
 @media(max-width:750px){
