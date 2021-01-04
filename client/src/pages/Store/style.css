@@ -219,7 +219,7 @@ input::-webkit-inner-spin-button {
   }
 
   .collection-nav {
-    flex-direction:row-reverse;
+    flex-direction:row;
     padding:25px;
     flex-wrap:wrap;
     text-align:unset;
