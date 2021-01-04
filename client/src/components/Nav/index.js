@@ -6,6 +6,8 @@ import fbLogo from "../../media/fb-grey.png";
 import Cart from "../StoreComponents/Cart";
 import instaLogo from "../../media/insta-grey.png";
 import cartLogo from "../../media/cart-grey.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import {
   ThemeContextConsumer,
   ThemeContextProvider,
@@ -74,7 +76,7 @@ export default class Nav extends Component {
   handleMobileNav = () => {
     this.setState({ mobileNavToggle: false });
     document.getElementById("menu-toggle").checked = false;
-  }
+  };
 
   componentDidMount() {
     this.prev = window.scrollY;
@@ -108,12 +110,17 @@ export default class Nav extends Component {
             mobileNavToggle: false,
             isMobile: false,
           });
+          // change header from mobile view
           document.getElementById("navvy-bar").className = "header";
+          // hide the nav sub columns if expanded from mobile width
+          document.getElementById("nav-toggle").checked = false;
+          // uncheck the hamburger to reset icon style
           document.getElementById("menu-toggle").checked = false;
-        } else if (window.innerWidth < 725) {
+        }  if (window.innerWidth < 725) {
           this.setState({
             isMobile: true,
           });
+          // document.getElementById("menu-toggle").checked = false;
           if (this.state.mobileNavToggle) {
             document.getElementById("menu-toggle").checked = true;
           }
@@ -136,18 +143,7 @@ export default class Nav extends Component {
                 {this.state.mobileNavToggle ? (
                   <ul>
                     <li>
-                      <Link
-                        onClick={this.handleMobileNav}
-                        to="/about"
-                      >
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        onClick={this.handleMobileNav}
-                        to="/blog"
-                      >
+                      <Link onClick={this.handleMobileNav} to="/blog">
                         Blog
                       </Link>
                     </li>
@@ -159,17 +155,66 @@ export default class Nav extends Component {
                         Shop
                       </Link>
                     </li>
+                    <li className="service-trigger">
+                      <input
+                        type="checkbox"
+                        class="nav-down-toggle"
+                        id="nav-toggle"
+                      ></input>
+                      <FontAwesomeIcon
+                        className="nav-down"
+                        icon={faChevronDown}
+                      />
+                      <Link to="/about">About</Link>
+                      <div className="nav-services">
+                        <div className="nav-service-arrow"></div>
+                        <li>
+                          <Link to="/about">About the Author</Link>
+                        </li>
+                        <li>
+                          <Link to="/resources">Resources</Link>
+                        </li>
+                        <li>
+                          <Link to="/speaking-engagements">
+                            Speaking Engagements
+                          </Link>
+                        </li>
+                      </div>
+                    </li>
                   </ul>
                 ) : (
                   <ul>
-                    <li>
-                      <Link to="/about">About</Link>
-                    </li>
                     <li>
                       <Link to="/blog">Blog</Link>
                     </li>
                     <li>
                       <Link to="/shop/most-popular">Shop</Link>
+                    </li>
+                    <li className="service-trigger">
+                      <input
+                        type="checkbox"
+                        class="nav-down-toggle"
+                        id="nav-toggle"
+                      ></input>
+                      <FontAwesomeIcon
+                        className="nav-down"
+                        icon={faChevronDown}
+                      />
+                      <Link to="/Services">About</Link>
+                      <div className="nav-services">
+                        <div className="nav-service-arrow"></div>
+                        <li>
+                          <Link to="/about">About the Author</Link>
+                        </li>
+                        <li>
+                          <Link to="/resources">Resources</Link>
+                        </li>
+                        <li>
+                          <Link to="/speaking-engagements">
+                            Speaking Engagements
+                          </Link>
+                        </li>
+                      </div>
                     </li>
                     {/* <li>
                 <a href="#">Resources</a>
@@ -219,9 +264,11 @@ export default class Nav extends Component {
                   <a href="/">
                     <img src={fbLogoW}></img>
                   </a>
-                  <a style={{cursor: 'pointer'}} onClick={context.handleCartOpen}>
-                    <img
-                    src={cartLogoW}></img>
+                  <a
+                    style={{ cursor: "pointer" }}
+                    onClick={context.handleCartOpen}
+                  >
+                    <img src={cartLogoW}></img>
                     {context.checkout.lineItems.length > 0 && (
                       <p className="mb-checked-cart-count">
                         {context.checkout.lineItems.length}
