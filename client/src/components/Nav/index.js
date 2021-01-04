@@ -169,7 +169,7 @@ export default class Nav extends Component {
                       <div className="nav-services">
                         <div className="nav-service-arrow"></div>
                         <li>
-                          <Link to="/about">About the Author</Link>
+                          <Link to="/about">About me</Link>
                         </li>
                         <li>
                           <Link to="/resources">Resources</Link>
@@ -204,7 +204,7 @@ export default class Nav extends Component {
                       <div className="nav-services">
                         <div className="nav-service-arrow"></div>
                         <li>
-                          <Link to="/about">About the Author</Link>
+                          <Link to="/about">About me</Link>
                         </li>
                         <li>
                           <Link to="/resources">Resources</Link>

@@ -362,6 +362,11 @@ input#nav-toggle {
   z-index:-5;
 }
 
+.nav-services {
+  display: flex;
+  flex-direction: column;
+}
+
 
 
 
