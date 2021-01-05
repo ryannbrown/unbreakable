@@ -61,7 +61,7 @@ button {
 
 a:hover {
   text-decoration: none;
-  color: #196196 !important;
+  color: #196196;
 }
 
 input {

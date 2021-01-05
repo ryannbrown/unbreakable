@@ -87,6 +87,7 @@
 }
 .header a:hover {
   opacity: 0.5;
+  color:#868686 !important;
 }
 /* this has potential to be a bug, as the menu flashes when minimizing on desktop, however setting this at 
   500px appears to do the trick */
@@ -110,7 +111,7 @@
   border: none;
 }
 .header a {
-  color: #0e3b62;
+  color: #868686;
   display: block;
   padding: 35px;
   -webkit-transition: background-color 300ms ease-in;
