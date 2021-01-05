@@ -31,9 +31,7 @@
   padding:10px 100px;
   /* max-width:75%; */
   margin:0px auto;
-  /* grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,20vh);
-    grid-gap: 15px; */
+  min-height:455px;
 }
 
 .prod-block {
@@ -830,6 +828,12 @@ span.prod-price {
     }
 }
 
+
+@media (min-width:1000px) {
+  .products-wrapper.collection-empty {
+    margin:50px 140px;
+  }
+}
 
 
 
