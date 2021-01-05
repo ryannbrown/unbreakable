@@ -44,9 +44,9 @@
   /* margin-left: -35em; */
 }
 @media (max-width: 1100px) {
-  .nav-brand {
+  /* .nav-brand {
     display: none;
-  }
+  } */
 }
 @media (max-width: 725px) {
   .nav-right {
