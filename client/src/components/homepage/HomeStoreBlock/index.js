@@ -38,7 +38,7 @@ export default class HomeStoreBlock extends Component {
             // backgroundColor: `rgb(244 244 236)`,
             opacity: `90%`,
             backgroundBlendMode: `multiply`,
-            backgroundPosition: `center right`,
+            backgroundPosition: `left center`,
             backgroundSize: `cover`,
             backgroundRepeat: `no-repeat`,
             // backgroundAttachment: `fixed`,
