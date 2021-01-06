@@ -32,6 +32,8 @@
 .nav-right {
   display: flex;
   width: 15em;
+  justify-content: center;
+  /* margin-right:40px; */
 }
 .nav-options {
   width: 15em;
