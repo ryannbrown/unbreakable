@@ -35,13 +35,11 @@ export default class HomeStoreBlock extends Component {
           className="home-store-img"
           style={{
             backgroundImage: `url(${merch})`,
-            // backgroundColor: `rgb(244 244 236)`,
             opacity: `90%`,
             backgroundBlendMode: `multiply`,
             backgroundPosition: `left center`,
             backgroundSize: `cover`,
             backgroundRepeat: `no-repeat`,
-            // backgroundAttachment: `fixed`,
             width: "100%",
             height: `100vh`,
           }}

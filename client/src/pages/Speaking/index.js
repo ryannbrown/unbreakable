@@ -38,7 +38,7 @@ export default function Speaking() {
           {/* <h1>You are not alone...</h1> */}
 
           <p>
-           If you are interested in having my speak at an event, please contact me using the form below!
+           If you are interested in having me speak at an event, please contact me using the form below!
           </p>
           <div className="form-parent">
             {/* exact copy of subscribe block on hp */}
