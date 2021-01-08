@@ -257,7 +257,10 @@
 .menu-toggle:checked + .mobile-bar {
   background-color: transparent;
 }
-.menu-toggle:checked + .mobile-bar .mobile-nav-brand img {
+/* .menu-toggle:checked + .mobile-header .mobile-nav-brand img {
+  display: none;
+} */
+.menu-toggle:checked + .mobile-bar .mobile-nav-brand {
   display: none;
 }
 .menu-toggle:checked + .mobile-bar .mbar-cart {
@@ -266,6 +269,12 @@
 .menu-toggle:checked + .mobile-bar .mb-cart-count {
   display: none;
 }
+
+@media (max-width: 725px) {
+  .nav-brand {
+    display: none;
+  }
+  }
 
 
 p.mb-checked-cart-count {
