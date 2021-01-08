@@ -25,11 +25,13 @@ import Blog from "./pages/Blog/index"
 import Resources from "./pages/Resources/index"
 import Speaking from "./pages/Speaking/index"
 import BlogPost from "./pages/BlogPost/index"
+import ScrollToTop from "./utils/scrollToTop.js"
 import Nav from "./components/Nav/index"
 import Footer from "./components/Footer"
 import { ThemeContextConsumer, ThemeContextProvider } from "./utils/themeContext";
 import createHistory from 'history/createBrowserHistory';
 import {Helmet} from "react-helmet";
+import { Fragment } from 'react';
 // import { Router, Route, Link } from 'react-router-dom';
 // import history from './history';
 
@@ -63,6 +65,7 @@ class App extends Component {
           <ThemeContextConsumer>
          {context => (
            <Router history={history}>
+             <Fragment>
                <Helmet>
                       <meta charSet="utf-8" />
                       <title>Unbreakable</title>
@@ -70,6 +73,7 @@ class App extends Component {
                       {/* <link rel="canonical" href="http://www.colemandefense.com/" /> */}
                   </Helmet>
                <Nav client={context.client} checkout={checkout} isCartOpen={context.isCartOpen}></Nav>
+               <ScrollToTop / >
              <Switch>
                {/* <Route path="/" component={Page}/> */}
                <Route path="/blog/:post" component={BlogPost}/>
@@ -97,6 +101,7 @@ class App extends Component {
            
              </Switch>
              <Footer></Footer>
+             </Fragment>
            </Router>
          )}
          </ThemeContextConsumer>
