@@ -43,12 +43,6 @@ class App extends Component {
     super();
 
     this.state = {
-      // isCartOpen: false,
-      // checkout: { lineItems: [] },
-      // products: [],
-      // shop: {},
-      // collections: [],
-      // updateCartClose: false
     };
 
 

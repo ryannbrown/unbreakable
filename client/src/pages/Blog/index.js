@@ -19,12 +19,13 @@ export default function Blog() {
   const apiEndpoint = REACT_APP_PRISMIC_API;
   const accessToken = REACT_APP_PRISMIC_TOKEN;
 
-  console.log(apiEndpoint, accessToken);
   // This is where you would add your access token for a Private repository
 
   var Client = Prismic.client(apiEndpoint, { accessToken });
 
   const [doc, setDocData] = React.useState(null);
+  const [dates, setDate] = React.useState(null);
+  const [year, setDateYear] = React.useState(2020);
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -38,7 +39,37 @@ export default function Blog() {
       }
     };
     fetchData();
+    // fetchDates()
   }, []);
+
+
+const queryByDate = (e) => {
+  let month = e.target.value;
+
+  const fetchDates = async (month, year) => {
+    const response = await Client.query(
+      Prismic.Predicates.month('my.blog.post_date', month),
+      Prismic.Predicates.year('my.blog.post_date', year)
+    );
+    if (response) {
+      setDocData(response.results);
+      console.log("response", response.results);
+    }
+  }
+  fetchDates(month, year);
+}
+
+
+const setYear = (e) => {
+  let theYear = e.target.value
+  console.log(theYear)
+  setDateYear(theYear)
+  // console.log(e.target.value)
+}
+
+const someYears = ["2020", "2019"]
+const monthsOfYear= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
 
   if (doc) {
     var data = doc.map(
@@ -59,6 +90,13 @@ export default function Blog() {
       // <div>post</div>
       // <h1>{RichText.asText(doc.data.title)}</h1>
     );
+
+    var months = monthsOfYear.map((month, i) => (
+      <option value={month}>{month}</option>
+    ));
+    var years = someYears.map((year, i) => (
+      <option value={year}>{year}</option>
+    ));
   }
 
   return (
@@ -90,10 +128,24 @@ export default function Blog() {
         <h1>The Unbreakable Blog</h1>
       </div>
       <div className="home-wrapper">
+        {/* filter is hidden for now */}
+        {/* <select onChange={queryByDate}>
+        {months}
+        </select>
+        <select onChange={setYear}>
+        {years}
+        </select> */}
+      
         <div>
           {doc ? (
             <div className="blog-wrapper">
-              {data}
+              {doc.length > 0 ?
+               <div>
+               {data}
+               </div> : <div>No Items for these dates</div>
+            }
+             
+            
             </div>
           ) : (
             <div className="loading-block">
