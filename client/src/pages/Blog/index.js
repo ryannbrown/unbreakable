@@ -50,7 +50,8 @@ export default function Blog() {
 
 const queryByDate = (e) => {
   e.preventDefault();
-  console.log(month, year)
+  console.log("month", typeof(month))
+  console.log("year", typeof(year))
 
   const fetchDates = async (month, year) => {
     const response = await Client.query([
@@ -79,6 +80,22 @@ const setMonth = (e) => {
   // console.log(e.target.value)
 }
 
+const resetSearch = () => {
+
+  setDateYear(nowYear)
+  setDateMonth(nowMonth)
+  const fetchData = async () => {
+    const response = await Client.query(
+      Prismic.Predicates.at("document.type", "blog"),
+      { orderings: "[my.blog.post_date desc]" }
+    );
+    if (response) {
+      setDocData(response.results);
+      console.log(response.results);
+    }
+  };
+  fetchData();
+}
 
 
 var now = Moment();
@@ -94,7 +111,8 @@ for (var i = 1; i <=1; i++) {
 for (var i = 1; i <=11; i++) {
   allMonths.push(Moment(now).subtract(i, 'months').format("MMMM"));
 }
-console.log("all months", allYears)
+console.log("all months", allMonths)
+console.log("all years", allYears)
 
 // const someYears = ["2021","2020", "2019"]
 // const monthsOfYear= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -120,10 +138,10 @@ console.log("all months", allYears)
       // <h1>{RichText.asText(doc.data.title)}</h1>
     );
 
-    var months = allYears.map((month, i) => (
+    var months = allMonths.map((month, i) => (
       <option value={month}>{month}</option>
     ));
-    var years = allMonths.map((year, i) => (
+    var years = allYears.map((year, i) => (
       <option value={year}>{year}</option>
     ));
   }
@@ -158,15 +176,16 @@ console.log("all months", allYears)
       </div>
       <div className="home-wrapper">
         {/* filter is hidden for now */}
-        {/* <form onSubmit={queryByDate}>
-        <select onChange={setMonth}>
+        <form className="blog-filter" onSubmit={queryByDate}>
+        <select className="filter-select" onChange={setMonth}>
         {months}
         </select>
-        <select onChange={setYear} >
+        <select className="filter-select" onChange={setYear} >
         {years}
         </select>
-        <button type="submit">Search</button>
-        </form> */}
+        <button className="filter-select-btn" type="submit">Search</button>
+        <button className="filter-select-btn" onClick={resetSearch}>Reset</button>
+        </form>
       
         <div>
           {doc ? (
