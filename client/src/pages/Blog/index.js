@@ -11,6 +11,7 @@ import Nav from "../../components/Nav";
 import waveImg from "../../media/wave-img.jpg";
 import { css } from "@emotion/core";
 import ClipLoader from "react-spinners/ClipLoader";
+var Moment = require("moment");
 
 require("dotenv").config();
 const { REACT_APP_PRISMIC_API, REACT_APP_PRISMIC_TOKEN } = process.env;
@@ -22,10 +23,14 @@ export default function Blog() {
   // This is where you would add your access token for a Private repository
 
   var Client = Prismic.client(apiEndpoint, { accessToken });
+  var d = new Date();
+  const nowMonth = d.getMonth();
+  const nowYear = d.getYear();
 
   const [doc, setDocData] = React.useState(null);
   const [dates, setDate] = React.useState(null);
-  const [year, setDateYear] = React.useState(2020);
+  const [year, setDateYear] = React.useState(nowYear);
+  const [month, setDateMonth] = React.useState(nowMonth);
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -44,13 +49,14 @@ export default function Blog() {
 
 
 const queryByDate = (e) => {
-  let month = e.target.value;
+  e.preventDefault();
+  console.log(month, year)
 
   const fetchDates = async (month, year) => {
-    const response = await Client.query(
+    const response = await Client.query([
       Prismic.Predicates.month('my.blog.post_date', month),
       Prismic.Predicates.year('my.blog.post_date', year)
-    );
+    ]);
     if (response) {
       setDocData(response.results);
       console.log("response", response.results);
@@ -66,9 +72,32 @@ const setYear = (e) => {
   setDateYear(theYear)
   // console.log(e.target.value)
 }
+const setMonth = (e) => {
+  let theMonth = e.target.value
+  console.log(theMonth)
+  setDateMonth(theMonth)
+  // console.log(e.target.value)
+}
 
-const someYears = ["2020", "2019"]
-const monthsOfYear= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+
+var now = Moment();
+// console.log(now);
+let thisYear = Moment(now).format("YYYY")
+let thisMonth = Moment(now).format("MMMM")
+let allYears = [thisYear];
+let allMonths = [thisMonth];
+// to be changed when blog has run longer
+for (var i = 1; i <=1; i++) {
+  allYears.push(Moment(now).subtract(i, 'years').format("YYYY"));
+}
+for (var i = 1; i <=11; i++) {
+  allMonths.push(Moment(now).subtract(i, 'months').format("MMMM"));
+}
+console.log("all months", allYears)
+
+// const someYears = ["2021","2020", "2019"]
+// const monthsOfYear= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 
   if (doc) {
@@ -91,10 +120,10 @@ const monthsOfYear= ["January", "February", "March", "April", "May", "June", "Ju
       // <h1>{RichText.asText(doc.data.title)}</h1>
     );
 
-    var months = monthsOfYear.map((month, i) => (
+    var months = allYears.map((month, i) => (
       <option value={month}>{month}</option>
     ));
-    var years = someYears.map((year, i) => (
+    var years = allMonths.map((year, i) => (
       <option value={year}>{year}</option>
     ));
   }
@@ -129,12 +158,15 @@ const monthsOfYear= ["January", "February", "March", "April", "May", "June", "Ju
       </div>
       <div className="home-wrapper">
         {/* filter is hidden for now */}
-        {/* <select onChange={queryByDate}>
+        {/* <form onSubmit={queryByDate}>
+        <select onChange={setMonth}>
         {months}
         </select>
-        <select onChange={setYear}>
+        <select onChange={setYear} >
         {years}
-        </select> */}
+        </select>
+        <button type="submit">Search</button>
+        </form> */}
       
         <div>
           {doc ? (
