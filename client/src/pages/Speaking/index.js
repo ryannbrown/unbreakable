@@ -28,6 +28,7 @@ export default function Speaking() {
           alignItems: `center`,
           justifyContent: "center",
           position: `relative`,
+          marginTop: '80px'
         }}
       >
         <h1>Have me speak at your next event!</h1>

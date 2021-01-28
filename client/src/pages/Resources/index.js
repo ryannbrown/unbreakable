@@ -28,6 +28,7 @@ export default function Resources() {
           alignItems: `center`,
           justifyContent: "center",
           position: `relative`,
+          marginTop: '80px'
         }}
       >
         <h1>Unbreakable Resources</h1>

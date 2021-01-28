@@ -36,6 +36,7 @@ export default class Nav extends Component {
       scrollingUp: false,
       hideNav: false,
       isMobile: false,
+      hideDropdown: false
     };
   }
 
@@ -57,6 +58,13 @@ export default class Nav extends Component {
     // if (window.innerWidth < 750) {
 
     const window = e.currentTarget;
+
+    if (window.scrollY > 0) {
+      this.setState({hideDropdown: true})
+    }
+    if (window.scrollY < 5) {
+      this.setState({hideDropdown: false})
+    }
 
     if (this.prev > window.scrollY) {
       // console.log("scrolling up")
@@ -165,17 +173,17 @@ export default class Nav extends Component {
                         className="nav-down"
                         icon={faChevronDown}
                       />
-                      <Link to="/about">About</Link>
+                      <Link>About</Link>
                       <div className="nav-services">
                         <div className="nav-service-arrow"></div>
                         <li>
-                          <Link to="/about">About me</Link>
+                          <Link onClick={this.handleMobileNav}  to="/about">About me</Link>
                         </li>
                         <li>
-                          <Link to="/resources">Resources</Link>
+                          <Link onClick={this.handleMobileNav}  to="/resources">Resources</Link>
                         </li>
                         <li>
-                          <Link to="/speaking-engagements">
+                          <Link onClick={this.handleMobileNav}  to="/speaking-engagements">
                             Speaking Engagements
                           </Link>
                         </li>
@@ -201,7 +209,7 @@ export default class Nav extends Component {
                         icon={faChevronDown}
                       />
                       <Link to="/Services">About</Link>
-                      <div className="nav-services">
+                      <div className={'nav-services' +(this.state.hideDropdown ? ' scrolled' : '')}>
                         <div className="nav-service-arrow"></div>
                         <li>
                           <Link to="/about">About me</Link>

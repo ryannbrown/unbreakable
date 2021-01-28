@@ -387,12 +387,11 @@ input#nav-toggle {
   background-color: #F4F4F4;
   visibility: hidden;
   position: fixed;
- 
 }
 
 .service-trigger:hover .nav-services {
     visibility: visible;
-    transition: visiblity 300ms ease-in;
+    transition: none;
 }
 
 .nav-down{
@@ -404,4 +403,11 @@ input#nav-toggle {
 
 .nav-services li {
   font-size:85%;
+}
+
+
+
+.service-trigger:hover .nav-services.scrolled {
+  visibility:hidden !important;
+  transition:none;
 }
