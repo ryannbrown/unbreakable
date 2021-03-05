@@ -199,11 +199,11 @@ export default class Nav extends Component {
                       <Link to="/shop/most-popular">Shop</Link>
                     </li>
                     <li className="service-trigger">
-                      <input
+                      {/* <input
                         type="checkbox"
                         class="nav-down-toggle"
                         id="nav-toggle"
-                      ></input>
+                      ></input> */}
                       <FontAwesomeIcon
                         className="nav-down"
                         icon={faChevronDown}
