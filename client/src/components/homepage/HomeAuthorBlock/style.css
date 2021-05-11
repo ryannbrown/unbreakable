@@ -53,6 +53,11 @@
   .author-content {
     flex-direction: column;
     width: 100%;
+    align-items: center;
+  }
+  .auth-pic {
+        width: unset !important;
+     padding: unset !important;
   }
 }
 @media (max-width: 750px) {

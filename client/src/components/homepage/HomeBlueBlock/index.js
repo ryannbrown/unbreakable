@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom"
 import "./style.css";
 // import profPic from "../../media/5.PNG"
-import waveImg from "../../../media/wave-img.jpg";
-import favWhite from "../../../media/fav-white.png";
+import waveImg from "../../../media/wave-img.png"
+
 
 export default class HomeBlueBlock extends Component {
   constructor(props) {

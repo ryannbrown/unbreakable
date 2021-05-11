@@ -41,8 +41,8 @@
     width: 100%;
   }
   .home-store-img {
-    width: 100% !important;
-    background-size: cover !important;
+    width: 75% !important;
+    background-size: contain !important;
     height: 75vh !important;
     background-position-x: 60% !important;
   }
@@ -61,11 +61,19 @@
 }
 
 .home-store-content .the-button:hover {
-  color:#F9FAFB !important;
+  color:#F7F7F7 !important;
   background: #196196;
   border: 1px solid #fff0;
 }
 
 .home-store-text {
   margin:25px;
+}
+
+/* this image is tricky for mobile.. made it smaller so it fit in better  */
+@media (max-width: 1275px) {
+  .home-store-img {
+    height:50vh !important;
+    background-position-x: 25% !important;
+  }
 }

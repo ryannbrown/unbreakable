@@ -208,7 +208,7 @@
     overflow: auto;
     visibility: visible;
     opacity: 1;
-    background-color: #f9fafb;
+    background-color: #F7F7F7;
     overflow: hidden;
     /* -webkit-transition: opacity 300ms ease-in, visibility 0s ease-in 300ms;
       transition: opacity 300ms ease-in, visibility 0s ease-in 300ms; */
@@ -251,7 +251,7 @@
 }
 .mobile-bar {
   /* background-color: transparent; */
-  background-color: #f9fafb;
+  background-color: #F7F7F7;
   transition: 0.6s;
 }
 .menu-toggle:checked + .mobile-bar {
@@ -280,7 +280,7 @@
 p.mb-checked-cart-count {
   display: inline;
   margin-left: 15px;
-  color:#F9FAFB;
+  color:#F7F7F7;
 }
 
 
@@ -293,7 +293,7 @@ p.mb-checked-cart-count {
 }
 .mobile-header a {
   font-size: 22px;
-  color: #F9FAFB;
+  color: #F7F7F7;
   display: block;
   padding: 25px;
   text-align: left;
@@ -304,17 +304,17 @@ p.mb-checked-cart-count {
     background-color: #C62828;
   } */
 .mobile-header ~ .mobile-bar .menu-icon > span {
-  background-color: #F9FAFB;
+  background-color: #F7F7F7;
 }
 .mobile-header ~ .mobile-bar .menu-icon > span:before,
 .mobile-header ~ .mobile-bar .menu-icon > span:after {
-  background-color: #F9FAFB;
+  background-color: #F7F7F7;
 }
 
 
 
 .nav-down {
-  color: #F9FAFB;
+  color: #F7F7F7;
   position: absolute;
   top: 30px;
   left: 70%;

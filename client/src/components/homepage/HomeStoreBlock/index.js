@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./style.css";
-import merch from "../../../media/merch.png";
+import merch from "../../../media/merchnew.jpg";
 import {Link} from "react-router-dom"
 
 export default class HomeStoreBlock extends Component {
@@ -38,10 +38,11 @@ export default class HomeStoreBlock extends Component {
             opacity: `90%`,
             backgroundBlendMode: `multiply`,
             backgroundPosition: `left center`,
-            backgroundSize: `cover`,
+            backgroundSize: `contain`,
             backgroundRepeat: `no-repeat`,
             width: "100%",
             height: `100vh`,
+            padding:'35px 0px'
           }}
         ></div>
       </div>

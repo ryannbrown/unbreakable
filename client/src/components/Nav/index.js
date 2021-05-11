@@ -110,31 +110,31 @@ export default class Nav extends Component {
     //       }
     //     }
 
-    window.addEventListener(
-      "resize",
-      _.debounce(() => {
-        if (window.innerWidth > 725) {
-          this.setState({
-            mobileNavToggle: false,
-            isMobile: false,
-          });
-          // change header from mobile view
-          document.getElementById("navvy-bar").className = "header";
-          // hide the nav sub columns if expanded from mobile width
-          document.getElementById("nav-toggle").checked = false;
-          // uncheck the hamburger to reset icon style
-          document.getElementById("menu-toggle").checked = false;
-        }  if (window.innerWidth < 725) {
-          this.setState({
-            isMobile: true,
-          });
-          // document.getElementById("menu-toggle").checked = false;
-          if (this.state.mobileNavToggle) {
-            document.getElementById("menu-toggle").checked = true;
-          }
-        }
-      }, 400)
-    );
+    // window.addEventListener(
+    //   "resize",
+    //   _.debounce(() => {
+    //     if (window.innerWidth > 725) {
+    //       this.setState({
+    //         mobileNavToggle: false,
+    //         isMobile: false,
+    //       });
+    //       // change header from mobile view
+    //       document.getElementById("navvy-bar").className = "header";
+    //       // hide the nav sub columns if expanded from mobile width
+    //       document.getElementById("nav-toggle").checked = false;
+    //       // uncheck the hamburger to reset icon style
+    //       document.getElementById("menu-toggle").checked = false;
+    //     }  if (window.innerWidth < 725) {
+    //       this.setState({
+    //         isMobile: true,
+    //       });
+    //       // document.getElementById("menu-toggle").checked = false;
+    //       if (this.state.mobileNavToggle) {
+    //         document.getElementById("menu-toggle").checked = true;
+    //       }
+    //     }
+    //   }, 400)
+    // );
   }
 
   render() {

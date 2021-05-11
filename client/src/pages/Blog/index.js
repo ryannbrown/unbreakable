@@ -8,7 +8,7 @@ import linkResolver from "../../utils/linkResolver";
 import { Link } from "react-router-dom";
 import Test from "../../components/Test";
 import Nav from "../../components/Nav";
-import waveImg from "../../media/wave-img.jpg";
+import waveImg from "../../media/wave-img.png";
 import { css } from "@emotion/core";
 import ClipLoader from "react-spinners/ClipLoader";
 var Moment = require("moment");

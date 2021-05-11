@@ -9,6 +9,7 @@
   padding: 15px;
 }
 .hero-text-block h3 {
+  font-family: "Mia Love";
   color: #196196;
   font-weight: 300;
   letter-spacing: 0.3rem;
@@ -22,6 +23,7 @@
   flex-direction: column;
 }
 .typewriter {
+  font-family: "Mia Love";
   font-size: 2.75rem;
   /* padding:50px; */
   color: #868686;
@@ -34,6 +36,9 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  white-space: nowrap;
+  max-width: 400px;
+  margin:0px auto;
 }
 .typewriter-section span {
   margin-left: 2.5px;

@@ -2,7 +2,7 @@ import React, { Component, useState } from "react";
 
 import "./style.css";
 import { Link } from "react-router-dom";
-import waveImg from "../../media/wave-img.jpg";
+import waveImg from "../../media/wave-img.png";
 
 export default function Speaking() {
   return (

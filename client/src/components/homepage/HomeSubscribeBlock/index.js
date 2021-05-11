@@ -36,7 +36,8 @@ export default class HomeSubscribeBlock extends Component {
       >
         {/* <img className="hero-logo" src={logo}></img> */}
         <div className="subscribe-content">
-          <h2>Stay up to date with everything Unbreakable</h2>
+          <h2>Stay up to date with everything</h2>
+          <h2 className="mia">Unbreakable</h2>
           <div className="form-parent">
           <form className="subscribe-form" action="https://justsoup.us7.list-manage.com/subscribe/post" method="POST">
               <input type="hidden" name="u" value="81dfc6dfe378248a0c660c06c" />

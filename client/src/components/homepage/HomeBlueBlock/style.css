@@ -1,7 +1,7 @@
 .bb-text-content {
   display: flex;
   flex-direction: column;
-  color: #f9fafb;
+  color: #F7F7F7;
   /* justify-content: center; */
 }
 
@@ -19,7 +19,7 @@
   font-size: 1rem;
   max-width: 540px;
   margin: 0px auto;
-  color: #f9fafb;
+  color: #F7F7F7;
 }
 
 .vert-line {

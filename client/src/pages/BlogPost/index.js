@@ -8,7 +8,7 @@ import fbGrey from "../../media/fb-grey.png"
 import twitGrey from "../../media/twitter-grey.png"
 import linkedGrey from "../../media/linked-grey.png"
 import linkResolver from "../../utils/linkResolver";
-import waveImg from "../../media/wave-img.jpg";
+import waveImg from "../../media/wave-img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 import ClipLoader from "react-spinners/ClipLoader";
