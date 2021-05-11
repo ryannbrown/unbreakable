@@ -63,7 +63,7 @@ export default class Store extends Component {
               <header  style={{
           backgroundImage: `url(${waveImg})`,
           backgroundBlendMode: `multiply`,
-          backgroundPosition: `center top`,
+          backgroundPosition: `center`,
           backgroundSize: `cover`,
           backgroundRepeat: `no-repeat`,
           height: `25vh`,

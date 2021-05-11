@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: center;
   padding: 25px;
-  color: #196196;
+  color: #007BB7;
   height: 30vh;
 }
 
@@ -62,7 +62,7 @@
 
 .home-store-content .the-button:hover {
   color:#F7F7F7 !important;
-  background: #196196;
+  background: #007BB7;
   border: 1px solid #fff0;
 }
 

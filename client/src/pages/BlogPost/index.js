@@ -91,7 +91,7 @@ export default function BlogPost(props) {
           <ClipLoader
           // css={override}
           size={35}
-          color={"#196196"}
+          color={"#007BB7"}
           // loading={this.state.loading}
         />
         </div>

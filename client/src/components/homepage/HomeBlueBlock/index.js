@@ -27,7 +27,7 @@ export default class HomeBlueBlock extends Component {
         className="home-blue-block"
         style={{
           backgroundImage: `url(${waveImg})`,
-          // backgroundColor: `#196196`,
+          // backgroundColor: `#007BB7`,
           // opacity: `100%`,
           backgroundBlendMode: `multiply`,
           backgroundPosition: `center`,

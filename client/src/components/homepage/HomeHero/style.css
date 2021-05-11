@@ -10,7 +10,7 @@
 }
 .hero-text-block h3 {
   font-family: "Mia Love";
-  color: #196196;
+  color: #007BB7;
   font-weight: 300;
   letter-spacing: 0.3rem;
 }
@@ -27,6 +27,7 @@
   font-size: 2.75rem;
   /* padding:50px; */
   color: #868686;
+  /* color: black; */
   min-height: 75px;
   letter-spacing: 0.2rem;
   font-weight: 300;

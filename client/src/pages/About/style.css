@@ -37,7 +37,7 @@
 .about h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #196196;
+  color: #007BB7;
 }
 
 .about p {
@@ -46,7 +46,7 @@
 }
 
 .about-contact a:hover {
-  color: #196196;
+  color: #007BB7;
   z-index: 5000;
 }
 
@@ -69,7 +69,7 @@
 
 .about-contact h1 {
   font-size: 2.5rem;
-  color: #196196;
+  color: #007BB7;
   margin-bottom: 15px;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .about-contact span {
-  color: #196196;
+  color: #007BB7;
 }
 
 @media (max-width: 997px) {

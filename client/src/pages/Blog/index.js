@@ -153,10 +153,10 @@ console.log("all years", allYears)
         className="blog-blue-block"
         style={{
           backgroundImage: `url(${waveImg})`,
-          // backgroundColor: `#196196`,
+          // backgroundColor: `#007BB7`,
           // opacity: `100%`,
           backgroundBlendMode: `multiply`,
-          backgroundPosition: `center top`,
+          backgroundPosition: `center`,
           backgroundSize: `cover`,
           backgroundRepeat: `no-repeat`,
           // backgroundAttachment: `fixed`,
@@ -203,7 +203,7 @@ console.log("all years", allYears)
             <ClipLoader
             // css={override}
             size={35}
-            color={"#196196"}
+            color={"#007BB7"}
             // loading={this.state.loading}
           />
           </div>

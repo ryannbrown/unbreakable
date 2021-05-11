@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 // import Mobile from "./mobile"
-import logo from "../../media/logo.png";
+import logo from "../../media/newlogo.png";
 import fbLogo from "../../media/fb-grey.png";
 import Cart from "../StoreComponents/Cart";
 import instaLogo from "../../media/insta-grey.png";
@@ -208,7 +208,7 @@ export default class Nav extends Component {
                         className="nav-down"
                         icon={faChevronDown}
                       />
-                      <Link to="/Services">About</Link>
+                      <Link>About</Link>
                       <div className={'nav-services' +(this.state.hideDropdown ? ' scrolled' : '')}>
                         <div className="nav-service-arrow"></div>
                         <li>

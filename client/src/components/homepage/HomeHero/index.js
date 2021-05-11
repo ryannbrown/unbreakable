@@ -4,6 +4,7 @@ import "./style.css";
 // import profPic from "../../media/5.PNG"
 // import placeHolder from "../../../media/placeholder.png"
 import bookImg from "../../../media/book-img.png";
+import newLogo from "../../../media/newlogo.png"
 import Typed from "typed.js";
 
 export default class Hero extends Component {
@@ -63,7 +64,8 @@ export default class Hero extends Component {
         <div className="hero-content-section">
           <div className="hero-text-block">
             <div>
-              <h3>UNBREAKABLE</h3>
+              {/* <h3>UNBREAKABLE</h3> */}
+              <img style={{maxWidth:'250px'}} src={newLogo}></img>
             </div>
             <div className="typewriter-section">
             <div className="typewriter"></div>
