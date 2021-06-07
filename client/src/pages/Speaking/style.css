@@ -13,7 +13,8 @@
   margin-bottom: 25px;
 }
 .subscribe-content button {
-  border: 1px solid #868686;
+  border: 1px solid #007BB7;
+  color: #007BB7 !important;
   padding: 1.4em 2.338em;
   background-color: transparent;
 }
@@ -25,14 +26,17 @@
   transition: 0.6s;
 }
 .subscribe-content input {
-  border-left: 1px solid #868686;
-  border-bottom: 1px solid #868686;
-  border-top: 1px solid #868686;
-  border-right:1px solid #868686;
-  background-color: transparent;
-  padding: 1.4em 7em 1.4em 2em;
-  /* padding: 1.4em 2.338em; */
-  letter-spacing: 0.1rem;
+  border: 1px solid #007BB7;
+    background-color: transparent;
+    padding: 1.4em 7em 1.4em 2em;
+    letter-spacing: .1rem;
+    color: #007BB7 !important;
+}
+.subscribe-content input::placeholder {
+  color:#007BB7;
+}
+.subscribe-content input:focus {
+  outline:none;
 }
 
 @media (max-width: 725px) {

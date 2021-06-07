@@ -73,7 +73,9 @@
 /* this image is tricky for mobile.. made it smaller so it fit in better  */
 @media (max-width: 1275px) {
   .home-store-img {
-    height:50vh !important;
+    height: 50vh !important;
     background-position-x: 25% !important;
+    margin-left: -50px;
+    width:100% !important;
   }
 }

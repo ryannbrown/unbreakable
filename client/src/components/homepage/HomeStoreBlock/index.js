@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./style.css";
-import merch from "../../../media/merchnew.jpg";
+import merch from "../../../media/merchy.png";
 import {Link} from "react-router-dom"
 
 export default class HomeStoreBlock extends Component {
