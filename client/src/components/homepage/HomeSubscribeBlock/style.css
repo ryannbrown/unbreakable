@@ -22,13 +22,13 @@
 }
 .subscribe-content button {
   border: 1px solid #007BB7 !important;
-  color: #007BB7;
+  color: white !important;
   padding: 1.4em 2.338em;
   background-color: transparent;
 }
 .subscribe-content button:hover {
   background-color: #007BB7;
-  color: white;
+  color: white !important;
   margin: 0px auto;
   border: 1px solid#007BB7;
   transition: 0.6s;
