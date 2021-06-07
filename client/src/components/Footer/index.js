@@ -3,7 +3,7 @@ import { Navbar, NavDropdown } from "react-bootstrap";
 import React, { Component } from "react";
 // import logo from "../../media/stamplogo.png";
 import "./style.css";
-import logo from "../../media/merchy.png"
+import logo from "../../media/newlogo.png"
 import jsLogo from "../../media/redlogo.png"
 import fbLogo from "../../media/fb-grey.png"
 import instaLogo from "../../media/insta-grey.png"
