@@ -70,7 +70,8 @@ export default class Hero extends Component {
             <div className="typewriter-section">
             <div className="typewriter"></div>
             </div>
-
+            <a  target="_blank" rel="noreferrer" href="https://www.amazon.com/dp/B093R5X4BW/ref=nodl_" className="buy-book-btn">Buy the Book
+          </a>
           </div>
 
           <div className="hero-book-block">
