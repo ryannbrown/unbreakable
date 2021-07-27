@@ -48,7 +48,7 @@ export default function BlogPost(props) {
       script.src =
         "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=668236647227571&autoLogAppEvents=1";
       script.async = true;
-      var url = 'https://unbreakable.herokuapp.com/' + window.location.pathname;
+      var url = 'https://uareunbreakable.com/' + window.location.pathname;
       console.log("url", url);
       setShareUrl(url);
 
