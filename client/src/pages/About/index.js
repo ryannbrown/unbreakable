@@ -79,7 +79,7 @@ export default class About extends Component {
               </p>
               <p>
                 Follow me on:
-                <a href="https://www.instagram.com/Carolyn9787/"> @instagram</a>
+                <a href="https://www.instagram.com/Carolyn.skowron/"> @instagram</a>
                 {/* <a href="https://www.facebook.com/milliegrace22"> @facebook</a> */}
               </p>
             </div>

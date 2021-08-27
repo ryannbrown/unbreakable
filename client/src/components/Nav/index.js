@@ -255,7 +255,7 @@ export default class Nav extends Component {
               </div>
               {!this.state.isMobile ? (
                 <div className="nav-right">
-                  <a href="https://www.instagram.com/Carolyn9787/">
+                  <a href="https://www.instagram.com/Carolyn.skowron/">
                     <img src={instaLogo}></img>
                   </a>
                   <a href="/">
@@ -276,7 +276,7 @@ export default class Nav extends Component {
                 </div>
               ) : (
                 <div className="nav-right">
-                  <a href="https://www.instagram.com/Carolyn9787/">
+                  <a href="https://www.instagram.com/Carolyn.skowron/">
                     <img src={instaLogoW}></img>
                   </a>
                   <a href="/">
