@@ -41,8 +41,8 @@ export default class Footer extends Component {
               <Link  to="/about"><p>About</p></Link>
             </div>
             <div className="social-wrapper">
-             <a href="/"><img src={fbLogo}></img></a>
-             <a  href="/"><img src={instaLogo}></img></a>
+             <a href="https://www.facebook.com/carolyn.skowron"><img src={fbLogo}></img></a>
+             <a  href="https://www.instagram.com/Carolyn.skowron/"><img src={instaLogo}></img></a>
              <a  href="/"><img src={cartLogo}></img></a>
          
               {/* <img src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_19,h_19,al_c,q_85,usm_0.66_1.00_0.01/81af6121f84c41a5b4391d7d37fce12a.webp"></img> */}
