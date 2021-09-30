@@ -39,9 +39,9 @@ export default class HomeSubscribeBlock extends Component {
           <h2>Stay up to date with everything</h2>
           <h2 className="mia">Unbreakable</h2>
           <div className="form-parent">
-          <form className="subscribe-form" action="https://justsoup.us7.list-manage.com/subscribe/post" method="POST">
-              <input type="hidden" name="u" value="81dfc6dfe378248a0c660c06c" />
-              <input type="hidden" name="id" value="692eaf01e9" />
+          <form className="subscribe-form" action="https://gmail.us7.list-manage.com/subscribe/post" method="POST">
+              <input type="hidden" name="u" value="3d97dabe417fa5f2f25acd87d" />
+              <input type="hidden" name="id" value="d9e8eceba3" />
               <input
                 type="email"
                 autocapitalize="off"
