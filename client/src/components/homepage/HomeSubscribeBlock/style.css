@@ -33,7 +33,7 @@
   border: 1px solid#007BB7;
   transition: 0.6s;
 }
-.subscribe-content input {
+.subscribe-content input, .subscribe-content textarea {
   border: 1px solid #007BB7 !important;
     background-color: transparent;
     padding: 1.4em 7em 1.4em 2em;

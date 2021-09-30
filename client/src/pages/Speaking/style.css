@@ -32,10 +32,10 @@
     letter-spacing: .1rem;
     color: #007BB7 !important;
 }
-.subscribe-content input::placeholder {
+.subscribe-content input::placeholder, .subscribe-content textarea::placeholder {
   color:#007BB7;
 }
-.subscribe-content input:focus {
+.subscribe-content input:focus, .subscribe-content textarea:focus{
   outline:none;
 }
 

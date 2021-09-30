@@ -3,6 +3,7 @@ import "./style.css";
 // import Mobile from "./mobile"
 import logo from "../../media/newlogo.png";
 import fbLogo from "../../media/fb-grey.png";
+import linkedInGrey from "../../media/linkedin-grey.svg"
 import Cart from "../StoreComponents/Cart";
 import instaLogo from "../../media/insta-grey.png";
 import cartLogo from "../../media/cart-grey.png";
@@ -14,6 +15,7 @@ import {
 } from "../../utils/themeContext";
 import fbLogoW from "../../media/fb-white.png";
 import instaLogoW from "../../media/insta-white.png";
+import linkedInW from "../../media/linkedin-white.svg"
 import cartLogoW from "../../media/cart-white.png";
 import {
   BrowserRouter as Router,
@@ -160,14 +162,14 @@ export default class Nav extends Component {
                         Featured
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         onClick={this.handleMobileNav}
                         to="/shop/most-popular"
                       >
                         Shop
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="service-trigger">
                       <input
                         type="checkbox"
@@ -188,8 +190,8 @@ export default class Nav extends Component {
                           <Link onClick={this.handleMobileNav}  to="/resources">Resources</Link>
                         </li>
                         <li>
-                          <Link onClick={this.handleMobileNav}  to="/speaking-engagements">
-                            Speaking Engagements
+                          <Link onClick={this.handleMobileNav}  to="/contact">
+                            Contact me
                           </Link>
                         </li>
                       </div>
@@ -197,18 +199,7 @@ export default class Nav extends Component {
                   </ul>
                 ) : (
                   <ul>
-                    <li>
-                      <Link to="/blog">Blog</Link>
-                    </li>
-                    <li>
-                      <Link to="/featured">
-                        Featured
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/shop/most-popular">Shop</Link>
-                    </li>
-                    <li className="service-trigger">
+                     <li className="service-trigger">
                       {/* <input
                         type="checkbox"
                         class="nav-down-toggle"
@@ -228,12 +219,25 @@ export default class Nav extends Component {
                           <Link to="/resources">Resources</Link>
                         </li>
                         <li>
-                          <Link to="/speaking-engagements">
-                            Speaking Engagements
+                          <Link to="/contact">
+                          Contact me
                           </Link>
                         </li>
                       </div>
                     </li>
+                    <li>
+                      <Link to="/blog">Blog</Link>
+                    </li>
+                    {/* <li>
+                      <Link to="/shop/most-popular">Shop</Link>
+                    </li> */}
+                    <li>
+                      <Link to="/featured">
+                        Featured
+                      </Link>
+                    </li>
+                
+                   
                     {/* <li>
                 <a href="#">Resources</a>
               </li>
@@ -258,8 +262,11 @@ export default class Nav extends Component {
                   <a href="https://www.instagram.com/Carolyn.skowron/">
                     <img src={instaLogo}></img>
                   </a>
-                  <a href="/">
+                  <a href="https://www.facebook.com/carolyn.skowron">
                     <img src={fbLogo}></img>
+                  </a>
+                  <a href="https://www.linkedin.com/in/carolyn-skowron-919624152/">
+                    <img src={linkedInGrey}></img>
                   </a>
                   <a className="cart-desktop">
                     <img
@@ -279,8 +286,11 @@ export default class Nav extends Component {
                   <a href="https://www.instagram.com/Carolyn.skowron/">
                     <img src={instaLogoW}></img>
                   </a>
-                  <a href="/">
+                  <a href="https://www.facebook.com/carolyn.skowron">
                     <img src={fbLogoW}></img>
+                  </a>
+                  <a href="https://www.linkedin.com/in/carolyn-skowron-919624152/">
+                    <img src={linkedInW}></img>
                   </a>
                   <a
                     style={{ cursor: "pointer" }}

@@ -31,7 +31,7 @@ export default function Speaking() {
           marginTop: '80px'
         }}
       >
-        <h1>Have me speak at your next event!</h1>
+        <h1>Contact me</h1>
       </div>
       {/* subscribe content is being used here to make the form easier by copying from homepage */}
       <div className="subscribe-content">
@@ -39,13 +39,13 @@ export default function Speaking() {
           {/* <h1>You are not alone...</h1> */}
 
           <p>
-           If you are interested in having me speak at an event, please contact me using the form below!
+           If you would like to connect with me, please fill out the form below!
           </p>
           <div className="form-parent">
             {/* exact copy of subscribe block on hp */}
           <form
            className="subscribe-form"
-            // action="https://justsoup.us7.list-manage.com/subscribe/post" method="POST"
+           action="https://getform.io/f/4556cbbd-d637-4287-a2f3-09f9d4add98d" method="POST"
            >
              {/* <label>Full Name</label> */}
               <input
@@ -59,7 +59,7 @@ export default function Speaking() {
                 name="email"
                 placeholder="Email"
               />
-             <label>Date of event</label>
+             <label>If this is about an event, what is the date of the event?</label>
               <input
                 type="date"
                 name="event_date"

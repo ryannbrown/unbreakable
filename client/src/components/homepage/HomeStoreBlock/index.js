@@ -27,7 +27,7 @@ export default class HomeStoreBlock extends Component {
           {/* <div> */}
           <h2>Check out</h2>
           <h2>my online store!</h2>
-          <Link to="/shop/most-popular"><button className="the-button">Shop</button>
+          <Link><button className="the-button">Coming Soon!</button>
           </Link>
           {/* </div> */}
         </div>
