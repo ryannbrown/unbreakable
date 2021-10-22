@@ -167,6 +167,11 @@ export default class Nav extends Component {
                         Events
                       </Link>
                     </li>
+                    <li>
+                      <Link onClick={this.handleMobileNav} to="/podcast">
+                        Podcast
+                      </Link>
+                    </li>
                     {/* <li>
                       <Link
                         onClick={this.handleMobileNav}
@@ -244,6 +249,11 @@ export default class Nav extends Component {
                     <li>
                       <Link to="/events">
                         Events
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/podcast">
+                        Podcast
                       </Link>
                     </li>
                 

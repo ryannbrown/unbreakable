@@ -11,12 +11,13 @@ import Nav from "../../components/Nav";
 import waveImg from "../../media/wave-img.png";
 import { css } from "@emotion/core";
 import ClipLoader from "react-spinners/ClipLoader";
+import podcastImg from "../../media/spotify-original.svg"
 var Moment = require("moment");
 
 require("dotenv").config();
 const { REACT_APP_PRISMIC_API, REACT_APP_PRISMIC_TOKEN } = process.env;
 
-export default function Events() {
+export default function Podcast() {
   const apiEndpoint = REACT_APP_PRISMIC_API;
   const accessToken = REACT_APP_PRISMIC_TOKEN;
 
@@ -35,8 +36,8 @@ export default function Events() {
   React.useEffect(() => {
     const fetchData = async () => {
       const response = await Client.query(
-        Prismic.Predicates.at("document.type", "featured"),
-        { orderings: "[my.featured.featured_date desc]" }
+        Prismic.Predicates.at("document.type", "podcast"),
+        { orderings: "[my.podcast.podcast_date desc]" }
       );
       if (response) {
         setDocData(response.results);
@@ -63,10 +64,10 @@ export default function Events() {
             <h1>Title</h1>
           <p>Location</p>
           <a>Learn More</a> */}
-          <p>{Moment(post.data.featured_date).format('ll')}<br/>by {post.data.featured_publisher[0].text}</p>
-            <p>{post.data.featured_title[0].text}</p>
+          <p>{Moment(post.data.podcast_date).format('ll')}</p>
+            <p>{post.data.podcast_name[0].text}</p>
           {/* <p>{post.data.featured_location[0].text}</p> */}
-          <a href={post.data.featured_link.url} target="_blank" rel="noreferrer">Read More</a>
+          <a href={post.data.podcast_link.url} target="_blank" rel="noreferrer">Listen on Spotify <img style={{width:'25px'}} src={podcastImg}/></a>
 
         </div>
       )
@@ -108,13 +109,14 @@ export default function Events() {
           
         }}
       >
-        <h1>Featured</h1>
-        <p>See who's been talking about Unbreakable</p>
+        <h1>CaresTalk Podcast</h1>
+       <p>Explore episodes below!</p>
       </div>
       <div className="home-wrapper">
         <div>
           {doc ? (
             <div className="event-wrapper">
+               <p style={{marginBottom:'50px'}}>Life is about finding the real you. Being the real you. Knowing that you have potential in your life and you can do anything you believe in. You can take a terrible situation and make something great of it.</p>
               {doc.length > 0 ?
                <div style={{width: '100%'}}>
                {data}

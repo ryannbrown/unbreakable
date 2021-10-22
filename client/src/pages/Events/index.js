@@ -36,7 +36,7 @@ export default function Events() {
     const fetchData = async () => {
       const response = await Client.query(
         Prismic.Predicates.at("document.type", "events"),
-        { orderings: "[my.events.post_date desc]" }
+        { orderings: "[my.events.event_date desc]" }
       );
       if (response) {
         setDocData(response.results);
