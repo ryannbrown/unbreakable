@@ -16,7 +16,7 @@ var Moment = require("moment");
 require("dotenv").config();
 const { REACT_APP_PRISMIC_API, REACT_APP_PRISMIC_TOKEN } = process.env;
 
-export default function Blog() {
+export default function Events() {
   const apiEndpoint = REACT_APP_PRISMIC_API;
   const accessToken = REACT_APP_PRISMIC_TOKEN;
 
@@ -35,8 +35,8 @@ export default function Blog() {
   React.useEffect(() => {
     const fetchData = async () => {
       const response = await Client.query(
-        Prismic.Predicates.at("document.type", "blog"),
-        { orderings: "[my.blog.post_date desc]" }
+        Prismic.Predicates.at("document.type", "events"),
+        { orderings: "[my.events.post_date desc]" }
       );
       if (response) {
         setDocData(response.results);
@@ -48,102 +48,38 @@ export default function Blog() {
   }, []);
 
 
-const queryByDate = (e) => {
-  e.preventDefault();
-  console.log("month", typeof(month))
-  console.log("year", typeof(year))
-
-  const fetchDates = async (month, year) => {
-    const response = await Client.query([
-      Prismic.Predicates.month('my.blog.post_date', month),
-      Prismic.Predicates.year('my.blog.post_date', year)
-    ]);
-    if (response) {
-      setDocData(response.results);
-      console.log("response", response.results);
-    }
-  }
-  fetchDates(month, year);
-}
-
-
-const setYear = (e) => {
-  let theYear = e.target.value
-  console.log(theYear)
-  setDateYear(theYear)
-  // console.log(e.target.value)
-}
-const setMonth = (e) => {
-  let theMonth = e.target.value
-  console.log(theMonth)
-  setDateMonth(theMonth)
-  // console.log(e.target.value)
-}
-
-const resetSearch = () => {
-
-  setDateYear(nowYear)
-  setDateMonth(nowMonth)
-  const fetchData = async () => {
-    const response = await Client.query(
-      Prismic.Predicates.at("document.type", "blog"),
-      { orderings: "[my.blog.post_date desc]" }
-    );
-    if (response) {
-      setDocData(response.results);
-      console.log(response.results);
-    }
-  };
-  fetchData();
-}
-
-
-var now = Moment();
-// console.log(now);
-let thisYear = Moment(now).format("YYYY")
-let thisMonth = Moment(now).format("MMMM")
-let allYears = [thisYear];
-let allMonths = [thisMonth];
-// to be changed when blog has run longer
-for (var i = 1; i <=1; i++) {
-  allYears.push(Moment(now).subtract(i, 'years').format("YYYY"));
-}
-for (var i = 1; i <=11; i++) {
-  allMonths.push(Moment(now).subtract(i, 'months').format("MMMM"));
-}
-console.log("all months", allMonths)
-console.log("all years", allYears)
-
-// const someYears = ["2021","2020", "2019"]
-// const monthsOfYear= ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
 
   if (doc) {
     var data = doc.map(
       (post) => (
-        <div className="blog-post">
-          <Link to={`/blog/${post.uid}`}>
+        <div className="event-post">
+
             {/* <img
               className="blog-img"
               alt="cover"
               src={post.data.blog_image.url}
               /> */}
-            <h1>{post.data.title[0].text}</h1>
-          </Link>
-          <p>{post.data.post_date}</p>
-          <p>{post.data.short_description[0].text}</p>
+          {/* <p>Date</p>
+            <h1>Title</h1>
+          <p>Location</p>
+          <a>Learn More</a> */}
+          <p>{Moment(post.data.event_date).format('llll')}</p>
+            <p>{post.data.event_name[0].text}</p>
+          <p>{post.data.event_location[0].text}</p>
+          <a href={post.data.event_link.url} target="_blank" rel="noreferrer">Learn More</a>
+
         </div>
       )
       // <div>post</div>
       // <h1>{RichText.asText(doc.data.title)}</h1>
     );
 
-    var months = allMonths.map((month, i) => (
-      <option value={month}>{month}</option>
-    ));
-    var years = allYears.map((year, i) => (
-      <option value={year}>{year}</option>
-    ));
+    // var months = allMonths.map((month, i) => (
+    //   <option value={month}>{month}</option>
+    // ));
+    // var years = allYears.map((year, i) => (
+    //   <option value={year}>{year}</option>
+    // ));
   }
 
   return (
@@ -172,26 +108,15 @@ console.log("all years", allYears)
           
         }}
       >
-        <h1>The Unbreakable Blog</h1>
+        <h1>Upcoming Events</h1>
+        <p>Featuring Carolyn Skowron, author of Unbreakable</p>
       </div>
       <div className="home-wrapper">
-        {/* filter is hidden for now */}
-        {/* <form className="blog-filter" onSubmit={queryByDate}>
-        <select className="filter-select" onChange={setMonth}>
-        {months}
-        </select>
-        <select className="filter-select" onChange={setYear} >
-        {years}
-        </select>
-        <button className="filter-select-btn" type="submit">Search</button>
-        <button className="filter-select-btn" onClick={resetSearch}>Reset</button>
-        </form> */}
-      
         <div>
           {doc ? (
-            <div className="blog-wrapper">
+            <div className="event-wrapper">
               {doc.length > 0 ?
-               <div>
+               <div style={{width: '100%'}}>
                {data}
                </div> : <div>No Items for these dates</div>
             }
