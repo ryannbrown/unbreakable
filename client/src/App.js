@@ -23,6 +23,7 @@ import About from "./pages/About"
 import Homepage from "./pages/Homepage/index"
 import Blog from "./pages/Blog/index"
 import Events from "./pages/Events/index"
+import Featured from "./pages/Featured/index"
 import Resources from "./pages/Resources/index"
 import Speaking from "./pages/Speaking/index"
 import BlogPost from "./pages/BlogPost/index"
@@ -77,6 +78,7 @@ class App extends Component {
              <Route exact path="/resources" component={Resources}/>
              <Route exact path="/contact" component={Speaking}/>
              <Route exact path="/events" component={Events}/>
+             <Route exact path="/featured" component={Featured}/>
              <Route exact path="/" component={Homepage}/>
              {/* <Route exact path="/shop" component={Shop}/>
              <Route exact path="/shop/:collection" component={ShopCollection}/> */}

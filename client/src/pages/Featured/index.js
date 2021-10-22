@@ -1,15 +1,92 @@
 import React, { Component, useState } from "react";
 
 import "./style.css";
+import Prismic from "prismic-javascript";
+// import { Date, Link, RichText } from "prismic-reactjs";
+import linkResolver from "../../utils/linkResolver";
+// import logo from '../../media/logo.png'
 import { Link } from "react-router-dom";
+import Test from "../../components/Test";
+import Nav from "../../components/Nav";
 import waveImg from "../../media/wave-img.png";
+import { css } from "@emotion/core";
+import ClipLoader from "react-spinners/ClipLoader";
+var Moment = require("moment");
 
-export default function Featured() {
+require("dotenv").config();
+const { REACT_APP_PRISMIC_API, REACT_APP_PRISMIC_TOKEN } = process.env;
+
+export default function Events() {
+  const apiEndpoint = REACT_APP_PRISMIC_API;
+  const accessToken = REACT_APP_PRISMIC_TOKEN;
+
+  // This is where you would add your access token for a Private repository
+
+  var Client = Prismic.client(apiEndpoint, { accessToken });
+  var d = new Date();
+  const nowMonth = d.getMonth();
+  const nowYear = d.getYear();
+
+  const [doc, setDocData] = React.useState(null);
+  const [dates, setDate] = React.useState(null);
+  const [year, setDateYear] = React.useState(nowYear);
+  const [month, setDateMonth] = React.useState(nowMonth);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const response = await Client.query(
+        Prismic.Predicates.at("document.type", "featured"),
+        { orderings: "[my.featured.post_date desc]" }
+      );
+      if (response) {
+        setDocData(response.results);
+        console.log(response.results);
+      }
+    };
+    fetchData();
+    // fetchDates()
+  }, []);
+
+
+
+  if (doc) {
+    var data = doc.map(
+      (post) => (
+        <div className="event-post featured">
+
+            {/* <img
+              className="blog-img"
+              alt="cover"
+              src={post.data.blog_image.url}
+              /> */}
+          {/* <p>Date</p>
+            <h1>Title</h1>
+          <p>Location</p>
+          <a>Learn More</a> */}
+          <p>{Moment(post.data.featured_date).format('ll')}<br/>by {post.data.featured_publisher[0].text}</p>
+            <p>{post.data.featured_title[0].text}</p>
+          {/* <p>{post.data.featured_location[0].text}</p> */}
+          <a href={post.data.featured_link.url} target="_blank" rel="noreferrer">Read More</a>
+
+        </div>
+      )
+      // <div>post</div>
+      // <h1>{RichText.asText(doc.data.title)}</h1>
+    );
+
+    // var months = allMonths.map((month, i) => (
+    //   <option value={month}>{month}</option>
+    // ));
+    // var years = allYears.map((year, i) => (
+    //   <option value={year}>{year}</option>
+    // ));
+  }
+
   return (
-    <div className="resources-page">
+    <div>
       {/* <Nav></Nav> */}
       <div
-        className=""
+        className="blog-blue-block"
         style={{
           backgroundImage: `url(${waveImg})`,
           // backgroundColor: `#007BB7`,
@@ -28,29 +105,36 @@ export default function Featured() {
           alignItems: `center`,
           justifyContent: "center",
           position: `relative`,
-          marginTop: '80px'
+          
         }}
       >
-        <h1>Featured On</h1>
+        <h1>Featured</h1>
+        <p>See who's been talking about Unbreakable</p>
       </div>
       <div className="home-wrapper">
-      {/* <div className="resources-text-content">
-          <h1></h1>
-
-          <p>
-            Almost 1 in 5 adults suffer from a mental illness. In 2017, roughly
-            46.6 million people were diagnosed with mental health issues in the
-            United States alone. If you or someone you know struggles with
-            mental health, know that you are not alone. Below are a list of resource that I have found
-            to be incredibly helpful.
-          </p>
-          <div className="resource-btn-wrapper">
-          <a target="_blank" rel="noopener noreferrer" href="https://www.nami.org/Home"><button className="the-button">NAMI</button></a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.samhsa.gov/find-help/national-helpline"><button className="the-button">SAMHSA Help Hotline</button></a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.napab.org/"><button className="the-button">NAPAB</button></a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.crisistextline.org/"><button className="the-button">CRISIS TEXT LINE</button></a>
+        <div>
+          {doc ? (
+            <div className="event-wrapper">
+              {doc.length > 0 ?
+               <div style={{width: '100%'}}>
+               {data}
+               </div> : <div>No Items for these dates</div>
+            }
+             
+            
+            </div>
+          ) : (
+            <div className="loading-block">
+            <ClipLoader
+            // css={override}
+            size={35}
+            color={"#007BB7"}
+            // loading={this.state.loading}
+          />
           </div>
-        </div> */}
+          )}
+        </div>
+        {/* <Test></Test> */}
       </div>
     </div>
   );
