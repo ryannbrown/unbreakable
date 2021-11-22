@@ -42,7 +42,7 @@ export default class Footer extends Component {
               <Link  to="/about"><p>About</p></Link>
             </div>
             <div className="social-wrapper">
-             <a href="https://www.facebook.com/carolyn.skowron"><img src={fbLogo}></img></a>
+             {/* <a href="https://www.facebook.com/carolyn.skowron"><img src={fbLogo}></img></a> */}
              <a  href="https://www.instagram.com/Carolyn.skowron/"><img src={instaLogo}></img></a>
              <a  href="https://www.linkedin.com/in/carolyn-skowron-919624152/"><img src={linkedIn}></img></a>
              <a  href="/"><img src={cartLogo}></img></a>

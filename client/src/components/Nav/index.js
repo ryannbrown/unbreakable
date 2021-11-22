@@ -282,9 +282,9 @@ export default class Nav extends Component {
                   <a href="https://www.instagram.com/Carolyn.skowron/">
                     <img src={instaLogo}></img>
                   </a>
-                  <a href="https://www.facebook.com/carolyn.skowron">
+                  {/* <a href="https://www.facebook.com/carolyn.skowron">
                     <img src={fbLogo}></img>
-                  </a>
+                  </a> */}
                   <a href="https://www.linkedin.com/in/carolyn-skowron-919624152/">
                     <img src={linkedInGrey}></img>
                   </a>
@@ -306,9 +306,9 @@ export default class Nav extends Component {
                   <a href="https://www.instagram.com/Carolyn.skowron/">
                     <img src={instaLogoW}></img>
                   </a>
-                  <a href="https://www.facebook.com/carolyn.skowron">
+                  {/* <a href="https://www.facebook.com/carolyn.skowron">
                     <img src={fbLogoW}></img>
-                  </a>
+                  </a> */}
                   <a href="https://www.linkedin.com/in/carolyn-skowron-919624152/">
                     <img src={linkedInW}></img>
                   </a>
